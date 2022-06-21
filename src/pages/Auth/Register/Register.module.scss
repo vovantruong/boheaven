@@ -1,0 +1,34 @@
+@import '../../../styles/globalStyles', '../auth.module.scss';
+
+.section-register{
+    @include section-frame;
+    @include mobile{
+        height: 100vh;
+    }
+
+    .wrapper{
+        .submit{
+            margin-top: 9px;
+        }
+
+        .get-code{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 22px;
+            width: 82px;
+            height: 27px;
+            background: #365A97;
+            border-radius: 100px;
+            color: #fff;
+            &:hover{
+                background: #314C87;
+                border: none;
+            }
+        }
+
+        @include mobile{
+            padding-top: 116px;
+            max-width: 263px;
+        }      
+    }
+}
