@@ -1,0 +1,43 @@
+.label{
+    margin-bottom: 10px;
+}
+
+.wrap{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #365A97;
+    border-radius: 4px; 
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 8px 7px;
+
+    .icon{
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #939393;
+
+        svg{
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    .input{
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        background: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #939393;
+        letter-spacing: 1px;
+    }
+}
+

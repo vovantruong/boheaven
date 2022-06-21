@@ -1,0 +1,15 @@
+@import '../../../styles/globalStyles', '../auth.module.scss';
+
+.section-login{
+    @include section-frame;
+    @include mobile{
+        height: 100vh;
+    }
+
+    .wrapper{
+        @include mobile{
+            padding-top: 116px;
+            max-width: 263px;
+        }      
+    }
+}
