@@ -1,0 +1,36 @@
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        width: 70px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        margin-right: 9px;
+        transition: all .3s;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .btn-login{
+        background: linear-gradient(180deg, #57D7FF 0%, #1E50A6 100%);
+        color: #fff;
+
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+
+    .btn-register{
+        background: linear-gradient(180deg, #F8E98E 0%, #F2D06F 100%);
+        color: #000;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}
