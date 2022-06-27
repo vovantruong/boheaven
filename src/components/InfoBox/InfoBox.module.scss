@@ -1,0 +1,75 @@
+@import '../../styles/globalStyles';
+
+.info-box{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(180deg, #EDF6FF 0%, #FFFFFF 53.65%, #F0F7FF 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25), 0px 0px 40px #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 24px 31px;
+    overflow: hidden;
+
+    .wrap-text{
+        width: 100%;
+        height: 100%;
+    }
+
+    @include mobile{
+        padding: 12px 15px;
+    }
+}
+
+.info-head, .info-tag, .info-body{
+    p{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+    
+        @include mobile{
+            font-size: 12px;
+        }
+    }
+}
+
+.info-image{
+    margin-right: 19px;
+}
+
+.info-head{
+    color: #365A97;
+}
+
+.info-tag{
+    color: #575757;
+    p{
+        font-weight: 400;
+    }
+}
+
+.info-body{
+    color: #000000;
+}
+
+.info-link-more{
+    position: absolute;
+    right: 31px;
+    bottom: 24px;
+    
+    a{
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    @include mobile{
+        right: 15px;
+        bottom: 12px;
+        font-size: 10px;
+    }
+}

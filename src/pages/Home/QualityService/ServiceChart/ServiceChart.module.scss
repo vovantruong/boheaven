@@ -1,0 +1,95 @@
+.service-chart{
+    display: inline-block;
+    margin-bottom: 35px;
+
+    .title-chart {
+        margin-top: 20px;
+        p{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+           justify-content: center;
+            color: #365A97;
+        }
+    }
+}
+
+.radial-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #EDF6FF 60.65%, #ffffff 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 5px 6px rgb(0 0 0 / 20%), 0px 0px 40px #FFFFFF;
+    border-radius: 50%;
+
+    .label-text{
+        tspan{
+            font-weight: 600;
+            font-size: 30px;
+        }
+    }
+
+    .span-middle{
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        background: linear-gradient(180deg, #ffffff 0%, #EDF6FF 60.65%, #ffffff 100%);
+        border: 2px solid #FFFFFF;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+
+        h4{
+            display: flex;
+            align-items: baseline;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 39px;
+            background: linear-gradient(180deg, #81DCFF 0%, #4DA8FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: translate(-50%, -50%) scale(0);
+            animation: fade .4s 1.5s ease-in-out forwards;
+
+            p{
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+        @keyframes fade {
+            0%{
+                transform: translate(-50%, -50%) scale(0);
+            }
+            50%{
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            70%{
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+            100%{
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+
+    .bg-chart-transparent{
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        width: 92%;
+        height: 92%;
+    }
+}

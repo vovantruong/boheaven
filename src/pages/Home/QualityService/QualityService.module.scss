@@ -1,0 +1,35 @@
+@import '../../../styles/globalStyles';
+
+.quality-servide{
+}
+
+.wrapper{
+    padding-top: 40px;
+    padding-bottom: calc(50px - 16px);
+    @include mobile{
+        padding: 10px 0;
+    }
+
+    .list-chart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    
+        .info-item{
+            width: 48%;
+            margin-bottom: 16px;
+    
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

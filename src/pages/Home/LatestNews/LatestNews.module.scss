@@ -1,0 +1,21 @@
+.latest-news{
+    padding-top: 20px;
+    padding-bottom: 23px;
+
+    .list-news{
+        padding: 24px 0;
+
+        .news-item{
+            margin-bottom: 29px;
+
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .btn-more{
+        margin: 0 auto;
+    }
+}
