@@ -17,17 +17,27 @@ const data = [
   },
   {
     name: '歐博真人',
-    image: GAMELOBBY.RealOberLive,
+    image: GAMELOBBY.RealOber,
     link: '#',
   },
   {
     name: 'SA真人',
-    image: GAMELOBBY.RealSALive,
+    image: GAMELOBBY.RealSA,
     link: '#',
   },
   {
     name: 'WM真人',
-    image: GAMELOBBY.RealWMLive,
+    image: GAMELOBBY.RealWM,
+    link: '#',
+  },
+  {
+    name: 'OB真人',
+    image: GAMELOBBY.RealOB,
+    link: '#',
+  },
+  {
+    name: 'OG真人',
+    image: GAMELOBBY.RealOG,
     link: '#',
   },
 ]
@@ -36,7 +46,7 @@ const RealPerson = () => {
   const swiperRef = useRef(null);
   return (
     <div className={cx("real-person")}>
-      <Swiper ref={swiperRef} loop={true} slidesPerView={4} spaceBetween={20}>
+      <Swiper ref={swiperRef} loop={true} slidesPerView={4} spaceBetween={30}>
       {
         data.map((item, i) => (
           <SwiperSlide key={i} className={cx('slide-item')}>

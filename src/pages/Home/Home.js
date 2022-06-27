@@ -9,13 +9,11 @@ import GameLobby from "./GameLobby/GameLobby";
 import AboutUs from "./AboutBoheaven/AboutBoheaven";
 import QualityService from "./QualityService/QualityService";
 import LatestNews from "./LatestNews/LatestNews";
-import TitleTagV2 from "~/components/TitleTagV2/TitleTagV2";
 const cx = classNames.bind(styles);
 
 const Home = () => {
   return (
     <div className={cx("home-page")}>
-      <TitleTagV2>歐博品牌介紹</TitleTagV2>
       <Banner style={{ marginBottom: "25px" }} />
       <TitleTag name="遊戲大廳" />
       <GameLobby />

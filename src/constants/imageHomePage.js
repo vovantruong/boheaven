@@ -27,10 +27,12 @@ const GAMELOBBY = {
     IconFishing: require('../assets/images/pages/home/game-lobby/icon-fishing.png'),
     IconFishingActive: require('../assets/images/pages/home/game-lobby/icon-fishing-avtive.png'),
 
-    RealDG: require('../assets/images/pages/home/game-lobby/real-person/dg-real.png'),
-    RealOberLive: require('../assets/images/pages/home/game-lobby/real-person/ober-live.png'),
-    RealSALive: require('../assets/images/pages/home/game-lobby/real-person/sa-live.png'),
-    RealWMLive: require('../assets/images/pages/home/game-lobby/real-person/wm-live.png'),
+    RealDG: require('../assets/images/pages/home/game-lobby/real-person/dg-real-person.png'),
+    RealOber: require('../assets/images/pages/home/game-lobby/real-person/ober-real-person.png'),
+    RealSA: require('../assets/images/pages/home/game-lobby/real-person/sa-real-person.png'),
+    RealWM: require('../assets/images/pages/home/game-lobby/real-person/wm-real-person.png'),
+    RealOB: require('../assets/images/pages/home/game-lobby/real-person/ob-real-person.png'),
+    RealOG: require('../assets/images/pages/home/game-lobby/real-person/og-real-person.png'),
 
     BingoSuperLottery: require('../assets/images/pages/home/game-lobby/bingo/super-lottery.png'),
     Bingo9KLottery: require('../assets/images/pages/home/game-lobby/bingo/9k-lottery.png'),

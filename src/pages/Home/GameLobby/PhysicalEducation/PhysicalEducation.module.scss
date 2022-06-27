@@ -5,6 +5,13 @@
     justify-content: space-around;
     flex-wrap: wrap;
 
+    .img-main{
+        background: url('../../../../assets/images/pages/home/game-lobby/physical/place-sports.png') no-repeat;
+        background-position-y: 50px;
+        height: 200px;
+        background-size: cover;
+    }
+
     img{
         margin-bottom: 10px;
     }
