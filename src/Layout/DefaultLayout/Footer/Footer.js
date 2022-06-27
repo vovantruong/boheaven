@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import className from "classnames/bind";
 import { Link } from "react-router-dom";
-import { imageFooter } from "~/constants/images-footer";
+import { imageFooter } from "~/constants/imagesFooter";
 
 const cx = className.bind(styles);
 
