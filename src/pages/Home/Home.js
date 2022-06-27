@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss";
 import Banner from "./Banner/Banner";
@@ -9,17 +9,19 @@ import GameLobby from "./GameLobby/GameLobby";
 import AboutUs from "./AboutBoheaven/AboutBoheaven";
 import QualityService from "./QualityService/QualityService";
 import LatestNews from "./LatestNews/LatestNews";
+import TitleTagV2 from "~/components/TitleTagV2/TitleTagV2";
 const cx = classNames.bind(styles);
 
 const Home = () => {
   return (
-    <div className={cx('home-page')}>
-      <Banner style={{marginBottom: '25px'}} />
+    <div className={cx("home-page")}>
+      <TitleTagV2>歐博品牌介紹</TitleTagV2>
+      <Banner style={{ marginBottom: "25px" }} />
       <TitleTag name="遊戲大廳" />
       <GameLobby />
       <TitleTag name="博天堂介紹" />
       <AboutUs />
-      <TitleTag name="優質服務"/>
+      <TitleTag name="優質服務" />
       <QualityService />
       <TitleTag name="最新消息" />
       <LatestNews />

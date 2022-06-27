@@ -1,0 +1,26 @@
+.real-person{
+    position: relative;
+
+    .action{
+        margin: -25px auto 10px auto;
+    }
+
+    .navigation{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 110%;
+
+        .previous{
+            position: absolute;
+            left: 0;
+        }
+
+        .next{
+            position: absolute;
+            right: 0;
+        }
+    }
+}

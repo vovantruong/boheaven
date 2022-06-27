@@ -1,0 +1,36 @@
+@import "../../styles/globalStyles";
+
+.title-tag-v2 {
+  text-align: center;
+  .wrap {
+    p {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 0.25px;
+      padding: 10px 0;
+      color: #365a97;
+
+      .img-tag{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 342px;
+        height: 33px;
+        margin: 10px;
+        img{
+          width: 100%;
+          height: 100%;
+          display: flex;
+        }
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+}
