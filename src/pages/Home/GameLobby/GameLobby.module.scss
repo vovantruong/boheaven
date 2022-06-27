@@ -1,0 +1,41 @@
+.game-lobby{
+    padding-top: 33px;
+}
+.wrapper{
+
+    .tab-menu{
+        height: 58px;
+        background: linear-gradient(180deg, #EDF6FF 0%, #FFFFFF 53.65%, #F0F7FF 100%);
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .tab-action{
+            box-shadow: unset;
+            transition: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+
+            img{
+                margin-right: 10px;
+            }
+        }
+
+        .active{
+            z-index: 1;
+        }
+    }
+
+    .tab-body{
+        background: url('../../../assets/images/pages/home/game-lobby/place-bg.png') no-repeat;
+        background-position-y: 13rem;
+        background-size: contain;
+        min-height: 435px;
+        overflow: hidden;
+    }
+}

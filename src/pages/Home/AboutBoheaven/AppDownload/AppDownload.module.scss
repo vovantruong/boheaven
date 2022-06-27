@@ -1,0 +1,81 @@
+@import '../../../../styles/globalStyles';
+.app-download{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 130px;
+    padding-right: 184px;
+    padding-top: 10px;
+
+    @include mobile{
+        display: block;
+        padding: 0 11px;
+
+    }
+
+    .image{
+        width: 428px;
+        height: 301px;
+
+        @include mobile{
+            width: 100%;
+            height: 100%;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card-download{
+        background: linear-gradient(180deg, #FCFEFD 0%, #F0F2FF 25.52%, #E2E5F8 52.08%, #F0F2FF 81.77%, #F1F3FF 100%);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+
+        button{
+            width: 258px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+
+            @include mobile{
+                    width: 100%;
+            }
+        }
+
+        .normal{
+            padding: 22px 0;
+            margin-bottom: 19px;
+            background: radial-gradient(63.11% 63.11% at 31.97% 19.67%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #22A7FB;
+        }
+
+        .ios{
+            padding: 8px 0;
+            margin-bottom: 12px;
+            background: linear-gradient(180deg, #D3D3D3 0%, #9B9B9B 100%);
+        }
+
+        .android{
+            padding: 8px 0;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #B6D96C 0%, #5C7624 100%);
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #939393;
+        }
+    }
+}
