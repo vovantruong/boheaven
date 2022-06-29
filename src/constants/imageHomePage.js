@@ -27,6 +27,13 @@ const GAMELOBBY = {
     IconFishing: require('../assets/images/pages/home/game-lobby/icon-fishing.png'),
     IconFishingActive: require('../assets/images/pages/home/game-lobby/icon-fishing-avtive.png'),
 
+    RealDG: require('../assets/images/pages/home/game-lobby/real-person/dg-real-person.png'),
+    RealOber: require('../assets/images/pages/home/game-lobby/real-person/ober-real-person.png'),
+    RealSA: require('../assets/images/pages/home/game-lobby/real-person/sa-real-person.png'),
+    RealWM: require('../assets/images/pages/home/game-lobby/real-person/wm-real-person.png'),
+    RealOB: require('../assets/images/pages/home/game-lobby/real-person/ob-real-person.png'),
+    RealOG: require('../assets/images/pages/home/game-lobby/real-person/og-real-person.png'),
+
     BingoSuperLottery: require('../assets/images/pages/home/game-lobby/bingo/super-lottery.png'),
     Bingo9KLottery: require('../assets/images/pages/home/game-lobby/bingo/9k-lottery.png'),
 
@@ -36,6 +43,16 @@ const GAMELOBBY = {
     ElectronicPLAY: require('../assets/images/pages/home/game-lobby/electronic/play-electronics.png'),
     ElectronicRTG: require('../assets/images/pages/home/game-lobby/electronic/rtg-electronics.png'),
     ElectronicSP: require('../assets/images/pages/home/game-lobby/electronic/sp-electronics.png'),
+
+    BestSport: require('../assets/images/pages/home/game-lobby/physical/best-sports.png'),
+    SuperSport: require('../assets/images/pages/home/game-lobby/physical/super-sports.png'),
+    PlaceSport: require('../assets/images/pages/home/game-lobby/physical/place-sports.png'),
+
+    SPFishing: require('../assets/images/pages/home/game-lobby/fishing/sp-fishing.png'),
+    MustWinFishing: require('../assets/images/pages/home/game-lobby/fishing/must-win-fishing.png'),
+
+    ChessAndCard: require('../assets/images/pages/home/game-lobby/chess/chess-and-card.png'),
+    MGChess: require('../assets/images/pages/home/game-lobby/chess/mg-chess.png'),
 }
 
 export {SERVICES, ABOUTUS, GAMELOBBY}
