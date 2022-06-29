@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./SidebarSupport.module.scss";
 import Service from "../../../assets/images/global/web/service.png";
 import Announcement from "../../../assets/images/global/web/announcement.png";
 import Help from "../../../assets/images/global/web/help.png";
+import PopupService from "./PopupService/PopupService";
 
 const cx = classNames.bind(styles);
 
@@ -30,11 +31,11 @@ const sidebaritems = [
 ];
 
 const SidebarSupport = () => {
-
+  const [visible, setVisible] = useState(false);
   const handdleShowPopup = (e) => {
     e.preventDefault();
-    console.log('show popups');
-  }
+    setVisible(!visible);
+  };
 
   return (
     <div className={cx("sidebar")}>
@@ -53,6 +54,7 @@ const SidebarSupport = () => {
           </Link>
         ))}
       </div>
+      {visible && <PopupService visible={visible} setVisible={setVisible} />}
     </div>
   );
 };

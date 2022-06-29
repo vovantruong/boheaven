@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, } from "react";
 import classNames from "classnames/bind";
 import styles from "./GameLobby.module.scss";
 import Bingo from "./Bingo/Bingo";
@@ -55,12 +55,13 @@ const GameLobby = () => {
   const [active, setActive] = useState(0);
   const [tab, setTab] = useState(dataTab[0].components);
   return (
-    <div className={cx("game-lobby")}>
+      <div className={cx("game-lobby")}>
       <div className="container">
         <div className={cx("wrapper")}>
           <div className={cx("tab-menu")}>
             {dataTab.map((item, i) => (
               <Button
+              key={i}
                 className={cx("tab-action", active === i ? 'active' : '')}
                 active={active === i ? true : false}
                 onClick={() => {
