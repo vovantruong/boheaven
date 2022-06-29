@@ -13,6 +13,9 @@ import Discount from "~/pages/Discount/Discount";
 import Login from "~/pages/Auth/Login/Login";
 import Register from "~/pages/Auth/Register/Register";
 
+import Blogsport from "~/pages/Blogsport/Blogsport";
+import Invitefriends from "~/pages/Invitefriends/Invitefriends";
+
 const publicRoutes = [
   // Home
   {
@@ -38,6 +41,16 @@ const publicRoutes = [
     components: Register,
     layout: NormalLayout,
   },
+  {
+    path: configRoutes.blogsport,
+    components: Blogsport,
+    layout: DefaultLayout,
+  },
+  {
+    path: configRoutes.invitefriends,
+    components: Invitefriends,
+    layout: DefaultLayout,
+  }
 ];
 
 export { publicRoutes };
