@@ -23,7 +23,7 @@ const tabLink = [
   },
   {
     name: "邀請好友",
-    link: "#",
+    link: "/invitefriends",
   },
   {
     name: "APP下載",
@@ -51,7 +51,7 @@ const tabLink = [
   },
   {
     name: "娛樂城文章分享",
-    link: "#",
+    link: "/blog-sport",
   },
 ];
 
