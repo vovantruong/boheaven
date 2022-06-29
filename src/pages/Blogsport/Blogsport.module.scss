@@ -1,0 +1,97 @@
+$desktop:1280px;
+$lg:1024px;
+$md:768px;
+$sm:568px;
+.wrapper {
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
+  border: 3px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px 45px 15px 60px;
+  .blogsport-title {
+    font-family: Noto Sans TC;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    padding: 12px 3px 2px 50px;
+  }
+}
+.inner {
+  .title-block {
+    display: flex;
+    padding: 20px 35px 25px 50px;
+    gap: 23px;
+    .with-title {
+      width: 115px;
+      font-family: Noto Sans TC;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+      border-radius: 100px;
+      padding: 5px;
+    }
+
+    .active {
+      background: #365a97;
+      color: #ffffff;
+    }
+  }
+}
+
+// responsive mobi
+
+@mixin mobile {
+  @media (max-width: #{$mobile -width - 1px}) {
+    .container {
+        box-sizing: border-box;
+        background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
+        border: 3px solid #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 5px;
+        width: 60%;
+        height: auto;
+        margin: 15px 0px 26px 0px;
+      
+        .blogsport-title {
+          font-family: Noto Sans TC;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0em;
+          padding: 12px 3px 2px 40px;
+        }
+      }
+      .inner {
+        .title-block {
+          display: flex;
+          padding: 20px 35px 25px 50px;
+          gap: 10px;
+          .with-title {
+            width: 115px;
+            left: 32px;
+            top: 56px;
+            font-family: Noto Sans TC;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: center;
+            background: #ffffff;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+            border-radius: 100px;
+          }
+      
+          .active {
+            background: #365a97;
+            color: #ffffff;
+          }
+        }
+      } 
+  }
+}
