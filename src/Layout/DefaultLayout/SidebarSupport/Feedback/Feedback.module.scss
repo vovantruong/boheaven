@@ -1,0 +1,87 @@
+.feedback {
+  .question {
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    div:last-child {
+      padding: 11px !important;
+      background: transparent;
+      border-color: #ababab;
+    }
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 26px;
+  }
+
+  .image-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+        width: 30.33%;
+      padding: 13px;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ABABABFF' stroke-width='3' stroke-dasharray='5%2c 14' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+    }
+  }
+
+  .change-file {
+    position: relative;
+    margin: 17px 0;
+    text-align: center;
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .icon {
+        width: 20px;
+        height: 20px;
+        background: #365a97;
+        color: #fff;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        color: #365a97;
+      }
+    }
+
+    .upload {
+      display: none;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 22px;
+      color: #575757;
+    }
+  }
+
+  .submit {
+    padding: 6px 0;
+    background: #365a97;
+    border-radius: 8px;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+  }
+}

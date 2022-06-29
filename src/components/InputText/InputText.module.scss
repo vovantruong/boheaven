@@ -1,5 +1,22 @@
+@import '../../styles/globalStyles';
+
 .label{
     margin-bottom: 10px;
+}
+
+.horizontal{
+    display: flex;
+    align-items: center;
+
+    .label{
+        margin-bottom: 0;
+        flex: 30%;
+
+        @include mobile{
+            flex: 40%
+        }
+    }
+
 }
 
 .wrap{
@@ -12,6 +29,7 @@
     align-items: center;
     justify-content: start;
     padding: 8px 7px;
+
 
     .icon{
         margin-right: 10px;
