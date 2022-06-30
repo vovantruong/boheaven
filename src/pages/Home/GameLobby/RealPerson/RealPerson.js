@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import styles from "./RealPerson.module.scss";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
@@ -6,72 +6,108 @@ import Button from "~/components/Button/Button";
 import { GAMELOBBY } from "~/constants/imageHomePage";
 import Icon from "~/constants/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { MediaQueryContext } from "~/Context/MainContext";
+import ListCardMb from "~/components/ListCardMb/ListCardMb";
 
 const cx = classNames.bind(styles);
 
 const data = [
   {
-    name: 'DG真人',
-    image: GAMELOBBY.RealDG,
-    link: '#',
+    image2x: GAMELOBBY.RealDG,
+    image: GAMELOBBY.RealDGMobile,
+    logo: GAMELOBBY.LogoRealDG,
+    tag: "",
+    name: "DG真人",
+    category: "casino",
+    link: "#",
   },
   {
-    name: '歐博真人',
-    image: GAMELOBBY.RealOber,
-    link: '#',
+    image2x: GAMELOBBY.RealOber,
+    image: GAMELOBBY.RealOberMobile,
+    logo: GAMELOBBY.LogoRealOber,
+    tag: "",
+    name: "歐博真人",
+    category: "casino",
+    link: "#",
   },
   {
-    name: 'SA真人',
-    image: GAMELOBBY.RealSA,
-    link: '#',
+    image2x: GAMELOBBY.RealSA,
+    image: GAMELOBBY.RealSAMobile,
+    logo: GAMELOBBY.LogoRealSA,
+    tag: "",
+    name: "SA真人",
+    category: "casino",
+    link: "#",
   },
   {
-    name: 'WM真人',
-    image: GAMELOBBY.RealWM,
-    link: '#',
+    image2x: GAMELOBBY.RealWM,
+    image: GAMELOBBY.RealWMMobile,
+    logo: GAMELOBBY.LogoRealWM,
+    tag: "",
+    name: "WM真人",
+    category: "casino",
+    link: "#",
   },
   {
-    name: 'OB真人',
-    image: GAMELOBBY.RealOB,
-    link: '#',
+    image2x: GAMELOBBY.RealOB,
+    image: GAMELOBBY.RealOBMobile,
+    logo: GAMELOBBY.LogoRealOB,
+    tag: "",
+    name: "OB真人",
+    category: "casino",
+    link: "#",
   },
   {
-    name: 'OG真人',
-    image: GAMELOBBY.RealOG,
-    link: '#',
+    image2x: GAMELOBBY.RealOG,
+    image: GAMELOBBY.RealOGMobile,
+    logo: GAMELOBBY.LogoRealOG,
+    tag: "",
+    name: "OG真人",
+    category: "casino",
+    link: "#",
   },
-]
+];
 
 const RealPerson = () => {
+  const isMobile = useContext(MediaQueryContext);
   const swiperRef = useRef(null);
   return (
     <div className={cx("real-person")}>
-      <Swiper ref={swiperRef} loop={true} slidesPerView={4} spaceBetween={30}>
-      {
-        data.map((item, i) => (
-          <SwiperSlide key={i} className={cx('slide-item')}>
-            <img src={item.image}/>
-            <Button active className={cx('action')}>
-              <Link to={item.link}>{item.name}</Link>
-            </Button>
-          </SwiperSlide>
-        ))
-      }
-      </Swiper>
-      <div className={cx("navigation")}>
-        <button
-          className={cx("previous")}
-          onClick={() => swiperRef.current.swiper.slidePrev()}
-        >
-         <Icon name="previous" />
-        </button>
-        <button
-          className={cx("next")}
-          onClick={() => swiperRef.current.swiper.slideNext()}
-        >
-          <Icon name="next" />
-        </button>
-      </div>
+      {!isMobile ? (
+        <React.Fragment>
+          <Swiper
+            ref={swiperRef}
+            loop={true}
+            slidesPerView={4}
+            spaceBetween={30}
+          >
+            {data.map((item, i) => (
+              <SwiperSlide key={i} className={cx("slide-item")}>
+                <img src={item.image2x} />
+                <Button active className={cx("action")}>
+                  <Link to={item.link}>{item.name}</Link>
+                </Button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className={cx("navigation")}>
+            <button
+              className={cx("previous")}
+              onClick={() => swiperRef.current.swiper.slidePrev()}
+            >
+              <Icon name="previous" />
+            </button>
+            <button
+              className={cx("next")}
+              onClick={() => swiperRef.current.swiper.slideNext()}
+            >
+              <Icon name="next" />
+            </button>
+          </div>
+        </React.Fragment>
+      ) : (
+        <ListCardMb data={data} />
+      )}
     </div>
   );
 };

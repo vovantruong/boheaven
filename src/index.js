@@ -3,18 +3,21 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "./styles/GlobalStyles";
+import { MainProvider } from "./Context/MainContext";
 
 // <------------------- IMPORT LIBRARY SWIPER -----------------------> //
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <GlobalStyles>
-      <App />
-    </GlobalStyles>
+    <MainProvider>
+      <GlobalStyles>
+        <App />
+      </GlobalStyles>
+    </MainProvider>
   </React.StrictMode>
 );
 

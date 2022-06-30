@@ -1,3 +1,4 @@
+@import '../../../../styles/globalStyles';
 .bingo{
     display: flex;
     align-items: center;
@@ -5,8 +6,12 @@
     justify-content: space-around;
     flex-wrap: wrap;
 
-    img{
-        margin-bottom: 27px;
+    .img-main{
+        padding: 10px 0;
+        text-align: center;
+        img{
+            margin-bottom: 27px;
+        }
     }
 
     button{
@@ -19,5 +24,13 @@
             justify-content: center;
             color: #fff;
         }
+    }
+
+    @include mobile{
+        padding: 0;
+    }
+
+    .list-game{
+        width: 100%;
     }
 }

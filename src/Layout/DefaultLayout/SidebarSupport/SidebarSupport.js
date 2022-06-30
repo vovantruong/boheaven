@@ -30,7 +30,7 @@ const sidebaritems = [
   },
 ];
 
-const SidebarSupport = () => {
+const SidebarSupport = ({ isMobile }) => {
   const [visible, setVisible] = useState(false);
   const handdleShowPopup = (e) => {
     e.preventDefault();
@@ -39,22 +39,28 @@ const SidebarSupport = () => {
 
   return (
     <div className={cx("sidebar")}>
-      <div className={cx("wrap")}>
-        {sidebaritems?.map((item, index) => (
-          <Link
-            onClick={(e) => item.key === "service" && handdleShowPopup(e)}
-            className={cx("link")}
-            key={index}
-            to={item.link}
-          >
-            <div className={cx("image")}>
-              <img src={item.image} alt="..." />
-            </div>
-            <p>{item.name}</p>
-          </Link>
-        ))}
-      </div>
-      {visible && <PopupService visible={visible} setVisible={setVisible} />}
+      {!isMobile ? (
+        <React.Fragment>
+          <div className={cx("wrap")}>
+            {sidebaritems?.map((item, index) => (
+              <Link
+                onClick={(e) => item.key === "service" && handdleShowPopup(e)}
+                className={cx("link")}
+                key={index}
+                to={item.link}
+              >
+                <div className={cx("image")}>
+                  <img src={item.image} alt="..." />
+                </div>
+                <p>{item.name}</p>
+              </Link>
+            ))}
+          </div>
+          {visible && (
+            <PopupService visible={visible} setVisible={setVisible} />
+          )}
+        </React.Fragment>
+      ) : null}
     </div>
   );
 };
