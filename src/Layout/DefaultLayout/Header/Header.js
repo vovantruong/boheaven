@@ -50,7 +50,7 @@ const navbar = [
   },
   {
     name: "優惠",
-    link: "#",
+    link: "/discount",
     type: "link",
   },
 ];

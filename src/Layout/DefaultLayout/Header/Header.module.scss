@@ -65,6 +65,12 @@
                 }
             }
 
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             &:hover{
                 button, a{
                    @include text-linear();
