@@ -107,7 +107,7 @@ const Electronic = () => {
         data.map((item, i) => (
           <div key={i} className={cx("item")}>
             <div className={cx("item-img")}>
-              <img src={item.image} />
+              <img src={item.image2x} />
             </div>
             <Button className="bg-blue">
               <Link to={item.link}>{item.name}</Link>
