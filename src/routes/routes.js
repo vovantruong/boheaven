@@ -4,6 +4,7 @@ import { configRoutes } from "../config/Routes";
 // layout -------------------------------------------------------------------------------
 import DefaultLayout from "~/Layout/DefaultLayout/DefaultLayout"; // Header & Footer
 import NormalLayout from "~/Layout/NormalLayout/NormalLayout"; // No Header & Footer
+import MobileTabLayout from "~/Layout/MobileTabLayout/MobileTabLayout";
 
 // routes page to navbar menu -----------------------------------------------------------
 import Home from "~/pages/Home/Home";
@@ -51,6 +52,8 @@ const publicRoutes = [
     path: configRoutes.invitefriends,
     components: Invitefriends,
     layout: DefaultLayout,
+    layoutMobile: MobileTabLayout,
+    nameLayoutMobile: '邀請好友',
   },
   {
     path: configRoutes.gameIntroduction,
