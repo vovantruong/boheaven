@@ -1,16 +1,15 @@
-import React,{useContext} from "react";
+import React from "react";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import styles from "./BannerSlide.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { MediaQueryContext } from "~/Context/MainContext";
 
 const cx = classNames.bind(styles);
 
-const BannerSlide = ({ data, className,loop = true, ...props }) => {
-  const isMobile = useContext(MediaQueryContext)
+const BannerSlide = ({ data, className,loop = true,container = false, ...props }) => {
+
   return (
-    <div className={isMobile ? 'container' : ''}>
+    <div className={cx(container ? 'container' : 'banner')}>
       <Swiper
         className={cx("banner-slide", className)}
         slidesPerView={props.slidesPerView ? props.slidesPerView : 1}

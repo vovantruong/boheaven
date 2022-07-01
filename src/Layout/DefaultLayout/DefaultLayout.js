@@ -38,7 +38,7 @@ const DefaultLayout = ({ children }) => {
         <React.Fragment>
           <div className={cx("group-head")}>
             <Header />
-            <BannerSlide data={dataBanner} />
+            <BannerSlide data={dataBanner} container/>
             <Notification isMobile={isMobile} />
           </div>
           {children}

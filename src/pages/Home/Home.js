@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss";
 import Banner from "./Banner/Banner";
-import TitleTag from "~/components/TitleTag/TitleTag";
+import TagTitlePattern from "~/components/TagTitlePattern/TagTitlePattern";
 import GameLobby from "./GameLobby/GameLobby";
 import AboutUs from "./AboutBoheaven/AboutBoheaven";
 import QualityService from "./QualityService/QualityService";
@@ -14,20 +14,19 @@ const cx = classNames.bind(styles);
 
 const Home = () => {
   const isMobile = useContext(MediaQueryContext);
-  // const isMobile = useMediaQuery({query: `(max-width: 480px)`});
-  console.log(isMobile);
+
   return (
     <div className={cx("home-page")}>
       {!isMobile ? (
         <React.Fragment>
           <Banner style={{ marginBottom: "25px" }} />
-          <TitleTag name="遊戲大廳" />
+          <TagTitlePattern name="遊戲大廳" />
           <GameLobby />
-          <TitleTag name="博天堂介紹" />
+          <TagTitlePattern name="博天堂介紹" />
           <AboutUs />
-          <TitleTag name="優質服務" />
+          <TagTitlePattern name="優質服務" />
           <QualityService />
-          <TitleTag name="最新消息" />
+          <TagTitlePattern name="最新消息" />
           <LatestNews />
         </React.Fragment>
       ) : (
