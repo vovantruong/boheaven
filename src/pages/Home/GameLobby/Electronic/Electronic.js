@@ -9,39 +9,6 @@ import ListCardMb from "~/components/ListCardMb/ListCardMb";
 
 const cx = classNames.bind(styles);
 
-// const data = [
-//   {
-//     image: GAMELOBBY.ElectronicDT,
-//     name: "DT電子",
-//     link: "#",
-//   },
-//   {
-//     image: GAMELOBBY.ElectronicBNG,
-//     name: "BNG電子",
-//     link: "#",
-//   },
-//   {
-//     image: GAMELOBBY.ElectronicRTG,
-//     name: "RTG電子",
-//     link: "#",
-//   },
-//   {
-//     image: GAMELOBBY.ElectronicBetter,
-//     name: "必贏電子",
-//     link: "#",
-//   },
-//   {
-//     image: GAMELOBBY.ElectronicSP,
-//     name: "SP電子",
-//     link: "#",
-//   },
-//   {
-//     image: GAMELOBBY.ElectronicPLAY,
-//     name: "PLAY電子",
-//     link: "#",
-//   },
-// ];
-
 const data = [
   {
     image2x: GAMELOBBY.ElectronicDT,

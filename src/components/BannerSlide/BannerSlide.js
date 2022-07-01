@@ -7,14 +7,14 @@ import { MediaQueryContext } from "~/Context/MainContext";
 
 const cx = classNames.bind(styles);
 
-const BannerSlide = ({ data, className, ...props }) => {
+const BannerSlide = ({ data, className,loop = true, ...props }) => {
   const isMobile = useContext(MediaQueryContext)
   return (
     <div className={isMobile ? 'container' : ''}>
       <Swiper
         className={cx("banner-slide", className)}
         slidesPerView={props.slidesPerView ? props.slidesPerView : 1}
-        loop={props.loop ? props.loop : true}
+        loop={loop}
       >
         {data?.map((item, i) =>
           Object.keys(item.link).length > 0 ? (
