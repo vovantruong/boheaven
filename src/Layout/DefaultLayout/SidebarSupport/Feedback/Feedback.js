@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./Feedback.module.scss";
 import classNames from "classnames/bind";
 import InputText from "~/components/InputText/InputText";
@@ -13,7 +13,6 @@ const Feedback = () => {
   const [description, setDescription] = useState("");
   const [selectedFile, setSelectedFile] = useState();
 	const [isSelected, setIsSelected] = useState(false);
-
 
   const changeFile = (e) => {
     setSelectedFile(e.target.files[0]);

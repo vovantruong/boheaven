@@ -5,4 +5,5 @@ export const configRoutes = {
     register: '/register',
     blogsport: '/blog-sport',
     invitefriends: '/invitefriends',
+    gameIntroduction: '/game-introduction',
 }

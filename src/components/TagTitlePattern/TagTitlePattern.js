@@ -1,14 +1,14 @@
 import React from "react";
 import classNames from "classnames/bind";
-import styles from "./Title.Tag.module.scss";
+import styles from "./TagTitlePattern.module.scss";
 import TagLeft from "../../assets/images/global/components/tag-left.svg";
 import TagRight from "../../assets/images/global/components/tag-right.svg";
 
 const cx = classNames.bind(styles);
-const TitleTag = ({ className, name, children }) => {
+const TagTitlePattern = ({ className, name, children, container = true }) => {
   return (
     <div className={cx("title-tag", className)}>
-      <div className="container">
+      <div className={cx(container ? "container" : "wrapper")}>
         <div className={cx("wrap")}>
           <div className={cx("tag-img")}>
             <img src={TagLeft} />
@@ -23,4 +23,4 @@ const TitleTag = ({ className, name, children }) => {
   );
 };
 
-export default TitleTag;
+export default TagTitlePattern;

@@ -1,0 +1,33 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  .text {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding-right: 5px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    background: linear-gradient(180deg, #557ce0 0%, #1e50a6 100%);
+    width: calc(100% - 45px);
+    height: 3px;
+    z-index: -1;
+  }
+
+  &::after {
+    transform: rotateZ(45deg);
+    content: "";
+    bottom: 1px;
+    position: absolute;
+    right: -1px;
+    width: 4px;
+    height: 3px;
+    background: #fff;
+  }
+}

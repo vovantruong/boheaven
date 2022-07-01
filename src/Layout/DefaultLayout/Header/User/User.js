@@ -83,29 +83,32 @@ const dataItemMenu = [
   },
 ];
 
-const User = ({ className }) => {
+const User = ({ className, isMobile }) => {
   const [visible, setVisible] = useState(false);
 
   return (
     <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
       <div className={cx("user-account", className)}>
-        <div className={cx("head")} onClick={() => setVisible(!visible)}>
-          <div className={cx("avatar")}>
-            <img src={Avatar} />
-          </div>
-          <div className={cx("info")}>
-            <div className={cx("top")}>
-              <span className={cx("phone")}>0987123654</span>
-              <Vip className={cx("tag-vip")} name="v1" />
+        {!isMobile ? (
+          <div className={cx("head")} onClick={() => setVisible(!visible)}>
+            <div className={cx("avatar")}>
+              <img src={Avatar} />
             </div>
-            <div className={cx("bottom")}>
-              <span className={cx("balance")}>$3,000.00</span>
-              <span className={cx("member-center")}>
-                會員中心 <BsChevronDown />
-              </span>
+            <div className={cx("info")}>
+              <div className={cx("top")}>
+                <span className={cx("phone")}>0987123654</span>
+                <Vip className={cx("tag-vip")} name="v1" />
+              </div>
+              <div className={cx("bottom")}>
+                <span className={cx("balance")}>$3,000.00</span>
+                <span className={cx("member-center")}>
+                  會員中心 <BsChevronDown />
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        ) : <button className={cx('sign-out-mobile')}>登出</button>}
+
         <div className={cx("message")}>
           <img src={Mail} />
           <span className={cx("tick")}></span>
