@@ -6,6 +6,7 @@ import Service from "../../../assets/images/global/web/service.png";
 import Announcement from "../../../assets/images/global/web/announcement.png";
 import Help from "../../../assets/images/global/web/help.png";
 import PopupService from "./PopupService/PopupService";
+import { imageNavi } from "../../../constants/imageNavigation";
 
 const cx = classNames.bind(styles);
 
@@ -30,38 +31,94 @@ const sidebaritems = [
   },
 ];
 
+const navigationMenu = [
+  {
+    key: "home",
+    name: "首頁",
+    image: imageNavi.Home,
+    imageActive: imageNavi.HomeActive,
+    link: "/",
+  },
+  {
+    key: "gift",
+    name: "優惠",
+    image: imageNavi.Gift,
+    imageActive: imageNavi.GiftActive,
+    link: "/discount",
+  },
+  {
+    key: "transfer",
+    name: "存/提/轉",
+    image: imageNavi.Transfer,
+    imageActive: imageNavi.Transfer,
+    link: "#",
+  },
+  {
+    key: "service",
+    name: "客服",
+    image: imageNavi.Service,
+    imageActive: imageNavi.ServiceActive,
+    link: "#",
+  },
+  {
+    key: "member",
+    name: "我的",
+    image: imageNavi.Member,
+    imageActive: imageNavi.MemberActive,
+    link: "#",
+  },
+];
+
 const SidebarSupport = ({ isMobile }) => {
+
+  const [activeNavigate, setActiveNavigate] = useState(0);
   const [visible, setVisible] = useState(false);
   const handdleShowPopup = (e) => {
     e.preventDefault();
     setVisible(!visible);
   };
 
-  return (
+  return !isMobile ? (
     <div className={cx("sidebar")}>
-      {!isMobile ? (
-        <React.Fragment>
-          <div className={cx("wrap")}>
-            {sidebaritems?.map((item, index) => (
-              <Link
-                onClick={(e) => item.key === "service" && handdleShowPopup(e)}
-                className={cx("link")}
-                key={index}
-                to={item.link}
-              >
-                <div className={cx("image")}>
-                  <img src={item.image} alt="..." />
-                </div>
+      <div className={cx("wrapper")}>
+        {sidebaritems?.map((item, index) => (
+          <Link
+            onClick={(e) => item.key === "service" && handdleShowPopup(e)}
+            className={cx("link")}
+            key={index}
+            to={item.link}
+          >
+            <div className={cx("image")}>
+              <img src={item.image} alt="..." />
+            </div>
+            <p>{item.name}</p>
+          </Link>
+        ))}
+      </div>
+      {visible && <PopupService visible={visible} setVisible={setVisible} />}
+    </div>
+  ) : (
+    <React.Fragment>
+      <div className={cx("space")}></div>
+      <div className={cx("navigation-menu")}>
+        <ul className={cx("list-navigate")}>
+          {navigationMenu.map((item, i) => (
+            <li
+              className={cx("item")}
+              key={i}
+              onClick={() => setActiveNavigate(i)}
+            >
+              <Link to={item.link} className={cx(activeNavigate === i ? 'active-navi' : '')}>
+                <img
+                  src={activeNavigate === i ? item.imageActive : item.image}
+                />
                 <p>{item.name}</p>
               </Link>
-            ))}
-          </div>
-          {visible && (
-            <PopupService visible={visible} setVisible={setVisible} />
-          )}
-        </React.Fragment>
-      ) : null}
-    </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </React.Fragment>
   );
 };
 

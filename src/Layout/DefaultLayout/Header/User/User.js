@@ -83,66 +83,87 @@ const dataItemMenu = [
   },
 ];
 
-const User = ({ className, isMobile }) => {
+const dataUser = {
+  member: '0987123654',
+  balance: '300.00',
+  image: Avatar,
+  vip: 'v1'
+}
+
+const User = ({ className, isMobile, infoMember = false }) => {
   const [visible, setVisible] = useState(false);
 
   return (
     <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
-      <div className={cx("user-account", className)}>
-        {!isMobile ? (
-          <div className={cx("head")} onClick={() => setVisible(!visible)}>
-            <div className={cx("avatar")}>
-              <img src={Avatar} />
-            </div>
-            <div className={cx("info")}>
-              <div className={cx("top")}>
-                <span className={cx("phone")}>0987123654</span>
-                <Vip className={cx("tag-vip")} name="v1" />
+      {!infoMember ? (
+        <div className={cx("user-account", className)}>
+          {!isMobile ? (
+            <div className={cx("head")} onClick={() => setVisible(!visible)}>
+              <div className={cx("avatar")}>
+                <img src={Avatar} />
               </div>
-              <div className={cx("bottom")}>
-                <span className={cx("balance")}>$3,000.00</span>
-                <span className={cx("member-center")}>
-                  會員中心 <BsChevronDown />
-                </span>
+              <div className={cx("info")}>
+                <div className={cx("top")}>
+                  <span className={cx("phone")}>{dataUser.member}</span>
+                  <Vip className={cx("tag-vip")} name={dataUser.vip} />
+                </div>
+                <div className={cx("bottom")}>
+                  <span className={cx("balance")}>{`$${dataUser.balance}`}</span>
+                  <span className={cx("member-center")}>
+                    會員中心 <BsChevronDown />
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ) : <button className={cx('sign-out-mobile')}>登出</button>}
+          ) : (
+            <button className={cx("sign-out-mobile")}>登出</button>
+          )}
 
-        <div className={cx("message")}>
-          <img src={Mail} />
-          <span className={cx("tick")}></span>
-        </div>
-        {visible && (
-          <div className={cx("user-dropdown")}>
-            <div className={cx("top")}>
-              {dataAction.map((item, i) => (
-                <Link key={i} to={item.link} className={cx("link")}>
-                  <div
-                    style={{ background: `${item.bg}` }}
-                    className={cx("action")}
-                  >
-                    {item.key}
-                  </div>
-                  <p>{item.name}</p>
-                </Link>
-              ))}
-            </div>
-            <div className={cx("body")}>
-              {dataItemMenu.map((item, i) => (
-                <Link key={i} to={item.link} className={cx("item")}>
-                  <div className={cx("icon-item")}>{item.icon}</div>
-                  <div className={cx("name")}>
-                    <h4>{item.name}</h4>
-                    {item.description && <p>{`(${item.description})`}</p>}
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <button className={cx("sign-out")}>登出</button>
+          <div className={cx("message")}>
+            <img src={Mail} />
+            <span className={cx("tick")}></span>
           </div>
-        )}
-      </div>
+          {visible && (
+            <div className={cx("user-dropdown")}>
+              <div className={cx("top")}>
+                {dataAction.map((item, i) => (
+                  <Link key={i} to={item.link} className={cx("link")}>
+                    <div
+                      style={{ background: `${item.bg}` }}
+                      className={cx("action")}
+                    >
+                      {item.key}
+                    </div>
+                    <p>{item.name}</p>
+                  </Link>
+                ))}
+              </div>
+              <div className={cx("body")}>
+                {dataItemMenu.map((item, i) => (
+                  <Link key={i} to={item.link} className={cx("item")}>
+                    <div className={cx("icon-item")}>{item.icon}</div>
+                    <div className={cx("name")}>
+                      <h4>{item.name}</h4>
+                      {item.description && <p>{`(${item.description})`}</p>}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <button className={cx("sign-out")}>登出</button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className={cx("info-member")}>
+          <div className={cx("top")}>
+            <span className={cx("phone")}>{`會員: ${dataUser.member}`}</span>
+            <Vip className={cx("tag-vip")} name={dataUser.vip} />
+          </div>
+          <div className={cx("balance")}>
+            {`$${dataUser.balance}`} <BsChevronDown />
+          </div>
+        </div>
+      )}
     </OutsideClickHandler>
   );
 };
