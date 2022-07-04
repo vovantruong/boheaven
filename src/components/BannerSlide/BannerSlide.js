@@ -6,29 +6,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const cx = classNames.bind(styles);
 
-const BannerSlide = ({ data, className, ...props }) => {
+const BannerSlide = ({ data, className,loop = true,container = false, ...props }) => {
+
   return (
-    <Swiper
-      className={cx("banner-slide", className)}
-      slidesPerView={props.slidesPerView ? props.slidesPerView : 1}
-      loop={props.loop ? props.loop : true}
-    >
-      {data?.map((item, i) =>
-        Object.keys(item.link).length > 0 ? (
-          <SwiperSlide key={i}>
-            <Link to={item.link} className={cx("img-banner")}>
-              <img src={item.image} />
-            </Link>
-          </SwiperSlide>
-        ) : (
-          <SwiperSlide key={i}>
-            <div className={cx("img-banner")}>
-              <img src={item} />
-            </div>
-          </SwiperSlide>
-        )
-      )}
-    </Swiper>
+    <div className={cx(container ? 'container' : 'banner')}>
+      <Swiper
+        className={cx("banner-slide", className)}
+        slidesPerView={props.slidesPerView ? props.slidesPerView : 1}
+        loop={loop}
+      >
+        {data?.map((item, i) =>
+          Object.keys(item.link).length > 0 ? (
+            <SwiperSlide key={i} className={cx('slide-item')}>
+              <Link to={item.link} className={cx("img-banner")}>
+                <img src={item.image} />
+              </Link>
+            </SwiperSlide>
+          ) : (
+            <SwiperSlide key={i} className={cx('slide-item')}>
+              <div className={cx("img-banner")}>
+                <img src={item} />
+              </div>
+            </SwiperSlide>
+          )
+        )}
+      </Swiper>
+    </div>
   );
 };
 

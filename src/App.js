@@ -1,26 +1,39 @@
-import { useEffect, Fragment } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MediaQueryContext } from "./Context/MainContext";
 
 import { publicRoutes } from "./routes/routes";
 
 import DefaultLayout from "./Layout/DefaultLayout/DefaultLayout";
 
 function App() {
+  const isMobile = useContext(MediaQueryContext);
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           {publicRoutes?.map((routes, indexParent) => {
             const Page = routes?.components;
-            let Layout = routes?.layout ?? DefaultLayout;
+            const Layout = routes?.layout ?? DefaultLayout;
+            const tabHeaderMobile = routes.tabHeaderMobile ?? true;
+            const titlePageMobile = routes.titlePageMobile ?? '';
             return (
               <Route
                 key={indexParent}
                 path={routes.path}
                 element={
-                  <Layout >
-                    <Page />
-                  </Layout>
+                  isMobile ? (
+                    <Layout
+                      tabHeaderMobile={tabHeaderMobile}
+                      titlePageMobile={titlePageMobile}
+                    >
+                      <Page />
+                    </Layout>
+                  ) : (
+                    <Layout>
+                      <Page />
+                    </Layout>
+                  )
                 }
               >
                 {routes?.children

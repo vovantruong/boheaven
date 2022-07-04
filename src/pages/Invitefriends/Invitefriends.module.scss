@@ -1,151 +1,164 @@
-.img-banner {
-  width: 100%;
-}
-.inner {
-  box-sizing: border-box;
-  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-  border: 3px solid #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  padding: 5px;
-  height: auto;
-  margin: 15px 35px 30px 55px;
+@import "../../styles/globalStyles";
 
-  .title-block {
-    font-family: Noto Sans TC;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    padding: 12px 3px 2px 50px;
-    display: flex;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    text-align: center;
-    gap: 250px;
-    justify-content: center;
-    margin: 15px 25px 20px 0;
-  }
-}
-.inner1 {
-  box-sizing: border-box;
-  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-  border: 3px solid #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@mixin bg-box {
+  background: url("../../assets/images/global/background-main-attactment.jpg")
+    no-repeat center;
+  background-size: cover;
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
-  padding: 5px;
-  height: auto;
-  margin: 15px 35px 30px 55px;
-
-  .title-block1 {
-    font-family: Noto Sans TC;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    padding: 12px 3px 2px 50px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    gap: 250px;
-    margin: 15px 25px 20px 0;
-  }
-  .block {
-    display: flex;
-    .title {
-      margin: 5px 0 0 10px;
-    }
-    .content {
-      background-color: #eaeaea;
-      width: 730px;
-      height: 30px;
-      align-items: center;
-      line-height: 28px;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      margin-top: 7px;
-    }
-    .btn-copy {
-      background: #365a97;
-      color: #ffffff;
-      border-radius: 0px 4px 4px 0px;
-      margin-top: 7px;
-      width: 71px;
-      height: 30px;
-      align-items: center;
-      line-height: 28px;
-    }
-  }
 }
-.inner2 {
-  box-sizing: border-box;
-  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-  border: 3px solid #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  padding: 5px;
-  height: auto;
-  margin: 15px 35px 30px 55px;
 
-  .title-block2 {
-    font-family: Noto Sans TC;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    padding: 12px 3px 2px 50px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    gap: 250px;
-    margin: 15px 25px 20px 0;
-  }
-  .title{
-    padding-bottom: 10px;
-  }
-  .block1 {
-    font-family: Noto Sans TC;
-    padding-top: 10px;
-    .block1-title {
-      margin: 5px 0 0 10px;
-      color: #365A97;
-    }
-    .content {
-      width: 730px;
+.invite-friends {
+  .wrapper {
+    padding: 0 36px;
+    .invation {
+      @include bg-box();
+      padding: 21px 55px 29px;
+      display: flex;
       align-items: center;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
+      justify-content: space-between;
+      text-align: center;
+      margin: 12px 0 17px;
+
+      .info {
+        h4 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #365a97;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: #575757;
+        }
+      }
     }
-  }
-  .block2 {
-    font-family: Noto Sans TC;
-    padding-top: 10px;
-    .block1-title {
-      margin: 5px 0 0 10px;
-      color: #365A97;
+
+    .copy-link {
+      @include bg-box();
+      padding: 25px 33px;
+      margin-bottom: 17px;
+
+      .tag-head{
+        margin-bottom: 17px;
+      }
+      .link {
+        height: 36px;
+        position: relative;
+        background: #eaeaea;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #575757;
+          letter-spacing: 0.01em;
+          overflow-x: auto;
+          width: 75%;
+          padding: 10px 0 10px 10px;
+        }
+
+        .action-copy {
+          background: #365a97;
+          border-radius: 0px 4px 4px 0px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: #fff;
+          padding: 7px 19px;
+          position: absolute;
+          right: 0;
+        }
+      }
     }
-    .content {
-      width: 730px;
-      align-items: center;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
+
+    .activity-details {
+      padding: 25px 0;
+      @include bg-box();
+      margin-bottom: 26px;
+
+      .tag-head{
+        padding-left: 33px;
+        margin-bottom: 24px;
+      }
+
+      .content {
+        padding: 0 58px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+
+        .head, .box-rules{
+          margin-bottom: 30px;
+        }
+
+        .box-rules{
+          &:last-child{
+            margin-bottom: 0;
+          }
+          .title{
+            color: #365A97;
+            margin-bottom: 5px;
+          }
+        }
+
+      }
     }
-  }
-  .block3 {
-    font-family: Noto Sans TC;
-    padding-top: 10px;
-    .block1-title {
-      margin: 5px 0 0 10px;
-      color: #365A97;
+
+    @include mobile{
+      padding: 0;
+
+      .invation{
+        padding: 21px 16px 29px;
+
+        .info{
+          p{
+            font-size: 15px;
+          }
+        }
+      }
+
+      .copy-link{
+        padding: 11px 20px 18px;
+
+        .tag-title-pattern{
+          height: 20px;
+          margin-bottom: 17px;
+          line-height: 25px;
+        }
+      }
+
+      .activity-details{
+        padding: 0;
+        padding: 0;
+        background: unset;
+        box-shadow: unset;
+        border: none;
+        filter: none;
+        .title-head{
+          color: #365a97;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+
+        .content{
+          padding: 0;
+        }
+      }
     }
-    .content {
-      width: 730px;
-      align-items: center;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-    }
+
   }
 }

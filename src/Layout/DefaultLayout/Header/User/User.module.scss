@@ -1,7 +1,13 @@
+@import '../../../../styles/globalStyles';
+
 .user-account {
   display: flex;
   align-items: center;
   position: relative;
+
+  @include mobile{
+    align-items: unset;
+  }
 
   .head {
     display: flex;
@@ -42,6 +48,21 @@
         margin-left: 8px;
       }
     }
+  }
+
+  .sign-out-mobile{
+    width: 70px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #F8E98E 0%, #F2D06F 100%);
+    border-radius: 8px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 13px;
   }
 
   .message {

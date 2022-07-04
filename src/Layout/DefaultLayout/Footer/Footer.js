@@ -47,7 +47,7 @@ const tabLink = [
   },
   {
     name: "遊戲介紹",
-    link: "#",
+    link: "/game-introduction",
   },
   {
     name: "娛樂城文章分享",

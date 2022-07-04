@@ -1,8 +1,19 @@
+@import '../../../../styles/globalStyles';
 .chess{
     display: flex;
     align-items: center;
+    padding-top: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    .img-main{
+        padding: 10px 0;
+        text-align: center;
+
+        img{
+            margin-bottom: 10px;
+        }
+    }
 
     button{
         margin: 0 auto;
@@ -14,5 +25,15 @@
             justify-content: center;
             color: #fff;
         }
+    }
+
+    // <------------------- Mobile --------------------- > //
+
+    @include mobile{
+        padding: 0;
+    }
+
+    .list-game{
+        width: 100%;
     }
 }

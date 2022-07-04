@@ -1,0 +1,21 @@
+.tag-title{
+
+    .name{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;  
+        color: #575757;
+        display: inline-flex;
+        overflow: hidden;
+        margin-bottom: 6px;
+        margin-top: 2px;
+        padding: 0 6px;
+    }
+    
+    .wrapper-center{
+        text-align: center;
+        .name{
+            color: #365A97;
+        }
+    }
+}

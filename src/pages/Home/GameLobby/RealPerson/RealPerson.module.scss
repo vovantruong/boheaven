@@ -1,3 +1,4 @@
+@import '../../../../styles/globalStyles';
 .real-person{
     position: relative;
     padding-top: 65px;
@@ -32,5 +33,9 @@
             position: absolute;
             right: 0;
         }
+    }
+
+    @include mobile{
+        padding: 0;
     }
 }

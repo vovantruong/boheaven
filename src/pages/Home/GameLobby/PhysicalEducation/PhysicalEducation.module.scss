@@ -1,30 +1,51 @@
-.sports{
-    display: flex;
-    align-items: center;
-    padding-top: 10px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+@import "../../../../styles/globalStyles";
 
-    .img-main{
-        background: url('../../../../assets/images/pages/home/game-lobby/physical/place-sports.png') no-repeat;
-        background-position-y: 50px;
-        height: 200px;
-        background-size: cover;
-    }
+.sports {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-    img{
-        margin-bottom: 10px;
+  .img-main {
+    span {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      width: 50%;
+      background: url("../../../../assets/images/pages/home/game-lobby/physical/place-sports.png")
+        no-repeat;
+      height: 160px;
+      background-position: top;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
     }
+    padding: 10px 0;
+    text-align: center;
 
-    button{
-        margin: 0 auto;
-        a{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-        }
+    img {
+      margin-bottom: 10px;
     }
+  }
+
+  button {
+    margin: 0 auto;
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+
+  .list-game {
+    width: 100%;
+  }
 }
