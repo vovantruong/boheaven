@@ -4,7 +4,6 @@ import { configRoutes } from "../config/Routes";
 // layout -------------------------------------------------------------------------------
 import DefaultLayout from "~/Layout/DefaultLayout/DefaultLayout"; // Header & Footer
 import NormalLayout from "~/Layout/NormalLayout/NormalLayout"; // No Header & Footer
-import MobileTabLayout from "~/Layout/MobileTabLayout/MobileTabLayout";
 
 // routes page to navbar menu -----------------------------------------------------------
 import Home from "~/pages/Home/Home";
@@ -17,6 +16,16 @@ import Blogsport from "~/pages/Blogsport/Blogsport";
 import Invitefriends from "~/pages/Invitefriends/Invitefriends";
 import GameIntroduction from "~/pages/GameIntroduction/GameIntroduction";
 import Discount from "~/pages/Discount/Discount";
+
+/**
+ *  Parameter Object: 
+ * 1. path: (address link - string)
+ * 2. components: (React components)
+ * 3. layout: (React conponents)
+ * 4. tabHeaderMobile: (boolean)
+ * 5. titlePageMobile: (string)
+ * ...
+ */
 
 const publicRoutes = [
   // Home
@@ -52,15 +61,15 @@ const publicRoutes = [
     path: configRoutes.invitefriends,
     components: Invitefriends,
     layout: DefaultLayout,
-    layoutMobile: MobileTabLayout,
-    nameLayoutMobile: '邀請好友',
+    tabHeaderMobile: false,
+    titlePageMobile: '邀請好友',
   },
   {
     path: configRoutes.gameIntroduction,
     components: GameIntroduction,
     layout: DefaultLayout,
-    layoutMobile: MobileTabLayout,
-    nameLayoutMobile: '遊戲介紹'
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
   },
 ];
 
