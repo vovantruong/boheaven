@@ -3,6 +3,7 @@ import styles from "./Blogsport.module.scss";
 import className from "classnames/bind";
 import CasinoArt from "./CasinoArt/CasinoArt";
 import Bacarat from "./Baccarat/Bacarat";
+import { useMediaQuery } from "react-responsive";
 
 const cx = className.bind(styles);
 const tabBlogSport = [
@@ -39,6 +40,7 @@ const tabBlogSport = [
 function Blogsport() {
   const [active, setActive] = useState(0);
   const [renderTab, setRenderTab] = useState("casinoarticles");
+//   const isMobile = useMediaQuery({query: '(max-width: 480px)'} );
 
   const handleChangeTab = (index, key) => {
     setActive(index);

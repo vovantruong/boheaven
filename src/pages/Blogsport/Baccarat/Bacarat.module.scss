@@ -3,8 +3,8 @@
   height: 40px;
   align-items: center;
   background: #365a97;
-  margin-left: 67px;
-  margin-right: 42px;
+  margin-left: 60px;
+  margin-right: 43px;
   .title {
     font-family: "Roboto";
     font-style: normal;
@@ -25,19 +25,21 @@
   }
 }
 .tableTab {
+  margin-left: 61px;
+  margin-right: 40px;
   .block {
     display: flex;
-
+    font-family: "Roboto";
     .subject {
       width: 74%;
-      padding-left: 100px;
+      padding-left: 50px;
       padding-top: 10px;
       text-align: left;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
     }
     .date {
       width: 30%;
-      padding-left: 55px;
+      padding-left: 65px;
       padding-top: 5px;
       padding-right: 45px;
       letter-spacing: 1px;
@@ -54,7 +56,7 @@
       padding: 8px;
     }
     tr:nth-child(even) {
-        background: #EAEAEA;
+      background: #EAEAEA;
     }
   }
 }

@@ -1,6 +1,118 @@
-.wrapper{
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// @mixin mobile {
+//   @media (max-width: #{$mobile -width - 1px}) {
+//     .wrapper {
+//       width: 60%;
+//     }
+//     .fiel {
+//       display: flex;
+//       height: 40px;
+//       align-items: center;
+//       background: #365a97;
+//       .title {
+//         font-family: "Roboto";
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 16px;
+//         line-height: 20px;
+//         color: #ffffff;
+//         padding-left: 100px;
+//       }
+//       .time {
+//         font-family: "Roboto";
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 16px;
+//         line-height: 20px;
+//         color: #ffffff;
+//         padding-left: 120px;
+//       }
+//     }
+//     .tableTab {
+//       .block1 {
+//         display: flex;
+//         font-family: "Roboto";
+//         .subject {
+//           width: 70%;
+//           /* padding-left: 60px; */
+//           padding-top: 10px;
+//           text-align: left;
+//           letter-spacing: 3px;
+//           font-family: "Roboto";
+//         }
+//         .date {
+//           width: 22%;
+//           padding-left: 55px;
+//           padding-top: 5px;
+//           padding-right: 45px;
+//           letter-spacing: 1px;
+//           font-family: "Roboto";
+//         }
+//         table {
+//           font-family: "Roboto";
+//           border-collapse: collapse;
+//           width: 100%;
+//         }
+
+//         td,
+//         th {
+//           text-align: left;
+//           padding: 8px;
+//         }
+//         tr:nth-child(even) {
+//           background: #EAEAEA;
+//         }
+//       }
+//     }
+//     .block-trans2 {
+//       padding: 10px 5px 10px 35px;
+//       text-align: center;
+
+//       &__ont1 {
+//         opacity: 0.6;
+//       }
+//       .block {
+//         display: flex;
+//         padding-left: 300px;
+//         margin-top: 15px;
+//         margin-bottom: 60px;
+//         p {
+//           border: 1px solid;
+//           padding: 1px 12px 4px 7px;
+//           text-align: center;
+//           justify-content: center;
+//           margin-left: 3px;
+//           border-radius: 5px;
+//           line-height: 20px;
+//           font-weight: 700;
+//           font-size: 14px;
+//           font-family: "SF Pro Text";
+//         }
+//       }
+//     }
+//   }
+// }
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.wrapper {
   width: 90%;
-    margin-left: 61px;
+  margin-left: 61px;
 }
 .fiel {
   display: flex;
@@ -29,13 +141,13 @@
 .tableTab {
   .block1 {
     display: flex;
-
+    font-family: "Roboto";
     .subject {
       width: 78%;
       padding-left: 60px;
       padding-top: 10px;
-      text-align: left;
       letter-spacing: 3px;
+      font-family: "Roboto";
     }
     .date {
       width: 22%;
@@ -43,23 +155,23 @@
       padding-top: 5px;
       padding-right: 45px;
       letter-spacing: 1px;
+      font-family: "Roboto";
     }
     table {
       font-family: "Roboto";
       border-collapse: collapse;
       width: 100%;
     }
-  
+
     td,
     th {
       text-align: left;
       padding: 8px;
     }
     tr:nth-child(even) {
-      background-color: #928484;
+      background: #EAEAEA;
     }
   }
-  
 }
 .block-trans2 {
   padding: 10px 5px 10px 35px;
@@ -74,16 +186,16 @@
     margin-top: 15px;
     margin-bottom: 60px;
     p {
-        border: 1px solid;
-        padding: 1px 12px 4px 7px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 3px;
-        border-radius: 5px;
-        line-height: 20px;
-        font-weight: 700;
-        font-size: 14px;
-        font-family: "SF Pro Text";
+      border: 1px solid;
+      padding: 1px 12px 4px 7px;
+      text-align: center;
+      justify-content: center;
+      margin-left: 3px;
+      border-radius: 5px;
+      line-height: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: "SF Pro Text";
     }
   }
 }
