@@ -59,6 +59,8 @@ const publicRoutes = [
     path: configRoutes.gameIntroduction,
     components: GameIntroduction,
     layout: DefaultLayout,
+    layoutMobile: MobileTabLayout,
+    nameLayoutMobile: '遊戲介紹'
   },
 ];
 
