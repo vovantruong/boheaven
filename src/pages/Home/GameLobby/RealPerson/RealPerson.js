@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useState } from "react";
 import styles from "./RealPerson.module.scss";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
@@ -8,6 +8,8 @@ import Icon from "~/constants/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MediaQueryContext } from "~/Context/MainContext";
 import ListCardMb from "~/components/ListCardMb/ListCardMb";
+import Modal from "~/components/Modal/Modal";
+import PopupFastTransfer from "./PopupFastTransfer/PopupFastTransfer";
 
 const cx = classNames.bind(styles);
 
@@ -69,46 +71,60 @@ const data = [
 ];
 
 const RealPerson = () => {
+  const [visible, setVisible] = useState(false);
   const isMobile = useContext(MediaQueryContext);
   const swiperRef = useRef(null);
+
+  const handleShowPopup = (item) => {
+    setVisible(true);
+  };
   return (
-    <div className={cx("real-person")}>
-      {!isMobile ? (
-        <React.Fragment>
-          <Swiper
-            ref={swiperRef}
-            loop={true}
-            slidesPerView={4}
-            spaceBetween={30}
-          >
-            {data.map((item, i) => (
-              <SwiperSlide key={i} className={cx("slide-item")}>
-                <img src={item.image2x} />
-                <Button active className={cx("action")}>
-                  <Link to={item.link}>{item.name}</Link>
-                </Button>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className={cx("navigation")}>
-            <button
-              className={cx("previous")}
-              onClick={() => swiperRef.current.swiper.slidePrev()}
+    <>
+      <div className={cx("real-person")}>
+        {!isMobile ? (
+          <React.Fragment>
+            <Swiper
+              ref={swiperRef}
+              loop={true}
+              slidesPerView={4}
+              spaceBetween={30}
             >
-              <Icon name="previous" />
-            </button>
-            <button
-              className={cx("next")}
-              onClick={() => swiperRef.current.swiper.slideNext()}
-            >
-              <Icon name="next" />
-            </button>
-          </div>
-        </React.Fragment>
-      ) : (
-        <ListCardMb data={data} />
-      )}
-    </div>
+              {data.map((item, i) => (
+                <SwiperSlide key={i} className={cx("slide-item")}>
+                  <img src={item.image2x} />
+                  <Button
+                    active
+                    className={cx("action")}
+                    onClick={() => handleShowPopup(item)}
+                  >
+                    <Link to={item.link}>{item.name}</Link>
+                  </Button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className={cx("navigation")}>
+              <button
+                className={cx("previous")}
+                onClick={() => swiperRef.current.swiper.slidePrev()}
+              >
+                <Icon name="previous" />
+              </button>
+              <button
+                className={cx("next")}
+                onClick={() => swiperRef.current.swiper.slideNext()}
+              >
+                <Icon name="next" />
+              </button>
+            </div>
+          </React.Fragment>
+        ) : (
+          <ListCardMb data={data} />
+        )}
+      </div>
+      <Modal title="快速轉帳" visible={visible} onCloseModal={() => setVisible(false)}>
+        <PopupFastTransfer />
+      </Modal>
+    </>
   );
 };
 

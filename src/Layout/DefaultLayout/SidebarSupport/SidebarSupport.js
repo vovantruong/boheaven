@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./SidebarSupport.module.scss";
 import Service from "../../../assets/images/global/web/service.png";
@@ -70,9 +70,8 @@ const navigationMenu = [
 ];
 
 const SidebarSupport = ({ isMobile }) => {
-
-  const [activeNavigate, setActiveNavigate] = useState(0);
   const [visible, setVisible] = useState(false);
+
   const handdleShowPopup = (e) => {
     e.preventDefault();
     setVisible(!visible);
@@ -95,28 +94,31 @@ const SidebarSupport = ({ isMobile }) => {
           </Link>
         ))}
       </div>
-      {visible && <PopupService visible={visible} setVisible={setVisible} />}
+      {/* {visible && <PopupService visible={visible} setVisible={setVisible} />} */}
     </div>
   ) : (
+    // Navigate menu for mobie version
     <React.Fragment>
       <div className={cx("space")}></div>
       <div className={cx("navigation-menu")}>
-        <ul className={cx("list-navigate")}>
-          {navigationMenu.map((item, i) => (
-            <li
-              className={cx("item")}
-              key={i}
-              onClick={() => setActiveNavigate(i)}
-            >
-              <Link to={item.link} className={cx(activeNavigate === i ? 'active-navi' : '')}>
-                <img
-                  src={activeNavigate === i ? item.imageActive : item.image}
-                />
+        <nav className={cx("list-navigate")}>
+          {navigationMenu.map((item, i) =>
+            item.key !== "transfer" ? (
+              <NavLink
+                // className={({ isActive }) => (isActive ? cx("active-navi") : "")}
+                to={item.link}
+              >
+                <img src={item.image} />
                 <p>{item.name}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+              </NavLink>
+            ) : (
+              <button>
+                <img src={item.image} />
+                <p>{item.name}</p>
+              </button>
+            )
+          )}
+        </nav>
       </div>
     </React.Fragment>
   );
