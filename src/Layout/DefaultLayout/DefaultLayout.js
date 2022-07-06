@@ -10,6 +10,7 @@ import { imagesBanner } from "~/constants/imagesBanner";
 import BannerSlide from "~/components/BannerSlide/BannerSlide";
 import { IoCaretBack } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import User from "./Header/User/User";
 
 const cx = classNames.bind(styles);
 
@@ -39,11 +40,14 @@ const DefaultLayout = ({ children, tabHeaderMobile, titlePageMobile }) => {
       ) : (
         <React.Fragment>
           {tabHeaderMobile ? (
-            <div className={cx("group-head")}>
-              <Header />
-              <BannerSlide data={dataBanner} container />
-              <Notification isMobile={isMobile} />
-            </div>
+            <React.Fragment>
+              <div className={cx("group-head")}>
+                <Header />
+                <BannerSlide data={dataBanner} container />
+                <Notification isMobile={isMobile} />
+              </div>
+              <User isMobile={true} infoMember/>
+            </React.Fragment>
           ) : (
             <div className={cx("tab-head")}>
               <button className={cx("back")}>

@@ -9,6 +9,7 @@ const InputText = ({
   label,
   children,
   horizontal,
+  placeholder,
   ...props
 }) => {
   return (
@@ -21,7 +22,7 @@ const InputText = ({
         className={cx("wrap")}
       >
         {props.icon && <div className={cx("icon")}>{props.icon}</div>}
-        <input className={cx("input")} {...props} />
+        <input className={cx("input")} {...props} placeholder={placeholder}/>
         {children && children}
       </div>
     </div>
