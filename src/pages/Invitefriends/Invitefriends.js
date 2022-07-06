@@ -144,8 +144,7 @@ function Invitefriends() {
               <p>{linkCopy}</p>
               <button
                 onClick={() => navigator.clipboard.writeText(linkCopy)}
-                className={cx("action-copy")}
-              >
+                className={cx("action-copy")}>
                 複製
               </button>
             </div>

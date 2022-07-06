@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import styles from "./Blogsport.module.scss";
 import className from "classnames/bind";
 import CasinoArt from "./CasinoArt/CasinoArt";
 import Bacarat from "./Baccarat/Bacarat";
-import { useMediaQuery } from "react-responsive";
+import { MediaQueryContext } from "~/Context/MainContext";
 
 const cx = className.bind(styles);
 const tabBlogSport = [
@@ -40,26 +40,25 @@ const tabBlogSport = [
 function Blogsport() {
   const [active, setActive] = useState(0);
   const [renderTab, setRenderTab] = useState("casinoarticles");
-//   const isMobile = useMediaQuery({query: '(max-width: 480px)'} );
+  const isMobile = useContext(MediaQueryContext);
 
   const handleChangeTab = (index, key) => {
     setActive(index);
     setRenderTab(key);
   };
   return (
-    <div className={cx("container")}>
-      <div className={cx("wrapper")}>
+    <div className={cx(!isMobile ? "container" : "container-mobile")}>
+      <div className={cx(!isMobile ?"wrapper" : "wrappermobile")}>
         <div>
           <p className={cx("blogsport-title")}>部落格文章</p>
         </div>
         <div className={cx("inner")}>
-          <div className={cx("title-block")}>
+          <div className={cx(!isMobile ?"title-block" : "title-blockmobile")}>
             {tabBlogSport.map((item, index) => (
               <div
                 onClick={() => handleChangeTab(index, item.key)}
                 className={cx("with-title", index === active ? "active" : "")}
-                key={index}
-              >
+                key={index} >
                 {item.display}
               </div>
             ))}

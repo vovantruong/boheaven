@@ -6,4 +6,5 @@ export const configRoutes = {
     blogsport: '/blog-sport',
     invitefriends: '/invitefriends',
     gameIntroduction: '/game-introduction',
+    allbet:'/allbet',
 }

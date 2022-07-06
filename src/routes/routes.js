@@ -16,6 +16,7 @@ import Blogsport from "~/pages/Blogsport/Blogsport";
 import Invitefriends from "~/pages/Invitefriends/Invitefriends";
 import GameIntroduction from "~/pages/GameIntroduction/GameIntroduction";
 import Discount from "~/pages/Discount/Discount";
+import AllBet from "~/pages/GameIntroduction/AllBet/AllBet";
 
 /**
  *  Parameter Object: 
@@ -56,6 +57,8 @@ const publicRoutes = [
     path: configRoutes.blogsport,
     components: Blogsport,
     layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '部落格',
   },
   {
     path: configRoutes.invitefriends,
@@ -67,6 +70,13 @@ const publicRoutes = [
   {
     path: configRoutes.gameIntroduction,
     components: GameIntroduction,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.allbet,
+    components: AllBet,
     layout: DefaultLayout,
     tabHeaderMobile: false,
     titlePageMobile: '遊戲介紹'

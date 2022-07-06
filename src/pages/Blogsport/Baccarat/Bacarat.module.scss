@@ -1,3 +1,4 @@
+@import '../../../styles/globalStyles';
 .fiel {
   display: flex;
   height: 40px;
@@ -12,7 +13,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-    padding-left: 150px;
+    padding-left: 190px;
   }
   .time {
     font-family: "Roboto";
@@ -21,7 +22,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-    padding-left: 360px;
+    padding-left: 540px;
   }
 }
 .tableTab {
@@ -56,34 +57,98 @@
       padding: 8px;
     }
     tr:nth-child(even) {
-      background: #EAEAEA;
+      background: #eaeaea;
     }
   }
 }
 .block-trans2 {
-    padding: 10px 5px 10px 35px;
-    text-align: center;
-  
-    &__ont1 {
-      opacity: 0.6;
-    }
-    .block {
-      display: flex;
-      padding-left: 300px;
-      margin-top: 15px;
-      margin-bottom: 60px;
-      p {
-          border: 1px solid;
-          padding: 1px 12px 4px 7px;
-          text-align: center;
-          justify-content: center;
-          margin-left: 3px;
-          border-radius: 5px;
-          line-height: 20px;
-          font-weight: 700;
-          font-size: 14px;
-          font-family: "SF Pro Text";
-      }
+  padding: 10px 5px 10px 35px;
+  text-align: center;
+
+  &__ont1 {
+    opacity: 0.6;
+  }
+  .block {
+    display: flex;
+    padding-left: 300px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    p {
+      border: 1px solid;
+      padding: 1px 12px 4px 7px;
+      text-align: center;
+      justify-content: center;
+      margin-left: 3px;
+      border-radius: 5px;
+      line-height: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: "SF Pro Text";
     }
   }
-  
+}
+
+/////////////////Responsive Mobile//////////////////
+@include mobile {
+  .wrapper {
+    margin: 0;
+    padding: 0;
+    .fiel {
+      height: 40px;
+      background: #365a97;
+      width: 370px;
+      margin: 10px;
+    padding: 0;
+      .title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        padding-left: 100px;
+      }
+      .time {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        padding-left: 170px;
+      }
+    }
+    .tableTabMobile {
+      padding-left: 20px;
+      
+      letter-spacing: 2px;
+      font-family: "Roboto";
+      .subject {
+        width: 60%;
+        padding-top: 10px;
+        font-family: "Roboto";
+      }
+      .date {
+        width: 35%;
+        padding-left: 25px;
+      }
+      table {
+        font-family: "Roboto";
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background: #eaeaea;
+      }
+    }
+    .block-trans2 {
+      visibility: hidden;
+    }
+  }
+}

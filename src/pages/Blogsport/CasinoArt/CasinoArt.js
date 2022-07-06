@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CasinoArt.module.scss";
 import className from "classnames/bind";
-
+import { MediaQueryContext } from "~/Context/MainContext";
 const cx = className.bind(styles);
 const tabBlogSportList = [
   {
@@ -11,17 +11,16 @@ const tabBlogSportList = [
 ];
 
 function CasinoArt() {
+  const isMobile = useContext(MediaQueryContext);
   return (
     <div className={cx("wrapper")}>
       <div className={cx("fiel")}>
         <div className={cx("title")}>標題</div>
         <div className={cx("time")}>時間</div>
       </div>
-      <div className={cx("tableTab")}>
+      <div className={cx(!isMobile ? "tableTab" : "tableTabMobile")}>
         {tabBlogSportList.map((item, i) => (
           <div className={cx("block1")} key={i}>
-            {/* <div className={cx("subject")}>{item.Subject}</div>
-              <div className={cx("date")}>{item.Date}</div> */}
             <table>
               <tr>
                 <th className={cx("subject")}>{item.Subject}</th>
