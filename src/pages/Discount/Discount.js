@@ -40,13 +40,13 @@ const Discount = () => {
               {item}
             </Button>
           ) : (
-            <buton
+            <button
               key={i}
               onClick={() => handeActive(i)}
               className={cx(i === active ? "active" : "")}
             >
               {item}
-            </buton>
+            </button>
           )
         )}
       </div>

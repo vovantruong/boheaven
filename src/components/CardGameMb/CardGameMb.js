@@ -14,25 +14,30 @@ const CardGameMB = ({
   category,
   link,
   col2,
+  onClick,
   ...props
 }) => {
   return (
-    <li className={cx("card-item" ,className, col2 ? 'card-col-2' : '')}>
-      <Link to={link ? link : '#'} className={cx("group-item")}>
-        <div className={cx("info-game")}>
-          <div className={cx("logo")}>
-            <img src={logo} alt="..." />
+    <li className={cx("card-item", className, col2 ? "card-col-2" : "")}>
+      <button className={cx('btn-item')} onClick={onClick}>
+        <Link to={link ? link : "#"} className={cx("group-item")}>
+          <div className={cx("info-game")}>
+            <div className={cx("logo")}>
+              <img src={logo} alt="..." />
+            </div>
+            <p className={cx("title")}>{name ? name : "No name"}</p>
+            <p className={cx("tag")}>{tag ? tag : "No tag"}</p>
           </div>
-          <p className={cx("title")}>{name ? name : 'No name'}</p>
-          <p className={cx("tag")}>{tag ? tag : 'No tag'}</p>
-        </div>
-        <div className={cx("banner-game")}>
-          <h4 className={cx("category")}>{category ? category : 'No category'}</h4>
-          <div className={cx("image")}>
-            <img src={image} alt="..." />
+          <div className={cx("banner-game")}>
+            <h4 className={cx("category")}>
+              {category ? category : "No category"}
+            </h4>
+            <div className={cx("image")}>
+              <img src={image} alt="..." />
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </button>
     </li>
   );
 };

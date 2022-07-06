@@ -6,7 +6,9 @@ import Service from "../../../assets/images/global/web/service.png";
 import Announcement from "../../../assets/images/global/web/announcement.png";
 import Help from "../../../assets/images/global/web/help.png";
 import PopupService from "./PopupService/PopupService";
+import Feedback from "./Feedback/Feedback";
 import { imageNavi } from "../../../constants/imageNavigation";
+import Modal from "~/components/Modal/Modal";
 
 const cx = classNames.bind(styles);
 
@@ -71,6 +73,7 @@ const navigationMenu = [
 
 const SidebarSupport = ({ isMobile }) => {
   const [visible, setVisible] = useState(false);
+  const [changeFeedbackService, setChangeFeedbackService] = useState(false);
 
   const handdleShowPopup = (e) => {
     e.preventDefault();
@@ -78,24 +81,38 @@ const SidebarSupport = ({ isMobile }) => {
   };
 
   return !isMobile ? (
-    <div className={cx("sidebar")}>
-      <div className={cx("wrapper")}>
-        {sidebaritems?.map((item, index) => (
-          <Link
-            onClick={(e) => item.key === "service" && handdleShowPopup(e)}
-            className={cx("link")}
-            key={index}
-            to={item.link}
-          >
-            <div className={cx("image")}>
-              <img src={item.image} alt="..." />
-            </div>
-            <p>{item.name}</p>
-          </Link>
-        ))}
+    <React.Fragment>
+      <div className={cx("sidebar")}>
+        <div className={cx("wrapper")}>
+          {sidebaritems?.map((item, index) => (
+            <Link
+              onClick={(e) => item.key === "service" && handdleShowPopup(e)}
+              className={cx("link")}
+              key={index}
+              to={item.link}
+            >
+              <div className={cx("image")}>
+                <img src={item.image} alt="..." />
+              </div>
+              <p>{item.name}</p>
+            </Link>
+          ))}
+        </div>
       </div>
-      {/* {visible && <PopupService visible={visible} setVisible={setVisible} />} */}
-    </div>
+      <Modal
+        visible={visible}
+        onCloseModal={() => {setVisible(false);setChangeFeedbackService(false)}}
+        title={changeFeedbackService ? "意見反饋" : "聯絡我們"}
+      >
+        {changeFeedbackService ? (
+          <Feedback />
+        ) : (
+          <PopupService
+            onChangeFeedback={() => setChangeFeedbackService(true)}
+          />
+        )}
+      </Modal>
+    </React.Fragment>
   ) : (
     // Navigate menu for mobie version
     <React.Fragment>
@@ -107,12 +124,13 @@ const SidebarSupport = ({ isMobile }) => {
               <NavLink
                 // className={({ isActive }) => (isActive ? cx("active-navi") : "")}
                 to={item.link}
+                key={i}
               >
                 <img src={item.image} />
                 <p>{item.name}</p>
               </NavLink>
             ) : (
-              <button>
+              <button key={i}>
                 <img src={item.image} />
                 <p>{item.name}</p>
               </button>

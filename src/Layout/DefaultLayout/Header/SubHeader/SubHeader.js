@@ -19,7 +19,7 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                 subMenu.id === id &&
                 subMenu.data.map((item, index) =>
                   subMenu.data?.length < 3 ? (
-                    <div className={cx("item-short-data")}>
+                    <div key={index} className={cx("item-short-data")}>
                         <img src={item.image} />
                       <div className={cx("action")}>
                         <div className={cx("info")}>

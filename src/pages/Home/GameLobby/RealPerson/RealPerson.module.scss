@@ -39,3 +39,21 @@
         padding: 0;
     }
 }
+
+.transfer-modal{
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 100%) !important;
+    
+    @include mobile{
+        animation: translate .6s forwards;
+        top: 0;
+    }
+
+    @keyframes translate {
+        0%{
+            top: -100%;
+        }
+        100%{
+            top: 0;
+        }
+    }
+}

@@ -72,11 +72,13 @@ const data = [
 
 const RealPerson = () => {
   const [visible, setVisible] = useState(false);
+  const [dataTransfer, setDataTransfer] = useState([]);
   const isMobile = useContext(MediaQueryContext);
   const swiperRef = useRef(null);
 
   const handleShowPopup = (item) => {
     setVisible(true);
+    setDataTransfer(item);
   };
   return (
     <>
@@ -118,11 +120,17 @@ const RealPerson = () => {
             </div>
           </React.Fragment>
         ) : (
-          <ListCardMb data={data} />
+          <ListCardMb onClick={handleShowPopup} data={data} /> // Is mobile re-render
         )}
       </div>
-      <Modal title="快速轉帳" visible={visible} onCloseModal={() => setVisible(false)}>
-        <PopupFastTransfer />
+      <Modal
+        title="快速轉帳"
+        visible={visible}
+        onCloseModal={() => setVisible(false)}
+        contentClassName={cx("transfer-modal")}
+        className={cx("modal-transfer")}
+      >
+        <PopupFastTransfer data={dataTransfer} />
       </Modal>
     </>
   );
