@@ -39,6 +39,8 @@ const publicRoutes = [
     path: configRoutes.discount,
     components: Discount,
     layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '優惠活動'
   },
   // Login
   {

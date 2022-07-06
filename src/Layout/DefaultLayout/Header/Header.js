@@ -1,7 +1,7 @@
-import React, { useState , useContext} from "react";
+import React, { useState, useContext } from "react";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import User from "./User/User";
 import Control from "./Control/Control";
 import { MediaQueryContext } from "~/Context/MainContext";
@@ -9,14 +9,15 @@ import { MediaQueryContext } from "~/Context/MainContext";
 import Logo from "../../../assets/images/global/boheaven.png";
 import ArrowDown from "../../../assets/images/global/header/arrow-down-polygon.png";
 import ArrowUp from "../../../assets/images/global/header/arrow-up-polygon.png";
+import SubHeader from "./SubHeader/SubHeader";
 
 const cx = classNames.bind(styles);
 
 const navbar = [
   {
     name: "首頁",
-    link: "#",
-    type: "button",
+    link: "/",
+    type: "link",
   },
   {
     name: "真人",
@@ -56,11 +57,18 @@ const navbar = [
 ];
 
 const Header = () => {
-  const [active, setActive] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const [idSub, setIdSub] = useState(null);
 
   const isMobile = useContext(MediaQueryContext);
+
+  const handleOnClick = (index) => {
+    setVisible(true);
+    setIdSub(index);
+  };
+
   return (
-    <div className={cx("header")}>
+    <div className={cx("header")} onMouseLeave={() => setVisible(false)}>
       <div className="container">
         <div className={cx("wrapper")}>
           <div className={cx("navbar")}>
@@ -70,35 +78,35 @@ const Header = () => {
               </Link>
             </div>
             {!isMobile ? (
-              <ul className={cx("nav-list")}>
-                {navbar.map((item, index) => (
-                  <li
-                    onClick={() => setActive(index)}
-                    key={index}
-                    className={cx("nav-item", active === index ? "active" : "")}
-                  >
-                    {item.type === "button" ? (
-                      <button>
-                        <span>
-                          {item.name}
-                          {index !== 0 ? (
-                            <img src={active === index ? ArrowUp : ArrowDown} />
-                          ) : (
-                            ""
-                          )}
-                        </span>
-                      </button>
-                    ) : (
-                      <button>
-                        <Link to={item.link}>
-                          {item.name}
-                          <img src={ArrowDown} />
-                        </Link>
-                      </button>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <nav className={cx("nav-list")}>
+                {navbar.map((item, index) =>
+                  item.type === "button" ? (
+                    <button
+                      key={index}
+                      className={cx("nav-item")}
+                      onClick={() => handleOnClick(index)}
+                      onMouseEnter={() => handleOnClick(index)}
+                    >
+                      <span>
+                        {item.name}
+                        {index !== 0 ? <img src={ArrowDown} /> : ""}
+                      </span>
+                    </button>
+                  ) : (
+                    <NavLink
+                      key={index}
+                      className={({ isActive }) =>
+                        isActive ? cx("active", "nav-item") : cx("nav-item")
+                      }
+                      to={item.link}
+                      onMouseEnter={() => setVisible(false)}
+                    >
+                      {item.name}
+                      {index > 0 && <img src={ArrowDown} />}
+                    </NavLink>
+                  )
+                )}
+              </nav>
             ) : null}
           </div>
           {/* If login success render User  */}
@@ -107,6 +115,12 @@ const Header = () => {
           {/* <Control /> */}
         </div>
       </div>
+      <SubHeader
+        style={visible ? { display: "block" } : { display: "none" }}
+        visible={visible}
+        setVisible={setVisible}
+        id={idSub}
+      />
     </div>
   );
 };
