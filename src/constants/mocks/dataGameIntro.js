@@ -55,7 +55,7 @@ export const dataGame = [
         name: "必贏電子",
         link: "#"
     },{
-        image: GAMEINTRO. LogoBNG,
+        image: GAMEINTRO.LogoBNG,
         name: "BNG電子",
         link: "#"
     },{
