@@ -65,7 +65,7 @@ const navigationMenu = [
     name: "我的",
     image: imageNavi.Member,
     imageActive: imageNavi.MemberActive,
-    link: "#",
+    link: "/profile",
   },
 ];
 

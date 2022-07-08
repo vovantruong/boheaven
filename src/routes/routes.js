@@ -89,6 +89,8 @@ const publicRoutes = [
     path: configRoutes.profile,
     components: Profile,
     layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: "我的",
     children: [
       {
         path: "personal-information",

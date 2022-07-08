@@ -133,7 +133,7 @@ useEffect(() =>{
             to={item.link}
             onClick={onCloseDropdown}
             className={({ isActive }) =>
-              isActive ? cx("item", "active") : cx("item")
+              isActive ? cx("item", !isDropdown ? "active" : "") : cx("item")
             }
           >
             <div className={cx("icon-item")}>{item.icon}</div>
