@@ -118,8 +118,12 @@ const AllBet = () => {
           </div>
         </div>
         <div className={cx("block2")}>
-          {!isMobile ? (
-            <TagTitleRectangle className={cx("tag-head")} name="邀請連結" />
+        {!isMobile ? (
+            <TagTitleRectangle 
+              className={cx("tag-head")}
+              titleClassName={cx('tag-name')}
+              name="邀請連結" 
+             />
           ) : (
             <TagTitlePattern
               className={cx("tag-title-pattern")}
@@ -144,13 +148,17 @@ const AllBet = () => {
           </div>
         </div>
         <div className={cx("block3")}>
-          {!isMobile ? (
-            <TagTitleRectangle className={cx("tag-head")} name="歐博遊戲選擇" />
+        {!isMobile ? (
+            <TagTitleRectangle 
+              className={cx("tag-head")}
+              titleClassName={cx('tag-name')}
+              name="邀請連結" 
+             />
           ) : (
             <TagTitlePattern
               className={cx("tag-title-pattern")}
               container={false}
-              name="歐博遊戲選擇"
+              name="邀請連結"
             />
           )}
           <div className={cx("wrapper-block")}>
@@ -189,13 +197,17 @@ const AllBet = () => {
           </div>
         </div>
         <div className={cx("block4")}>
-          {!isMobile ? (
-            <TagTitleRectangle className={cx("tag-head")} name="歐博遊戲選擇" />
+        {!isMobile ? (
+            <TagTitleRectangle 
+              className={cx("tag-head")}
+              titleClassName={cx('tag-name')}
+              name="邀請連結" 
+             />
           ) : (
             <TagTitlePattern
               className={cx("tag-title-pattern")}
               container={false}
-              name="歐博遊戲選擇"
+              name="邀請連結"
             />
           )}
           <div className={cx("wrapper-block")}>
@@ -238,7 +250,7 @@ const AllBet = () => {
             </div>
           </div>
         </div>
-        <div className={cx("wrapper")}>
+        <div className={cx("wrapper-block")}>
           <div className={cx("fiel")}>
             <div className={cx("title")}>標題</div>
             <div className={cx("time")}>時間</div>

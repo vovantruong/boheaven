@@ -1,0 +1,27 @@
+.box-info{
+    background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
+    border: 3px solid #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 27px;
+
+    .title-head{
+        padding: 12px 27px;
+        span {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 22px;
+            color: #000;
+        }
+    }
+
+    hr {
+      background: #cecece;
+      height: 3px;
+      border: none;
+    }
+
+    .body{
+        padding: 12px 27px;
+    }
+}

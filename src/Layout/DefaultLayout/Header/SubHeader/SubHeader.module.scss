@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: center;
         gap: 17px;
-        img{
+        .image-main{
             width: 50%;
         }
 
@@ -43,6 +43,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        img{
+          max-width: 100%;
+        }
       }
 
       .content {

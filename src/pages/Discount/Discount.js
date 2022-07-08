@@ -55,9 +55,8 @@ const Discount = () => {
 
   return (
     <div className={cx("discount")}>
-      {
-        isMobile ? <TabMenu /> : <BannerSlide data={banner} />
-      }
+      {isMobile ? <TabMenu /> : <BannerSlide data={banner} />}
+      
       <div className="container">
         <div className={cx(!isMobile ? "wrapper" : "wrapper-mb")}>
           {!isMobile && <TabMenu />}

@@ -4,20 +4,29 @@ import classNames from "classnames/bind";
 import InputText from "~/components/InputText/InputText";
 import Textarea from "~/components/Textarea/Textarea";
 import { AiOutlinePlus } from "react-icons/ai";
-import PreviewImg from '../../../../assets/images/global/img-alt.png';
+import PreviewImg from "../../../../assets/images/global/img-alt.png";
 
 const cx = classNames.bind(styles);
 
 const Feedback = () => {
   const [question, setQuestion] = useState("");
   const [description, setDescription] = useState("");
-  const [selectedFile, setSelectedFile] = useState();
-	const [isSelected, setIsSelected] = useState(false);
+  const [selectedFile, setSelectedFile] = useState([]);
+  const [isSelected, setIsSelected] = useState(false);
+
+  const imageRef = useRef();
 
   const changeFile = (e) => {
-    setSelectedFile(e.target.files[0]);
-		setIsSelected(true);
-  }
+    const arrImg = e.target.files;
+    if (e.target.files[0] && e.target.files) {
+      let image = [];
+      for (let i = 0; i < arrImg.length; i++) {
+        image.push(URL.createObjectURL(arrImg[i]));
+      }
+      setSelectedFile(image);
+      setIsSelected(true);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,11 +54,11 @@ const Feedback = () => {
           label="問題描述:"
           maxLength={200}
         />
-       <div className={cx('image-preview')}>
+        <div className={cx("image-preview")}>  
           <img src={PreviewImg} />
           <img src={PreviewImg} />
           <img src={PreviewImg} />
-       </div>
+        </div>
         <div className={cx("change-file")}>
           <label htmlFor="upload">
             <AiOutlinePlus className={cx("icon")} />
@@ -57,11 +66,12 @@ const Feedback = () => {
           </label>
           <input
             multiple
+            ref={imageRef}
             type="file"
             id="upload"
             className={cx("upload")}
             onChange={changeFile}
-            accept=".jpg, .png, .jpeg"
+            accept=".jpg, .png, .jpeg, .gif"
           />
           <br />
           <span>*文件格式為png、jpg、jpeg，且大小不超過15MB</span>

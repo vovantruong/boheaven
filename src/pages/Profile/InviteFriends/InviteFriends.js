@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import styles from "./Invitefriends.module.scss";
+import styles from "./InviteFriends.module.scss";
 import className from "classnames/bind";
-import banner from "../../assets/images/pages/img-navfooter/img-invitefriends/banned-invite.png";
+import banner from "../../../assets/images/pages/img-navfooter/img-invitefriends/banned-invite.png";
 import BannerSlide from "~/components/BannerSlide/BannerSlide";
 import TagTitleRectangle from "~/components/TagTitleRectangle/TagTitleRectangle";
 import { MediaQueryContext } from "~/Context/MainContext";
@@ -115,8 +115,9 @@ const dataActivity = [
 const linkCopy =
   "https://www.918bt.net/0987123654413513513513513205123515314315035120";
 
-function Invitefriends() {
+function InviteFriends() {
   const isMobile = useContext(MediaQueryContext);
+
   return (
     <div className={cx("invite-friends")}>
       <BannerSlide container={false} loop={false} data={dataBanner} />
@@ -183,4 +184,4 @@ function Invitefriends() {
   );
 }
 
-export default Invitefriends;
+export default InviteFriends;

@@ -7,8 +7,8 @@ const cx = classNames.bind(styles);
 
 const TagTitleRectangle = ({
   className,
-  titleClassName,
   name = "",
+  titleClassName,
   children,
   container = false,
   ...props
@@ -22,8 +22,8 @@ const TagTitleRectangle = ({
         )}
       >
         <CustomTag>
-          <p className={cx("name")}>
-            <span className={cx(titleClassName)}>{children || name}</span>
+          <p className={cx("name",titleClassName)}>
+            <span>{children || name}</span>
           </p>
         </CustomTag>
       </div>

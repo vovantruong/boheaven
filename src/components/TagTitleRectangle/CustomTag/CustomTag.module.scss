@@ -1,11 +1,12 @@
 .tag {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
+  z-index: 1;
 
   .text {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     padding-right: 5px;
   }

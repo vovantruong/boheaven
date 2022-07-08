@@ -49,7 +49,15 @@
   }
   .block {
     text-align: center;
-
+    .tag-name {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 0.25px;
+      color: #365a97;
+    }
     .tag-head {
       color: #365a97;
       font-family: "Inter";
@@ -133,6 +141,15 @@
   }
   .block2 {
     text-align: center;
+    .tag-name {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 0.25px;
+      color: #365a97;
+    }
     .wrapper-block {
       display: flex;
       .block-left {
@@ -232,6 +249,15 @@
   .block3 {
     text-align: center;
     padding-top: 10px;
+    .tag-name {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 0.25px;
+      color: #365a97;
+    }
     .wrapper-block {
       .content {
         text-align: left;
@@ -269,6 +295,15 @@
   .block4 {
     text-align: center;
     padding-top: 10px;
+    .tag-name {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 0.25px;
+      color: #365a97;
+    }
     .wrapper-block {
       display: flex;
       .block-left {
@@ -370,7 +405,7 @@
       }
     }
   }
-  .wrapper {
+  .wrapper-block {
     .fiel {
       display: flex;
       height: 40px;
@@ -465,8 +500,3 @@
     }
   }
 }
-
-// .tag-name{
-//   color: red;
-//   font-size: 30px;
-// }

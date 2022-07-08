@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 0;
+  .content {
+    flex: 1;
+  }
+}

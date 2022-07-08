@@ -1,0 +1,41 @@
+.with-drawal{
+    .rule{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 17px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        .rule-id{
+            width: 24px;
+            height: 24px;
+            background: #365A97;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            flex: 1;
+
+            p{
+                color: #071522;
+            }
+
+            span{
+                color: #575757;
+            }
+        }
+    }
+}

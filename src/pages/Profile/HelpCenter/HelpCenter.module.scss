@@ -1,0 +1,33 @@
+.tab-head{
+  margin-bottom: 18px !important;
+}
+
+.wrap-tabs{
+    padding-top: 9px !important;
+}
+
+.action-tabs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  button {
+    width: 115px;
+    height: 40px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 100px;
+    background: #fff;
+    color: #575757;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .active{
+    background: #365A97;
+    color: #fff;
+  }
+}
+
+.tab-hands{
+  padding: 0 !important;
+}
