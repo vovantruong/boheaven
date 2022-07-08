@@ -6,6 +6,7 @@ const cx = className.bind(styles);
 
 const InputText = ({
   className,
+  wrapClassName,
   label,
   children,
   horizontal,
@@ -19,7 +20,7 @@ const InputText = ({
       {label && <div className={cx("label")}>{label}</div>}
       <div
         style={!props.icon ? { paddingLeft: "22px" } : {}}
-        className={cx("wrap")}
+        className={cx("wrap",wrapClassName)}
       >
         {props.icon && <div className={cx("icon")}>{props.icon}</div>}
         <input className={cx("input")} {...props} placeholder={placeholder}/>

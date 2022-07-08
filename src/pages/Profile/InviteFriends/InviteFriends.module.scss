@@ -1,7 +1,7 @@
-@import "../../styles/globalStyles";
+@import '../../../styles/globalStyles';
 
 @mixin bg-box {
-  background: url("../../assets/images/global/background-main-attactment.jpg")
+  background: url("../../../assets/images/global/background-main-attactment.jpg")
     no-repeat center;
   background-size: cover;
   border: 2px solid #ffffff;

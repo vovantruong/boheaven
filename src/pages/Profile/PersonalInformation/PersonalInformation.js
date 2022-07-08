@@ -1,0 +1,109 @@
+import React, { useState, useEffect } from "react";
+import classNames from "classnames/bind";
+import styles from "./PersonalInformation.module.scss";
+import { dataUser } from "~/constants/mocks/dataAccountUser";
+import InputText from "~/components/InputText/InputText";
+import Modal from "~/components/Modal/Modal";
+import PopupService from "~/Layout/DefaultLayout/SidebarSupport/PopupService/PopupService";
+import Feedback from "~/Layout/DefaultLayout/SidebarSupport/Feedback/Feedback";
+import BoxInforProfile from "~/components/BoxInfoProfile/BoxInforProfile";
+
+const cx = classNames.bind(styles);
+
+const PersonalInformation = () => {
+  const [lineId, setLineId] = useState("");
+  const [visible, setVisible] = useState(false);
+  const [changeFeedbackService, setChangeFeedbackService] = useState(false);
+
+  function EnCode(string="", start=0, end=0){
+    let t = "";
+    for(let i = 0; i < string.length; i++){
+      if(!start && !end){
+        t += "*" 
+      }else if(i > start && !end){
+        t += "*"
+      }
+      else if(i > start && i < end){
+        t += "*"
+      }else{
+        t += string[i]
+      }
+    }
+    return t;
+  }
+
+  
+  return (
+    <>
+      <div className={cx("personal-information")}>
+        <BoxInforProfile titleHead="基本資料" lineHead>
+          <div className={cx("asic-info", "wrapper")}>
+            <div className={cx("member")}>
+              <p>用戶名:</p>
+              <span>{dataUser.member}</span>
+            </div>
+            <div className={cx("name")}>
+              <p>真實姓名:</p>
+              <span>
+                {dataUser.name}
+                <span className={cx("notes")}>
+                  姓名需與銀行帳戶人姓名一致，否則無法提款，如需更改請
+                  <button onClick={() => setVisible(true)}>聯繫客服</button>
+                </span>
+              </span>
+            </div>
+            <div className={cx("gender")}>
+              <p>性別:</p>
+              <span>{dataUser.gender}</span>
+            </div>
+            <div className={cx("vip")}>
+              <p>VIP特權:</p>
+              <span>{dataUser.vip}</span>
+            </div>
+            <div className={cx("lineId")}>
+              <p>LINE ID:</p>
+              <InputText
+                value={lineId}
+                wrapClassName={cx("input")}
+                onChange={(e) => setLineId(e.target.value)}
+                placeholder="請輸入 LINE ID"
+              />
+            </div>
+          </div>
+        </BoxInforProfile>
+        <BoxInforProfile titleHead="帳號安全" lineHead>
+          <div className={cx("account-safety", "wrapper")}>
+            <div className={cx("phone")}>
+              <p>手機號碼:</p>
+              <span>{EnCode(dataUser.phone,3,8)}</span>
+              <span>{dataUser.verifyphone}</span>
+            </div>
+            <div className={cx("password")}>
+              <p>更改密碼:</p>
+              <span>{EnCode(dataUser.password)}</span>
+              <button>編輯</button>
+            </div>
+          </div>
+        </BoxInforProfile>
+      </div>
+      <Modal
+        visible={visible}
+        onCloseModal={() => {
+          setVisible(false);
+          setChangeFeedbackService(false);
+        }}
+        title={changeFeedbackService ? "意見反饋" : "聯絡我們"}
+      >
+        {changeFeedbackService ? (
+          <Feedback />
+        ) : (
+          <PopupService
+            onChangeFeedback={() => setChangeFeedbackService(true)}
+          />
+        )}
+      </Modal>
+    </>
+  );
+};
+
+export default PersonalInformation;

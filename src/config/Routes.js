@@ -4,6 +4,7 @@ export const configRoutes = {
     login: '/login',
     register: '/register',
     blogsport: '/blog-sport',
-    invitefriends: '/invitefriends',
+    invitefriends: '/profile/invite-friends',
     gameIntroduction: '/game-introduction',
+    profile: '/profile',
 }

@@ -13,9 +13,21 @@ import Login from "~/pages/Auth/Login/Login";
 import Register from "~/pages/Auth/Register/Register";
 
 import Blogsport from "~/pages/Blogsport/Blogsport";
-import Invitefriends from "~/pages/Invitefriends/Invitefriends";
 import GameIntroduction from "~/pages/GameIntroduction/GameIntroduction";
 import Discount from "~/pages/Discount/Discount";
+
+// routes profile -----------------------------------------------------------------------
+import Profile from "~/pages/Profile/Profile";
+// children route profile
+import PersonalInformation from "~/pages/Profile/PersonalInformation/PersonalInformation";
+import VipPrivileges from "~/pages/Profile/VipPrivileges/VipPrivileges";
+import InquiryCompliance from "~/pages/Profile/InquiryCompliance/InquiryCompliance";
+import AccountManager from "~/pages/Profile/AccountManager/AccountManager";
+import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
+import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
+import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
+import InviteFriends from "~/pages/Profile/InviteFriends/InviteFriends";
+
 
 /**
  *  Parameter Object: 
@@ -61,7 +73,7 @@ const publicRoutes = [
   },
   {
     path: configRoutes.invitefriends,
-    components: Invitefriends,
+    components: InviteFriends,
     layout: DefaultLayout,
     tabHeaderMobile: false,
     titlePageMobile: '邀請好友',
@@ -73,6 +85,41 @@ const publicRoutes = [
     tabHeaderMobile: false,
     titlePageMobile: '遊戲介紹'
   },
+  {
+    path: configRoutes.profile,
+    components: Profile,
+    layout: DefaultLayout,
+    children: [
+      {
+        path: "personal-information",
+        components: PersonalInformation
+      },
+      {
+        path: "vip-privileges",
+        components: VipPrivileges
+      },
+      {
+        path: "account-manager",
+        components: AccountManager
+      },
+      {
+        path: "betting-history",
+        components: BettingHistory
+      },
+      {
+        path: "help-center",
+        components: HelpCenter
+      },
+      {
+        path: "inquiry-compliance",
+        components: InquiryCompliance
+      },
+      {
+        path: "transaction-record",
+        components: TransactionRecord
+      },
+    ]
+  }
 ];
 
 export { publicRoutes };
