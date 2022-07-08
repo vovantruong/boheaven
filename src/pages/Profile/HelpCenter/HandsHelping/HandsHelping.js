@@ -46,5 +46,4 @@ const HandsHelping = () => {
     </div>
   );
 };
-
 export default HandsHelping;

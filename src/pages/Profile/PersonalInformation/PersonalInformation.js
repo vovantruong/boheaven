@@ -3,17 +3,14 @@ import classNames from "classnames/bind";
 import styles from "./PersonalInformation.module.scss";
 import { dataUser } from "~/constants/mocks/dataAccountUser";
 import InputText from "~/components/InputText/InputText";
-import Modal from "~/components/Modal/Modal";
-import PopupService from "~/Layout/DefaultLayout/SidebarSupport/PopupService/PopupService";
-import Feedback from "~/Layout/DefaultLayout/SidebarSupport/Feedback/Feedback";
 import BoxInforProfile from "~/components/BoxInfoProfile/BoxInforProfile";
+import ShowModalSupport from "~/Layout/DefaultLayout/SidebarSupport/ShowModalSupport";
 
 const cx = classNames.bind(styles);
 
 const PersonalInformation = () => {
   const [lineId, setLineId] = useState("");
   const [visible, setVisible] = useState(false);
-  const [changeFeedbackService, setChangeFeedbackService] = useState(false);
 
   function EnCode(string="", start=0, end=0){
     let t = "";
@@ -86,22 +83,7 @@ const PersonalInformation = () => {
           </div>
         </BoxInforProfile>
       </div>
-      <Modal
-        visible={visible}
-        onCloseModal={() => {
-          setVisible(false);
-          setChangeFeedbackService(false);
-        }}
-        title={changeFeedbackService ? "意見反饋" : "聯絡我們"}
-      >
-        {changeFeedbackService ? (
-          <Feedback />
-        ) : (
-          <PopupService
-            onChangeFeedback={() => setChangeFeedbackService(true)}
-          />
-        )}
-      </Modal>
+      <ShowModalSupport visible={visible} setVisible={setVisible} />
     </>
   );
 };

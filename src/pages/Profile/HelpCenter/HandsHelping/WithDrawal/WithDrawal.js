@@ -18,8 +18,18 @@ const dataRule = [
   {
     id: 3,
     title: "驗證本人帳戶身分",
-    description:
-      "首次存款後，需要驗證您存款的銀行帳戶資訊，請您提供雙證件(身分證+駕照或健保卡)及存摺，於＂綁定銀行帳戶＂頁面綁定銀行帳戶及上傳照片，或依照客服指示放置物品，並傳送圖片檔案給客服確認。以上流程驗證完成後，才會將您的存款到帳，還請您務必配合操作，謝謝您。 ",
+    description: [
+      {
+        key: 1,
+        paragrap:
+          "首次存款後，需要驗證您存款的銀行帳戶資訊，請您提供雙證件(身分證+駕照或健保卡)及存摺，於＂綁定銀行帳戶＂頁面綁定銀行帳戶及上傳照片，或依照客服指示放置物品，並傳送圖片檔案給客服確認。",
+      },
+      {
+        key: 2,
+        paragrap:
+          "以上流程驗證完成後，才會將您的存款到帳，還請您務必配合操作，謝謝您。",
+      },
+    ],
   },
 ];
 
@@ -31,7 +41,17 @@ const WithDrawal = () => {
           <span className={cx("rule-id")}>{item.id}</span>
           <div className={cx("information")}>
             <p className={cx("title")}>{item.title}</p>
-            <span>{item.description}</span>
+            <span>
+              {Array.isArray(item.description) ? (
+                item?.description.map((des, id) => (
+                  <React.Fragment key={id}>
+                    {des?.paragrap} <br />
+                  </React.Fragment>
+                ))
+              ) : (
+                <>{item.description}</>
+              )}
+            </span>
           </div>
         </div>
       ))}
