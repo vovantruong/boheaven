@@ -1,0 +1,5 @@
+@import '../HandsHelping.module.scss';
+
+.turning-point{
+    @include ruleStyle();
+}

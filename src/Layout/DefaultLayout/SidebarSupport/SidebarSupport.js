@@ -5,10 +5,8 @@ import styles from "./SidebarSupport.module.scss";
 import Service from "../../../assets/images/global/web/service.png";
 import Announcement from "../../../assets/images/global/web/announcement.png";
 import Help from "../../../assets/images/global/web/help.png";
-import PopupService from "./PopupService/PopupService";
-import Feedback from "./Feedback/Feedback";
 import { imageNavi } from "../../../constants/imageNavigation";
-import Modal from "~/components/Modal/Modal";
+import ShowModalSupport from "./ShowModalSupport";
 
 const cx = classNames.bind(styles);
 
@@ -73,7 +71,6 @@ const navigationMenu = [
 
 const SidebarSupport = ({ isMobile }) => {
   const [visible, setVisible] = useState(false);
-  const [changeFeedbackService, setChangeFeedbackService] = useState(false);
 
   const handdleShowPopup = (e) => {
     e.preventDefault();
@@ -99,19 +96,7 @@ const SidebarSupport = ({ isMobile }) => {
           ))}
         </div>
       </div>
-      <Modal
-        visible={visible}
-        onCloseModal={() => {setVisible(false);setChangeFeedbackService(false)}}
-        title={changeFeedbackService ? "意見反饋" : "聯絡我們"}
-      >
-        {changeFeedbackService ? (
-          <Feedback />
-        ) : (
-          <PopupService
-            onChangeFeedback={() => setChangeFeedbackService(true)}
-          />
-        )}
-      </Modal>
+      <ShowModalSupport visible={visible} setVisible={setVisible} />
     </React.Fragment>
   ) : (
     // Navigate menu for mobie version

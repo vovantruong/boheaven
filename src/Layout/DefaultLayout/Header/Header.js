@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,lazy } from "react";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import { Link, NavLink } from "react-router-dom";

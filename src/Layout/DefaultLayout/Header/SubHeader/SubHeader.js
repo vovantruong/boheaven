@@ -5,7 +5,6 @@ import OutsideClickHandler from "react-outside-click-handler";
 import Button from "~/components/Button/Button";
 import { dataSubMenu } from "~/constants/mocks/dataSubHeader";
 import { Link } from "react-router-dom";
-
 const cx = classNames.bind(styles);
 
 const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
@@ -20,7 +19,7 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                 subMenu.data.map((item, index) =>
                   subMenu.data?.length < 3 ? (
                     <div key={index} className={cx("item-short-data")}>
-                      <img className={cx('image-main')} src={item.image} />
+                      <img className={cx("image-main")} src={item.image} />
                       <div className={cx("action")}>
                         <div className={cx("info")}>
                           <div className={cx("logo")}>
@@ -31,7 +30,7 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                             <p className={cx("tag")}>{item.tag}</p>
                           </div>
                         </div>
-                        <Button className={cx('link')} active>
+                        <Button className={cx("link")} active>
                           <Link to={item.link}>進入遊戲</Link>
                         </Button>
                       </div>
