@@ -69,7 +69,7 @@ const TurningPoint = () => {
             <span className={cx("rule-id")}>{item.id}</span>
             <div className={cx("information")}>
               <p className={cx("title")}>{item.title}</p>
-              <span>
+              <span className={cx('desc')}>
                 {Array.isArray(item.description) ? (
                   item?.description.map((des, id) => (
                     <React.Fragment key={id}>

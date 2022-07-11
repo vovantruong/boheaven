@@ -1,7 +1,9 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./VentureAgent.module.scss";
-import TableRebate from "./TableRebate/TableRebate";
+import TableCustom from "~/components/TableCustom/TableCustom";
+import { dataRebate } from "~/constants/mocks/dataTableRebate";
+
 
 const cx = classNames.bind(styles);
 
@@ -31,13 +33,22 @@ const dataRule = [
   },
 ];
 
+const column = [
+  {
+    key: "rebate",
+    name: "退傭"
+  }
+]
+
 const VentureAgent = () => {
   return (
     <div className={cx("venture-agent")}>
-      <TableRebate />
+      <TableCustom dataSource={dataRebate} columns={column} colSpanHead={3}/>
       <div className={cx("unlimited-bonus")}>
         <h4 className={cx("title-bonus")}>獎金無上限</h4>
-        <p className={cx('other-des')}>若是想洽談其他的方式進行代理請聯繫客服</p>
+        <p className={cx("other-des")}>
+          若是想洽談其他的方式進行代理請聯繫客服
+        </p>
         <div className={cx("content")}>
           {dataRule.map((item, i) => (
             <div key={i} className={cx("rule")}>
