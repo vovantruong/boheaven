@@ -18,7 +18,7 @@ const data = [
     image2x: GAMELOBBY.RealDG,
     image: GAMELOBBY.RealDGMobile,
     logo: GAMELOBBY.LogoRealDG,
-    tag: "",
+    tag: "-DG Live-",
     name: "DG真人",
     category: "casino",
     link: "#",
@@ -27,7 +27,7 @@ const data = [
     image2x: GAMELOBBY.RealOber,
     image: GAMELOBBY.RealOberMobile,
     logo: GAMELOBBY.LogoRealOber,
-    tag: "",
+    tag: "-AB Live-",
     name: "歐博真人",
     category: "casino",
     link: "#",
@@ -36,7 +36,7 @@ const data = [
     image2x: GAMELOBBY.RealSA,
     image: GAMELOBBY.RealSAMobile,
     logo: GAMELOBBY.LogoRealSA,
-    tag: "",
+    tag: "-SA Live-",
     name: "SA真人",
     category: "casino",
     link: "#",
@@ -45,7 +45,7 @@ const data = [
     image2x: GAMELOBBY.RealWM,
     image: GAMELOBBY.RealWMMobile,
     logo: GAMELOBBY.LogoRealWM,
-    tag: "",
+    tag: "-WM Live-",
     name: "WM真人",
     category: "casino",
     link: "#",
@@ -54,7 +54,7 @@ const data = [
     image2x: GAMELOBBY.RealOB,
     image: GAMELOBBY.RealOBMobile,
     logo: GAMELOBBY.LogoRealOB,
-    tag: "",
+    tag: "-OB Live-",
     name: "OB真人",
     category: "casino",
     link: "#",
@@ -63,7 +63,7 @@ const data = [
     image2x: GAMELOBBY.RealOG,
     image: GAMELOBBY.RealOGMobile,
     logo: GAMELOBBY.LogoRealOG,
-    tag: "",
+    tag: "-OG Live-",
     name: "OG真人",
     category: "casino",
     link: "#",
@@ -93,7 +93,7 @@ const RealPerson = () => {
             >
               {data.map((item, i) => (
                 <SwiperSlide key={i} className={cx("slide-item")}>
-                  <img src={item.image2x} />
+                  <img src={item.image2x} alt="..."/>
                   <Button
                     active
                     className={cx("action")}

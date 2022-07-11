@@ -55,9 +55,9 @@ const Feedback = () => {
           maxLength={200}
         />
         <div className={cx("image-preview")}>  
-          <img src={PreviewImg} />
-          <img src={PreviewImg} />
-          <img src={PreviewImg} />
+          <img src={PreviewImg} alt="..."/>
+          <img src={PreviewImg} alt="..."/>
+          <img src={PreviewImg} alt="..."/>
         </div>
         <div className={cx("change-file")}>
           <label htmlFor="upload">

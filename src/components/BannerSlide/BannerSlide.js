@@ -20,14 +20,14 @@ const BannerSlide = ({children, data, className,loop = true,container = false,..
           Object.keys(item.link).length > 0 ? (
             <SwiperSlide key={i} className={cx('slide-item')}>
               <Link to={item.link} className={cx("img-banner")}>
-                <img src={item.image} />
+                <img src={item.image} alt="..."/>
                 {children}
               </Link>
             </SwiperSlide>
           ) : (
             <SwiperSlide key={i} className={cx('slide-item')}>
               <div className={cx("img-banner")}>
-                <img src={item} />
+                <img src={item} alt="..."/>
                 {children}
               </div>
             </SwiperSlide>

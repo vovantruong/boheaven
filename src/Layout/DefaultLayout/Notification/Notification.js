@@ -16,7 +16,7 @@ const Notification = ({ isMobile }) => {
             <React.Fragment>
               <div className={cx("title")}>
                 <div className={cx("image-noti")}>
-                  <img src={Speaker} />
+                  <img src={Speaker} alt="..."/>
                 </div>
                 <p>最新公告</p>
               </div>
