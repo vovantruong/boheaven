@@ -21,7 +21,7 @@ const sidebaritems = [
     key: "announcement",
     name: "幫助中心",
     image: Announcement,
-    link: "#",
+    link: "/profile/help-center",
   },
   {
     key: "help",
@@ -58,7 +58,7 @@ const navigationMenu = [
     name: "客服",
     image: imageNavi.Service,
     imageActive: imageNavi.ServiceActive,
-    link: "#",
+    link: "/customer-service",
   },
   {
     key: "member",
@@ -107,12 +107,18 @@ const SidebarSupport = ({ isMobile }) => {
           {navigationMenu.map((item, i) =>
             item.key !== "transfer" ? (
               <NavLink
-                // className={({ isActive }) => (isActive ? cx("active-navi") : "")}
+                className={({ isActive }) =>
+                  isActive ? cx("active") : ""
+                }
                 to={item.link}
                 key={i}
               >
-                <img src={item.image} />
-                <p>{item.name}</p>
+                {({ isActive }) => (
+                  <React.Fragment>
+                    <img src={isActive ? item.imageActive :item.image} alt="..." />
+                    <p>{item.name}</p>
+                  </React.Fragment>
+                )}
               </NavLink>
             ) : (
               <button key={i}>
