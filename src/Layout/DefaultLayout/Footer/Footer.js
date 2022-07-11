@@ -19,11 +19,11 @@ const logo = [
 const tabLink = [
   {
     name: "幫助中心",
-    link: "#",
+    link: "/profile/help-center",
   },
   {
     name: "邀請好友",
-    link: "/invitefriends",
+    link: "/profile/invite-friends",
   },
   {
     name: "APP下載",

@@ -1,0 +1,6 @@
+@import '../HandsHelping.module.scss';
+
+
+.with-drawal{
+    @include ruleStyle();
+}

@@ -5,10 +5,8 @@ import styles from "./SidebarSupport.module.scss";
 import Service from "../../../assets/images/global/web/service.png";
 import Announcement from "../../../assets/images/global/web/announcement.png";
 import Help from "../../../assets/images/global/web/help.png";
-import PopupService from "./PopupService/PopupService";
-import Feedback from "./Feedback/Feedback";
 import { imageNavi } from "../../../constants/imageNavigation";
-import Modal from "~/components/Modal/Modal";
+import ShowModalSupport from "./ShowModalSupport";
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +21,7 @@ const sidebaritems = [
     key: "announcement",
     name: "幫助中心",
     image: Announcement,
-    link: "#",
+    link: "/profile/help-center",
   },
   {
     key: "help",
@@ -60,20 +58,19 @@ const navigationMenu = [
     name: "客服",
     image: imageNavi.Service,
     imageActive: imageNavi.ServiceActive,
-    link: "#",
+    link: "/customer-service",
   },
   {
     key: "member",
     name: "我的",
     image: imageNavi.Member,
     imageActive: imageNavi.MemberActive,
-    link: "#",
+    link: "/profile",
   },
 ];
 
 const SidebarSupport = ({ isMobile }) => {
   const [visible, setVisible] = useState(false);
-  const [changeFeedbackService, setChangeFeedbackService] = useState(false);
 
   const handdleShowPopup = (e) => {
     e.preventDefault();
@@ -99,19 +96,7 @@ const SidebarSupport = ({ isMobile }) => {
           ))}
         </div>
       </div>
-      <Modal
-        visible={visible}
-        onCloseModal={() => {setVisible(false);setChangeFeedbackService(false)}}
-        title={changeFeedbackService ? "意見反饋" : "聯絡我們"}
-      >
-        {changeFeedbackService ? (
-          <Feedback />
-        ) : (
-          <PopupService
-            onChangeFeedback={() => setChangeFeedbackService(true)}
-          />
-        )}
-      </Modal>
+      <ShowModalSupport visible={visible} setVisible={setVisible} />
     </React.Fragment>
   ) : (
     // Navigate menu for mobie version
@@ -122,12 +107,18 @@ const SidebarSupport = ({ isMobile }) => {
           {navigationMenu.map((item, i) =>
             item.key !== "transfer" ? (
               <NavLink
-                // className={({ isActive }) => (isActive ? cx("active-navi") : "")}
+                className={({ isActive }) =>
+                  isActive ? cx("active") : ""
+                }
                 to={item.link}
                 key={i}
               >
-                <img src={item.image} />
-                <p>{item.name}</p>
+                {({ isActive }) => (
+                  <React.Fragment>
+                    <img src={isActive ? item.imageActive :item.image} alt="..." />
+                    <p>{item.name}</p>
+                  </React.Fragment>
+                )}
               </NavLink>
             ) : (
               <button key={i}>

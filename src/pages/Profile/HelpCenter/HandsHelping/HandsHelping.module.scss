@@ -1,0 +1,88 @@
+.action-tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        position: relative;
+        height: 43px;
+        width: 33.33%;
+        color: #575757;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #cecece;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .active{
+        color: #252525;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: #365A97;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+}
+
+.tab-pane{
+    padding: 24px 27px;
+}
+
+// CSS module children
+@mixin ruleStyle {
+    
+    .rule{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 17px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        .rule-id{
+            width: 24px;
+            height: 24px;
+            background: #365A97;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            flex: 1;
+
+            p{
+                color: #071522;
+            }
+
+            span{
+                color: #575757;
+            }
+        }
+    }
+}
+
