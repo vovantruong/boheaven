@@ -1,4 +1,4 @@
-@import '../../../styles/globalStyles';
+@import "../../../styles/globalStyles";
 .fiel {
   display: flex;
   height: 40px;
@@ -98,7 +98,7 @@
       background: #365a97;
       width: 370px;
       margin: 10px;
-    padding: 0;
+      padding: 0;
       .title {
         font-family: "Roboto";
         font-style: normal;
@@ -106,7 +106,7 @@
         font-size: 16px;
         line-height: 20px;
         color: #ffffff;
-        padding-left: 100px;
+        padding-left: 70px;
       }
       .time {
         font-family: "Roboto";
@@ -115,18 +115,25 @@
         font-size: 16px;
         line-height: 20px;
         color: #ffffff;
-        padding-left: 170px;
+        padding-left: 190px;
       }
     }
     .tableTabMobile {
-      padding-left: 20px;
-      
+      padding-left: 10px;
+      padding-right: 10px;
       letter-spacing: 2px;
       font-family: "Roboto";
       .subject {
-        width: 60%;
+        width: 75%;
         padding-top: 10px;
+        padding-left: 20px;
         font-family: "Roboto";
+        overflow: hidden;
+        text-overflow: clip;
+        -webkit-line-clamp: 0;
+        height: 30px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
       }
       .date {
         width: 35%;

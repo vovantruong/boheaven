@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import styles from "./AllBet.module.scss";
 import className from "classnames/bind";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { MediaQueryContext } from "~/Context/MainContext";
 import TagTitleRectangle from "~/components/TagTitleRectangle/TagTitleRectangle";
-import TagTitlePattern from "~/components/TagTitlePattern/TagTitlePattern";
 import banner from "../../../assets/images/pages/game-intro/img-Allbet/banner.png";
+import bannermobile from "../../../assets/images/pages/game-intro/img-Allbet/block-mobile.png";
 import icon from "../../../assets/images/pages/game-intro/img-Allbet/Vector.png";
 import icon1 from "../../../assets/images/pages/game-intro/img-Allbet/Vector1.png";
 import icon2 from "../../../assets/images/pages/game-intro/img-Allbet/Vector2.png";
@@ -47,9 +48,17 @@ const AllBet = () => {
   //   setActive(index);
   // };
   return (
-    <div className={cx("wrapper")}>
+    <div className={cx(!isMobile ? "wrapper" : "wrapper-mobile")}>
       <div className={cx("fiel")}>
-        <BannerSlide container={false} data={dataBanner} />
+        {!isMobile ? (
+          <BannerSlide
+            container={false}
+            data={dataBanner}
+            className={cx("img-banner")}
+          />
+        ) : (
+          <img src={bannermobile} />
+        )}
         <div className={cx("content-item")}>
           <div className={cx("title-content")}>
             <h3>Welcome to</h3>
@@ -71,19 +80,11 @@ const AllBet = () => {
       </div>
       <div className={cx("container")}>
         <div className={cx("block")}>
-          {!isMobile ? (
-            <TagTitleRectangle 
-              className={cx("tag-head")}
-              titleClassName={cx('tag-name')}
-              name="邀請連結" 
-             />
-          ) : (
-            <TagTitlePattern
-              className={cx("tag-title-pattern")}
-              container={false}
-              name="邀請連結"
-            />
-          )}
+          <TagTitleRectangle
+            className={cx("tag-head")}
+            titleClassName={cx("tag-name")}
+            name="邀請連結"
+          />
           <div className={cx("wrapper-block")}>
             <div className={cx("block-left")}>
               <img src={block1} />
@@ -106,31 +107,16 @@ const AllBet = () => {
                 <div>
                   <a> 免費試玩</a>
                 </div>
-                {/* {tabAllbet.map((item, index) => (
-                  <div className={cx("tab-Allbet__items", index === active ? "active" : "")} key={index}>
-                        <div>
-                      <a onClick={() => handleChangeTab(index, item.key)}> 立即註冊</a>
-                    </div>
-                  </div>
-                ))} */}
               </div>
             </div>
           </div>
         </div>
         <div className={cx("block2")}>
-        {!isMobile ? (
-            <TagTitleRectangle 
-              className={cx("tag-head")}
-              titleClassName={cx('tag-name')}
-              name="邀請連結" 
-             />
-          ) : (
-            <TagTitlePattern
-              className={cx("tag-title-pattern")}
-              container={false}
-              name="邀請連結"
-            />
-          )}
+          <TagTitleRectangle
+            className={cx("tag-head")}
+            titleClassName={cx("tag-name")}
+            name="邀請連結"
+          />
           <div className={cx("wrapper-block")}>
             <div className={cx("block-left")}>
               <div className={cx("block-title")}>
@@ -148,19 +134,11 @@ const AllBet = () => {
           </div>
         </div>
         <div className={cx("block3")}>
-        {!isMobile ? (
-            <TagTitleRectangle 
-              className={cx("tag-head")}
-              titleClassName={cx('tag-name')}
-              name="邀請連結" 
-             />
-          ) : (
-            <TagTitlePattern
-              className={cx("tag-title-pattern")}
-              container={false}
-              name="邀請連結"
-            />
-          )}
+          <TagTitleRectangle
+            className={cx("tag-head")}
+            titleClassName={cx("tag-name")}
+            name="邀請連結"
+          />
           <div className={cx("wrapper-block")}>
             <div className={cx("content")}>
               <p>
@@ -171,45 +149,75 @@ const AllBet = () => {
                 除了百家樂外，歐博app中還有骰寶、輪盤、龍虎、博丁、牛牛、炸金花、三公以及剪刀石頭布等多種類型的真人娛樂遊戲供玩家選擇，豐富精采的內容也是歐博能夠營運至今仍舊廣受歡迎的主因。
               </p>
             </div>
-            <div className={cx("block-content")}>
-              <div>
-                <h4>聚龍廳</h4>
-                <img src={block3} />
-                <p>
-                  聚龍廳便是集結所有歐博平檯上的遊戲內容，包括百家樂、輪盤、牛牛及骰寶等等所有深受歐博會員們喜愛的遊戲內容，各種遊戲內容皆有一個以上的桌檯供玩家選擇，且有不同的限紅滿足玩家們的不同需求。
-                </p>
+
+            {!isMobile ? (
+              <div className={cx("block-content")}>
+                <div>
+                  <h4>聚龍廳</h4>
+                  <img src={block3} />
+                  <p>
+                    聚龍廳便是集結所有歐博平檯上的遊戲內容，包括百家樂、輪盤、牛牛及骰寶等等所有深受歐博會員們喜愛的遊戲內容，各種遊戲內容皆有一個以上的桌檯供玩家選擇，且有不同的限紅滿足玩家們的不同需求。
+                  </p>
+                </div>
+                <div>
+                  <h4>快速廳／競咪廳</h4>
+                  <img src={block4} />
+                  <p>
+                    快速廳中集結了所有提供極速模式的遊戲內容，如極速百家樂、極速骰寶及極速龍虎等遊戲模式，讓玩家可以在一個遊戲介面中同時進行投注。競咪廳則在投注過程中加入「瞇牌」玩法的遊戲。
+                  </p>
+                </div>
+                <div>
+                  <h4>性感廳／VIP包桌</h4>
+                  <img src={block5} />
+                  <p>
+                    性感廳由穿著性感的美女荷官進行發牌。最後的VIP包桌則是讓玩家可以擁有獨家的桌檯，由專屬的荷官來進行發牌服務，可以不受外在干擾來好好享受遊戲。
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4>快速廳／競咪廳</h4>
-                <img src={block4} />
-                <p>
-                  快速廳中集結了所有提供極速模式的遊戲內容，如極速百家樂、極速骰寶及極速龍虎等遊戲模式，讓玩家可以在一個遊戲介面中同時進行投注。競咪廳則在投注過程中加入「瞇牌」玩法的遊戲。
-                </p>
-              </div>
-              <div>
-                <h4>性感廳／VIP包桌</h4>
-                <img src={block5} />
-                <p>
-                  性感廳由穿著性感的美女荷官進行發牌。最後的VIP包桌則是讓玩家可以擁有獨家的桌檯，由專屬的荷官來進行發牌服務，可以不受外在干擾來好好享受遊戲。
-                </p>
-              </div>
-            </div>
+            ) : (
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide>
+                  <div>
+                    <h4>聚龍廳</h4>
+                    <img src={block3} />
+                    <p>
+                      聚龍廳便是集結所有歐博平檯上的遊戲內容，包括百家樂、輪盤、牛牛及骰寶等等所有深受歐博會員們喜愛的遊戲內容，各種遊戲內容皆有一個以上的桌檯供玩家選擇，且有不同的限紅滿足玩家們的不同需求。
+                    </p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div>
+                  <h4>快速廳／競咪廳</h4>
+                  <img src={block4} />
+                  <p>
+                    快速廳中集結了所有提供極速模式的遊戲內容，如極速百家樂、極速骰寶及極速龍虎等遊戲模式，讓玩家可以在一個遊戲介面中同時進行投注。競咪廳則在投注過程中加入「瞇牌」玩法的遊戲。
+                  </p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div>
+                  <h4>性感廳／VIP包桌</h4>
+                  <img src={block5} />
+                  <p>
+                    性感廳由穿著性感的美女荷官進行發牌。最後的VIP包桌則是讓玩家可以擁有獨家的桌檯，由專屬的荷官來進行發牌服務，可以不受外在干擾來好好享受遊戲。
+                  </p>
+                </div>
+                </SwiperSlide>
+              </Swiper>
+            )}
           </div>
         </div>
         <div className={cx("block4")}>
-        {!isMobile ? (
-            <TagTitleRectangle 
-              className={cx("tag-head")}
-              titleClassName={cx('tag-name')}
-              name="邀請連結" 
-             />
-          ) : (
-            <TagTitlePattern
-              className={cx("tag-title-pattern")}
-              container={false}
-              name="邀請連結"
-            />
-          )}
+          <TagTitleRectangle
+            className={cx("tag-head")}
+            titleClassName={cx("tag-name")}
+            name="邀請連結"
+          />
           <div className={cx("wrapper-block")}>
             <div className={cx("block-left")}>
               <img src={block6} />
@@ -305,7 +313,6 @@ const AllBet = () => {
           </div>
           <div className={cx("block-trans2")}>
             <div className={cx("block")}>
-              <p>«</p>
               <p>‹</p>
               <p>1</p>
               <p>2</p>
@@ -313,7 +320,6 @@ const AllBet = () => {
               <p>9</p>
               <p>10</p>
               <p>›</p>
-              <p>»</p>
             </div>
           </div>
         </div>
