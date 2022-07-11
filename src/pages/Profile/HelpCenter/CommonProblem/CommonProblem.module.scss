@@ -1,0 +1,51 @@
+.problem-item{
+    padding: 8px 20px;
+    .action-collapse{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        h4{
+            font-family: 'Noto Sans TC';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000;
+        }
+
+        .icon{
+            transition: all .3s;
+        }
+
+    }
+
+    .content{
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s;
+        p{
+            color: #575757;
+            padding: 10px;
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+
+
+}
+.active{
+    .icon{
+        transform: rotateZ(90deg);
+    }
+
+    .content{
+       max-height: 500px;
+       overflow: auto;
+
+       &::-webkit-scrollbar{
+        display: none;
+       }
+    }
+}
