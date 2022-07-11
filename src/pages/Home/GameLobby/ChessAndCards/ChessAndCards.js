@@ -37,7 +37,7 @@ const ChessAndCards = () => {
         <Swiper loop={true} slidesPerView={2}>
           {data.map((item, i) => (
             <SwiperSlide key={i} className={cx("img-main")}>
-              <img src={item.image} />
+              <img src={item.image} alt="..."/>
               <Button className="bg-blue">
                 <Link to={item.link}>{item.name}</Link>
               </Button>

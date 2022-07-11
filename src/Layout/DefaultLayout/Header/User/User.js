@@ -20,7 +20,7 @@ const User = ({ className, isMobile, infoMember = false }) => {
           {!isMobile ? (
             <div className={cx("head")} onClick={() => setVisible(!visible)}>
               <div className={cx("avatar")}>
-                <img src={Avatar} />
+                <img src={Avatar} alt="..."/>
               </div>
               <div className={cx("info")}>
                 <div className={cx("top")}>
@@ -42,7 +42,7 @@ const User = ({ className, isMobile, infoMember = false }) => {
           )}
 
           <div className={cx("message")}>
-            <img src={Mail} />
+            <img src={Mail} alt="..."/>
             <span className={cx("tick")}></span>
           </div>
           {visible && (

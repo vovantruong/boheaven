@@ -89,7 +89,7 @@ const Header = () => {
                     >
                       <span>
                         {item.name}
-                        {index !== 0 ? <img src={ArrowDown} /> : ""}
+                        {index !== 0 ? <img src={ArrowDown} alt="..."/> : ""}
                       </span>
                     </button>
                   ) : (
@@ -102,7 +102,7 @@ const Header = () => {
                       onMouseEnter={() => setVisible(false)}
                     >
                       {item.name}
-                      {index > 0 && <img src={ArrowDown} />}
+                      {index > 0 && <img src={ArrowDown} alt="..."/>}
                     </NavLink>
                   )
                 )}

@@ -86,8 +86,9 @@ const GameLobby = () => {
                       ? item.icon
                       : item.iconMb
                   }
+                  alt="..."
                 />
-                {item.name}
+                <span>{item.name}</span> 
               </Button>
             ))}
           </div>

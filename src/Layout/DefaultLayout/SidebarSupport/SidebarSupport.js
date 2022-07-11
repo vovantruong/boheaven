@@ -122,7 +122,7 @@ const SidebarSupport = ({ isMobile }) => {
               </NavLink>
             ) : (
               <button key={i}>
-                <img src={item.image} />
+                <img src={item.image} alt="..."/>
                 <p>{item.name}</p>
               </button>
             )

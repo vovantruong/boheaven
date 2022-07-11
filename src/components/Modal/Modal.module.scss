@@ -54,6 +54,12 @@
                 letter-spacing: 0.01em;
                 flex: 1;
               }
+
+              .btn-close{
+                width: 24px;
+                height: 24px;
+                color: #365A97;
+              }
         }
         
         @include mobile{

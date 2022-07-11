@@ -33,7 +33,6 @@ export const InfoLinkMore = ({ children, className, to }) => {
 };
 
 const InfoBox = ({ className, children, ...props }) => {
-   const [isInfoImage, setIsInfoImage] = useState(false);
   return (
     <div className={cx("info-box", className)}>
       {
@@ -48,7 +47,6 @@ const InfoBox = ({ className, children, ...props }) => {
             ))
         }
       </div>
-
     </div>
   );
 };

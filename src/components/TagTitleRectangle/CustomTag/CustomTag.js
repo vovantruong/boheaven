@@ -11,12 +11,12 @@ const CustomTag = ({children}) => {
   return (
     <div className={cx('tag')}>
       <div className={cx('left')}>
-        <img src={TagLeft} />
+        <img src={TagLeft} alt="..."/>
       </div>
       <div className={cx('text')}>
         {children}
         <div className={cx('right')}>
-          <img src={TagRight} />
+          <img src={TagRight} alt="..."/>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const GameIntroduction = () => {
                 <button className={cx("action")}>
                   <Link to={item.link}>
                     <div className={cx("image-game")}>
-                      <img src={item.image} />
+                      <img src={item.image} alt="..."/>
                     </div>
                   </Link>
                 </button>
