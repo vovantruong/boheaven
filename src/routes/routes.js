@@ -27,7 +27,12 @@ import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
 import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
 import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
 import InviteFriends from "~/pages/Profile/InviteFriends/InviteFriends";
+import Withdrawal from "~/pages/Profile/Withdrawal/Withdrawal";
+import Deposit from "~/pages/Profile/Deposit/Deposit";
+import TurningPoint from "~/pages/Profile/TurningPoint/TurningPoint";
 
+// New route mobile ---------------------------------------------------------------------
+import CustomerService from "~/pages/Mobile/CustomerService/CustomerService";
 
 /**
  *  Parameter Object: 
@@ -120,7 +125,26 @@ const publicRoutes = [
         path: "transaction-record",
         components: TransactionRecord
       },
+      {
+        path: "deposit",
+        components: Deposit
+      },
+      {
+        path: "withdrawal",
+        components: Withdrawal
+      },
+      {
+        path: "turning-point",
+        components: TurningPoint
+      },
     ]
+  },
+  {
+    path: configRoutes.customerService,
+    components: CustomerService,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '客服中心',
   }
 ];
 

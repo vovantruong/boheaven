@@ -54,7 +54,6 @@
       flex-wrap: nowrap;
 
       .tab-menu-mobile {
-        flex: 20%;
         margin-top: 5px;
 
         .tab-action {
@@ -87,10 +86,9 @@
 
       .tab-body-mobile {
         flex: 80%;
-        max-height: 455px;
-        overflow: scroll;
-        padding-left: 15px;
-        padding-right: 10px;
+        // max-height: 455px;
+        // overflow: scroll;
+        padding-left: 18px;
         padding-top: 5px;
       }
     }
