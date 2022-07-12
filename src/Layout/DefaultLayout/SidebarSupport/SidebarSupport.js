@@ -115,7 +115,9 @@ const SidebarSupport = ({ isMobile }) => {
               >
                 {({ isActive }) => (
                   <React.Fragment>
+                  <div className={cx('image-icon')}>
                     <img src={isActive ? item.imageActive :item.image} alt="..." />
+                  </div>
                     <p>{item.name}</p>
                   </React.Fragment>
                 )}
