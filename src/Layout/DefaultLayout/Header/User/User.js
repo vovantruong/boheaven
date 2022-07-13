@@ -42,7 +42,7 @@ const User = ({ className, isMobile, infoMember = false }) => {
             <button className={cx("sign-out-mobile")}>登出</button>
           )}
 
-          <Link to="/notification-center" className={cx("message")}>
+          <Link to="/notification" className={cx("message")}>
             <img src={Mail} alt="..."/>
             <span className={cx("tick")}></span>
           </Link>
