@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./User.module.scss";
 import Avatar from "../../../../assets/images/global/header/user.png";
@@ -41,10 +42,10 @@ const User = ({ className, isMobile, infoMember = false }) => {
             <button className={cx("sign-out-mobile")}>登出</button>
           )}
 
-          <div className={cx("message")}>
+          <Link to="/notification" className={cx("message")}>
             <img src={Mail} alt="..."/>
             <span className={cx("tick")}></span>
-          </div>
+          </Link>
           {visible && (
             <MenuProfile
               onCloseDropdown={() => setVisible(false)}

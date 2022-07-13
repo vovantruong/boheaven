@@ -56,9 +56,14 @@
               }
 
               .btn-close{
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 color: #365A97;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
               }
         }
         

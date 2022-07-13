@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import OutsideClickHandler from "react-outside-click-handler";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
-import Close from '../../assets/images/global/close-outline.svg'
+import Close from '../../assets/images/global/close-outline.svg';
 
 const cx = classNames.bind(styles);
 

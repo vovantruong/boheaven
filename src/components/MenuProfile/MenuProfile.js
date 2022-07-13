@@ -3,7 +3,7 @@ import styles from "./MenuProfile.module.scss";
 import classNames from "classnames/bind";
 import Vip from "~/constants/tagVip";
 import { BsChevronDown } from "react-icons/bs";
-import { NavLink, useLocation,useNavigate } from "react-router-dom";
+import { NavLink, useLocation,useNavigate ,Link} from "react-router-dom";
 import { MediaQueryContext } from "~/Context/MainContext";
 import Icon from "~/constants/icons";
 
@@ -14,19 +14,19 @@ const currencyItem = [
     bg: "#365A97",
     key: "存",
     name: "存款",
-    link: "#",
+    link: "/profile/deposit",
   },
   {
     bg: "#F1C225",
     key: "提",
     name: "提款",
-    link: "#",
+    link: "/profile/withdrawal",
   },
   {
     bg: "#3BDB85",
     key: "轉",
     name: "轉點",
-    link: "#",
+    link: "/profile/turning-point",
   },
 ];
 
@@ -98,7 +98,7 @@ useEffect(() =>{
 },[pathname])
 
   return (
-    <div className={cx("menu-profile", className)}>
+    <div className={cx("bg-normal-linear","menu-profile", className)}>
       {!isDropdown && (
         <div className={cx("user-info")}>
           <div className={cx("avatar")}>
@@ -118,12 +118,12 @@ useEffect(() =>{
       )}
       <div className={cx("top")}>
         {currencyItem.map((item, i) => (
-          <NavLink key={i} to={item.link} className={cx("link")}>
+          <Link key={i} to={item.link} className={cx("link")} onClick={onCloseDropdown}>
             <div style={{ background: `${item.bg}` }} className={cx("action")}>
               {item.key}
             </div>
             <p>{item.name}</p>
-          </NavLink>
+          </Link>
         ))}
       </div>
       <div className={cx("body")}>
