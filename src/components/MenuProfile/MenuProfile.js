@@ -98,7 +98,7 @@ useEffect(() =>{
 },[pathname])
 
   return (
-    <div className={cx("menu-profile", className)}>
+    <div className={cx("bg-normal-linear","menu-profile", className)}>
       {!isDropdown && (
         <div className={cx("user-info")}>
           <div className={cx("avatar")}>

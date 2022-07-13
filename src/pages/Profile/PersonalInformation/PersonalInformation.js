@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import classNames from "classnames/bind";
 import styles from "./PersonalInformation.module.scss";
 import { dataUser } from "~/constants/mocks/dataAccountUser";
 import InputText from "~/components/InputText/InputText";
 import BoxInforProfile from "~/components/BoxInfoProfile/BoxInforProfile";
 import ShowModalSupport from "~/Layout/DefaultLayout/SidebarSupport/ShowModalSupport";
+import { MediaQueryContext } from "~/Context/MainContext";
 
 const cx = classNames.bind(styles);
 
 const PersonalInformation = () => {
   const [lineId, setLineId] = useState("");
   const [visible, setVisible] = useState(false);
+  const isMobile = useContext(MediaQueryContext);
 
   function EnCode(string="", start=0, end=0){
     let t = "";

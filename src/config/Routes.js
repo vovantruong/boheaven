@@ -7,5 +7,6 @@ export const configRoutes = {
     invitefriends: '/profile/invite-friends',
     gameIntroduction: '/game-introduction',
     profile: '/profile',
-    customerService: 'customer-service',
+    customerService: '/customer-service',
+    notificationCenter: '/notification'
 }

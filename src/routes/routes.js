@@ -31,6 +31,12 @@ import Withdrawal from "~/pages/Profile/Withdrawal/Withdrawal";
 import Deposit from "~/pages/Profile/Deposit/Deposit";
 import TurningPoint from "~/pages/Profile/TurningPoint/TurningPoint";
 
+// routes notifiation center
+import NotificationCenter from "~/pages/NotificationCenter/NotificationCenter";
+import StationLetter from "~/pages/NotificationCenter/StationLetter/StationLetter";
+import Announcement from "~/pages/NotificationCenter/Announcement/Announcement";
+import Maintenance from "~/pages/NotificationCenter/Maintenance/Maintenance";
+
 // New route mobile ---------------------------------------------------------------------
 import CustomerService from "~/pages/Mobile/CustomerService/CustomerService";
 
@@ -145,6 +151,27 @@ const publicRoutes = [
     layout: DefaultLayout,
     tabHeaderMobile: false,
     titlePageMobile: '客服中心',
+  },
+  {
+    path: configRoutes.notificationCenter,
+    components: NotificationCenter,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: "通知中心",
+    children: [
+      {
+        path: "station-letter",
+        components: StationLetter
+      },
+      {
+        path: "announcement",
+        components: Announcement,
+      },
+      {
+        path: "maintenance",
+        components: Maintenance
+      }
+    ]
   }
 ];
 
