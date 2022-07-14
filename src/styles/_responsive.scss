@@ -1,12 +1,19 @@
 $_sm: 320px; // small mobile
+$_a: 639px; // 
 $_m: 767px; // mobile
-$_t: 1024px; // tablet
+$_t: 1023px; // tablet
 $_d: 1179px; // desktop
 $_x: 1339px;
 $_w: 1419px;
 
 @mixin small-mobile {
     @media only screen and (max-width: #{$_sm}) {
+        @content;
+    }
+}
+
+@mixin middle-Mobile {
+    @media only screen and (max-width: #{$_m}) {
         @content;
     }
 }
@@ -28,3 +35,19 @@ $_w: 1419px;
         @content;
     }
 }
+
+// // --- Breakpoint F8
+// // Mobile
+// @media only screen and (max-width: 739px) {
+    
+// }
+
+// //Tablet
+// @media only screen and (min-width: 740px) and (max-width: 1023px) {
+    
+// }
+
+// //PC
+// @media only screen and (min-width: 1024px) {
+    
+// }

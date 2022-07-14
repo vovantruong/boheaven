@@ -38,7 +38,7 @@ const Notification = ({ isMobile }) => {
                 </marquee>
               </div>
               <button className={cx('more')}>
-                <Link to="#">更多</Link>
+                <Link to="/notification/announcement">更多</Link>
               </button>
             </React.Fragment>
           )}

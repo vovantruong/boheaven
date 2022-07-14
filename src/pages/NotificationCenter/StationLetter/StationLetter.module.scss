@@ -1,0 +1,48 @@
+@mixin d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.station-letter{
+   @include d-flex-column();
+   padding: 10px 33px;
+   
+    .letter-item{
+        @include d-flex-column();
+        padding: 10px 0;
+        border-bottom: 2px solid #C4C4C4;
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+
+        &:last-child{
+            border-bottom: none;
+        }
+        .head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .title{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .content{
+            color: #575757;
+            padding-left:2.5rem;
+            display: none;
+            transition: all .2s;
+        }
+
+        .collapse{
+            display: block;
+        }
+    }
+}
