@@ -25,7 +25,7 @@ const CommonProblem = () => {
             onClick={() => handleCollapse(id)}
             className={cx("action-collapse")}
           >
-            <h4>{rule.title}</h4>
+            <p>{rule.title}</p>
             <BsChevronRight className={cx("icon")} />
           </button>
           <div className={cx('content')}>

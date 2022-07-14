@@ -18,13 +18,11 @@ const GameIntroduction = () => {
           <ul className={cx("list-games")}>
             {dataGame?.map((item, i) => (
               <li key={i} className={cx("item-game")}>
-                <button className={cx("action")}>
-                  <Link to={item.link}>
-                    <div className={cx("image-game")}>
+                  <Link className={cx('action')} to={item.link}>
+                    <div className={cx("image-game",'bg-normal-linear')}>
                       <img src={item.image} alt="..."/>
                     </div>
                   </Link>
-                </button>
                 <p className={cx("name")}>{item.name}</p>
               </li>
             ))}

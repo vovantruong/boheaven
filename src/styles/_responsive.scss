@@ -6,48 +6,61 @@ $_d: 1179px; // desktop
 $_x: 1339px;
 $_w: 1419px;
 
-@mixin small-mobile {
-    @media only screen and (max-width: #{$_sm}) {
-        @content;
-    }
-}
+// @mixin small-mobile {
+//     @media only screen and (max-width: #{$_sm}) {
+//         @content;
+//     }
+// }
 
-@mixin middle-Mobile {
-    @media only screen and (max-width: #{$_m}) {
-        @content;
-    }
-}
+// @mixin middle-Mobile {
+//     @media only screen and (max-width: #{$_a}) {
+//         @content;
+//     }
+// }
 
-@mixin mobile {
-    @media only screen and (max-width: #{$_m}) {
-        @content;
-    }
-}
+// @mixin mobile {
+//     @media only screen and (max-width: 739px) {
+//         @content;
+//     }
+// }
 
-@mixin tablet {
-    @media only screen and (max-width: #{$_t}) {
-        @content;
-    }
-}
+// @mixin tablet {
+//     @media only screen and (max-width: #{$_t}) {
+//         @content;
+//     }
+// }
 
-@mixin desktop {
-    @media only screen and (max-width: #{$_d}) {
-        @content;
-    }
-}
+// @mixin desktop {
+//     @media only screen and (max-width: #{$_d}) {
+//         @content;
+//     }
+// }
 
 // // --- Breakpoint F8
-// // Mobile
-// @media only screen and (max-width: 739px) {
-    
-// }
 
-// //Tablet
-// @media only screen and (min-width: 740px) and (max-width: 1023px) {
-    
-// }
+@mixin smallmobile {
+    @media only screen and (max-width: 479px) {
+        @content;
+    }
+}
 
-// //PC
-// @media only screen and (min-width: 1024px) {
-    
-// }
+// Mobile
+@mixin mobile {
+    @media only screen and (max-width: 739px) {
+        @content;
+    }
+}
+
+//Tablet
+@mixin tablet {
+    @media only screen and (min-width: 740px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+//PC
+@mixin desktop {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
