@@ -110,7 +110,7 @@ const Header = () => {
             ) : null}
           </div>
           {/* If login success render User  */}
-          <User isMobile={isMobile} className={cx("user-account")} />
+          <User isMobile={isMobile} className={cx("user-info")} />
           {/* If not login render Control */}
           {/* <Control /> */}
         </div>

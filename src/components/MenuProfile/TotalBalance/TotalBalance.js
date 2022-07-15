@@ -50,13 +50,22 @@ const TotalBalance = ({ classNames, totalBalance, visible, setVisible }) => {
           <BsChevronDown className={cx("icon")} />
         </div>
         <div className={cx("balance-details")}>
-            <div className={cx('table-info')}>
-Hello
-            </div>
+        <div className={cx('wrapper')}>
+            <ul className={cx('table-info')}>
+              {
+                dataGameBalance.map((item, i) => (
+                  <li className={cx('item-balance')} key={i}>
+                    <p>{item.name}</p>
+                    <span>{item.balance}</span>
+                  </li>
+                ))
+              }
+            </ul>
             <div className={cx('total')}>
                 <div className={cx('amount')}>總額度: {totalBalance}</div>
                 <button>一鍵轉回</button>
             </div>
+        </div>
         </div>
       </div>
     </OutsideClickHandler>

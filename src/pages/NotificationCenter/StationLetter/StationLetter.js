@@ -8,15 +8,11 @@ const cx = classNames.bind(styles);
 
 const StationLetter = () => {
   const [active, setActive] = useState(0);
-  const [collapse, setCollapse] = useState(true);
+  const [collapse, setCollapse] = useState(false);
 
   const handleCollapse = (id) => {
     setActive(id);
-    if (collapse) {
-      setCollapse(false);
-    } 
-    setCollapse(true);
-    
+    setCollapse(!collapse);
   };
   return (
     <div className={cx("station-letter")}>
@@ -33,9 +29,13 @@ const StationLetter = () => {
             </div>
             <span className={cx("date")}>{item.date}</span>
           </div>
-          <div className={cx("content", {['collapse']: collapse && active === id})}>
-              <span>{item.description}</span>
-            </div>
+          <div
+            className={cx("content", {
+              ["collapse"]: collapse && active === id,
+            })}
+          >
+            <span>{item.description}</span>
+          </div>
         </div>
       ))}
     </div>
