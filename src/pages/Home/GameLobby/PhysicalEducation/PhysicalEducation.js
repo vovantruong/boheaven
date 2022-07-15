@@ -38,7 +38,7 @@ const PhysicalEducation = () => {
           {data.map((item, i) => (
             <SwiperSlide key={i} className={cx("img-main")}>
               <span></span>
-              <img src={item.image} />
+              <img src={item.image} alt="..."/>
               <Button className="bg-blue">
                 <Link to={item.link}>{item.name}</Link>
               </Button>

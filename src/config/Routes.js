@@ -18,4 +18,6 @@ export const configRoutes = {
     dreamtech:'/dreamtech',
     bng: '/BNG',
     profile: '/profile',
+    customerService: '/customer-service',
+    notificationCenter: '/notification'
 }

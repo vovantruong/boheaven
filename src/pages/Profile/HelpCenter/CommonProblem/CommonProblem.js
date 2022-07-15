@@ -12,7 +12,7 @@ const CommonProblem = () => {
   const handleCollapse = (id) => {
     // setVisible(!visible);
     setActive(id)
-    if(active == id){
+    if(active === id){
       setActive(null);
     }
   };
@@ -20,11 +20,12 @@ const CommonProblem = () => {
   return (
     <div className={cx("common-problem")}>
       {dataCommon.map((rule, id) => (
-        <div key={id} className={cx("problem-item", { ["active"]: active == id})}>
+        <div key={id} className={cx("problem-item", { ["active"]: active === id})}>
           <button
             onClick={() => handleCollapse(id)}
-            className={cx("action-collapse")}>
-            <h4>{rule.title}</h4>
+            className={cx("action-collapse")}
+          >
+            <p>{rule.title}</p>
             <BsChevronRight className={cx("icon")} />
           </button>
           <div className={cx('content')}>

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./SidebarSupport.module.scss";
-import Service from "../../../assets/images/global/web/service.png";
-import Announcement from "../../../assets/images/global/web/announcement.png";
-import Help from "../../../assets/images/global/web/help.png";
+import IcService from "../../../assets/images/global/web/service.png";
+import IcSpeaker from "../../../assets/images/global/web/announcement.png";
+import IcHelp from "../../../assets/images/global/web/help.png";
 import { imageNavi } from "../../../constants/imageNavigation";
 import ShowModalSupport from "./ShowModalSupport";
 
@@ -14,20 +14,20 @@ const sidebaritems = [
   {
     key: "service",
     name: "客服中心",
-    image: Service,
+    image: IcService,
     link: "#",
   },
   {
-    key: "announcement",
+    key: "helpcenter",
     name: "幫助中心",
-    image: Announcement,
+    image: IcSpeaker,
     link: "/profile/help-center",
   },
   {
-    key: "help",
+    key: "announcement",
     name: "公告專區",
-    image: Help,
-    link: "#",
+    image: IcHelp,
+    link: "/notification/announcement",
   },
 ];
 
@@ -115,14 +115,16 @@ const SidebarSupport = ({ isMobile }) => {
               >
                 {({ isActive }) => (
                   <React.Fragment>
+                  <div className={cx('image-icon')}>
                     <img src={isActive ? item.imageActive :item.image} alt="..." />
+                  </div>
                     <p>{item.name}</p>
                   </React.Fragment>
                 )}
               </NavLink>
             ) : (
               <button key={i}>
-                <img src={item.image} />
+                <img src={item.image} alt="..."/>
                 <p>{item.name}</p>
               </button>
             )

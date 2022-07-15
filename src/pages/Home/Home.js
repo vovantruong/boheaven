@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss";
 import Banner from "./Banner/Banner";
@@ -8,7 +8,6 @@ import AboutUs from "./AboutBoheaven/AboutBoheaven";
 import QualityService from "./QualityService/QualityService";
 import LatestNews from "./LatestNews/LatestNews";
 import { MediaQueryContext } from "~/Context/MainContext";
-import {useMediaQuery} from 'react-responsive'
 
 const cx = classNames.bind(styles);
 

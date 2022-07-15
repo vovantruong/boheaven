@@ -11,11 +11,11 @@ const TagTitlePattern = ({ className, name, children, container = true }) => {
       <div className={cx(container ? "container" : "wrapper")}>
         <div className={cx("wrap")}>
           <div className={cx("tag-img")}>
-            <img src={TagLeft} />
+            <img src={TagLeft} alt="..."/>
           </div>
           <p>{children || name}</p>
           <div className={cx("tag-img")}>
-            <img src={TagRight} />
+            <img src={TagRight} alt="..."/>
           </div>
         </div>
       </div>

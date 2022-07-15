@@ -19,11 +19,11 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                 subMenu.data.map((item, index) =>
                   subMenu.data?.length < 3 ? (
                     <div key={index} className={cx("item-short-data")}>
-                      <img className={cx("image-main")} src={item.image} />
+                      <img className={cx("image-main")} src={item.image} alt="..."/>
                       <div className={cx("action")}>
                         <div className={cx("info")}>
                           <div className={cx("logo")}>
-                            <img src={item.logo} />
+                            <img src={item.logo} alt="..."/>
                           </div>
                           <div className={cx("content")}>
                             <h4 className={cx("name")}>{item.name}</h4>
@@ -43,16 +43,14 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                     >
                       <div className={cx("info")}>
                         <div className={cx("logo")}>
-                          <img src={item.logo} />
+                          <img src={item.logo} alt="..."/>
                         </div>
                         <div className={cx("content")}>
                           <h4 className={cx("name")}>{item.name}</h4>
                           <p className={cx("tag")}>{item.tag}</p>
                         </div>
                       </div>
-                      <div className={cx("image-game")}>
-                        <img src={item.image} />
-                      </div>
+                        <img className={cx("image-game")} src={item.image} alt="..."/>
                     </Link>
                   )
                 )

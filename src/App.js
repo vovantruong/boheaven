@@ -9,7 +9,7 @@ import DefaultLayout from "./Layout/DefaultLayout/DefaultLayout";
 function App() {
   const isMobile = useContext(MediaQueryContext);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="App">
         <Routes>
           {publicRoutes?.map((routes, indexParent) => {

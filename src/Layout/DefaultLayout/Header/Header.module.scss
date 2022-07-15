@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 65px;
+  height: 6.5rem;
 
   .navbar {
     display: flex;
@@ -30,8 +30,8 @@
     flex: 1;
 
     .nav-logo {
-      width: 100px;
-      height: 36px;
+      max-width: 10rem;
+      height: 3.6rem;
 
       img {
         width: 100%;
@@ -43,16 +43,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-left: 41px;
-      margin-right: 45px;
-      width: 555px;
+      margin-left: 4.1rem;
+      margin-right: 4.5rem;
+      width: 55.5rem;
       height: 100%;
+
+      @include tablet{
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
     }
     .nav-item {
       height: 100%;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
       color: #000;
       transition: all 0.4s;
       display: flex;
@@ -60,7 +65,8 @@
       justify-content: center;
 
       img {
-        margin-left: 3px;
+        margin-left: 0.3rem;
+        width: 1.2rem;
       }
 
       &:hover {
@@ -76,7 +82,7 @@
       &::before {
         position: absolute;
         content: "";
-        height: 5px;
+        height: 0.5rem;
         width: 100%;
         bottom: 0;
         left: 0;

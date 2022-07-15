@@ -13,7 +13,7 @@ const BoxInforProfile = ({
   tabHead = false,
 }) => {
   return (
-    <div className={cx("box-info", className)}>
+    <div className={cx("bg-normal-linear","box-info", className)}>
       {titleHead && <div className={cx("title-head")}><span>{titleHead}</span></div>}
       {lineHead && <hr />}
       <div className={cx('body',bodyClassName)}>

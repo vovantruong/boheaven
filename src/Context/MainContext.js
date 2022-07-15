@@ -5,7 +5,7 @@ const MediaQueryContext = createContext();
 
 function MainProvider ({children}) {
 
-    const isMobile = useMediaQuery({query: `(max-width: 480px)`});
+    const isMobile = useMediaQuery({query: `(max-width: 739px)`});
 
     return(
         <MediaQueryContext.Provider value={isMobile}>

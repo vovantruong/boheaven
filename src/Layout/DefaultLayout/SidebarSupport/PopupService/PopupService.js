@@ -3,6 +3,7 @@ import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import styles from "./PopupService.module.scss";
 import Icon from "~/constants/icons";
+import {BsFillCaretRightFill} from 'react-icons/bs'
 
 const cx = classNames.bind(styles);
 
@@ -49,7 +50,7 @@ const PopupService = ({ className, onChangeFeedback,...props }) => {
                 </div>
               </div>
               <div className={cx("icon-next")}>
-                <Icon name="arrowRight" />
+                <BsFillCaretRightFill />
               </div>
             </Link>
           </button>

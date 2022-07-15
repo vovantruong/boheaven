@@ -3,19 +3,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 130px;
-    padding-right: 184px;
-    padding-top: 10px;
+    padding-left: 13rem;
+    padding-right: 18.4rem;
+    padding-top: 1rem;
+
+    @include tablet{
+        padding-right: 13rem;
+    }
 
     @include mobile{
         display: block;
         padding: 0 11px;
-
     }
 
     .image{
-        width: 428px;
-        height: 301px;
+        width: 42.8rem;
+        height: 30rem;
 
         @include mobile{
             width: 100%;
@@ -38,41 +41,38 @@
         padding: 15px;
 
         button{
-            width: 258px;
+            width: 25.8rem;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
             border-radius: 4px;
             color: #FFFFFF;
             font-weight: 600;
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 2rem;
+            line-height: 2.8rem;
 
             @include mobile{
-                    width: 100%;
+                width: 100%;
             }
         }
 
         .normal{
-            padding: 22px 0;
-            margin-bottom: 19px;
+            padding: 2.2rem 0;
+            margin-bottom: 2rem;
             background: radial-gradient(63.11% 63.11% at 31.97% 19.67%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #22A7FB;
         }
 
         .ios{
-            padding: 8px 0;
-            margin-bottom: 12px;
+            padding: 0.8rem 0;
+            margin-bottom: 1.2rem;
             background: linear-gradient(180deg, #D3D3D3 0%, #9B9B9B 100%);
         }
 
         .android{
-            padding: 8px 0;
-            margin-bottom: 16px;
+            padding: 0.8rem 0;
+            margin-bottom: 1.6rem;
             background: linear-gradient(180deg, #B6D96C 0%, #5C7624 100%);
         }
 
         p{
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
             text-align: center;
             letter-spacing: 0.01em;
             color: #939393;

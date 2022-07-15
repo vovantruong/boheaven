@@ -1,13 +1,12 @@
 .service-chart{
     display: inline-block;
-    margin-bottom: 35px;
+    margin-bottom: 3.5rem;
 
     .title-chart {
-        margin-top: 20px;
+        margin-top: 2rem;
         p{
             font-weight: 700;
-            font-size: 16px;
-            line-height: 22px;
+            line-height: 2.2rem;
             display: flex;
             align-items: center;
            justify-content: center;
@@ -53,8 +52,8 @@
             top: 50%;
             left: 50%;
             font-weight: 600;
-            font-size: 34px;
-            line-height: 39px;
+            font-size: 3.4rem;
+            line-height: 4rem;
             background: linear-gradient(180deg, #81DCFF 0%, #4DA8FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -64,7 +63,7 @@
 
             p{
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 2rem;
             }
         }
 

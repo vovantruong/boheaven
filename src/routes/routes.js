@@ -38,7 +38,18 @@ import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
 import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
 import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
 import InviteFriends from "~/pages/Profile/InviteFriends/InviteFriends";
+import Withdrawal from "~/pages/Profile/Withdrawal/Withdrawal";
+import Deposit from "~/pages/Profile/Deposit/Deposit";
+import TurningPoint from "~/pages/Profile/TurningPoint/TurningPoint";
 
+// routes notifiation center
+import NotificationCenter from "~/pages/NotificationCenter/NotificationCenter";
+import StationLetter from "~/pages/NotificationCenter/StationLetter/StationLetter";
+import Announcement from "~/pages/NotificationCenter/Announcement/Announcement";
+import Maintenance from "~/pages/NotificationCenter/Maintenance/Maintenance";
+
+// New route mobile ---------------------------------------------------------------------
+import CustomerService from "~/pages/Mobile/CustomerService/CustomerService";
 
 
 
@@ -212,6 +223,46 @@ const publicRoutes = [
         path: "transaction-record",
         components: TransactionRecord
       },
+      {
+        path: "deposit",
+        components: Deposit
+      },
+      {
+        path: "withdrawal",
+        components: Withdrawal
+      },
+      {
+        path: "turning-point",
+        components: TurningPoint
+      },
+    ]
+  },
+  {
+    path: configRoutes.customerService,
+    components: CustomerService,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '客服中心',
+  },
+  {
+    path: configRoutes.notificationCenter,
+    components: NotificationCenter,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: "通知中心",
+    children: [
+      {
+        path: "station-letter",
+        components: StationLetter
+      },
+      {
+        path: "announcement",
+        components: Announcement,
+      },
+      {
+        path: "maintenance",
+        components: Maintenance
+      }
     ]
   }
 ];

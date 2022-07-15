@@ -16,7 +16,7 @@ const Notification = ({ isMobile }) => {
             <React.Fragment>
               <div className={cx("title")}>
                 <div className={cx("image-noti")}>
-                  <img src={Speaker} />
+                  <img src={Speaker} alt="..."/>
                 </div>
                 <p>最新公告</p>
               </div>
@@ -38,7 +38,7 @@ const Notification = ({ isMobile }) => {
                 </marquee>
               </div>
               <button className={cx('more')}>
-                <Link to="#">更多</Link>
+                <Link to="/notification/announcement">更多</Link>
               </button>
             </React.Fragment>
           )}
