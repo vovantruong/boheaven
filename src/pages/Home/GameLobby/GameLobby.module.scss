@@ -1,10 +1,10 @@
 @import "../../../styles/globalStyles";
 
 .game-lobby {
-  padding-top: 7px;
+  padding-top: 32px;
   .wrapper {
     .tab-menu {
-      height: 58px;
+      height: 5.8rem;
       background: linear-gradient(
         180deg,
         #edf6ff 0%,
@@ -16,16 +16,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      padding: 0 1rem;
 
       .tab-action {
         box-shadow: unset;
         transition: none;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-
+        font-size: 1.6rem;
         img {
           margin-right: 10px;
         }
@@ -39,10 +37,9 @@
     .tab-body {
       background: url("../../../assets/images/pages/home/game-lobby/place-bg.png")
         no-repeat;
-      background-position-y: 13rem;
-      background-size: contain;
-      min-height: 435px;
-      // overflow: hidden;
+        background-position-y: 24rem;
+        background-size: contain;
+        height: 47rem;
     }
   }
 

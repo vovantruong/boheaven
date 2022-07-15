@@ -50,9 +50,7 @@ const SubHeader = ({ className, id, visible, setVisible, ...props }) => {
                           <p className={cx("tag")}>{item.tag}</p>
                         </div>
                       </div>
-                      <div className={cx("image-game")}>
-                        <img src={item.image} alt="..."/>
-                      </div>
+                        <img className={cx("image-game")} src={item.image} alt="..."/>
                     </Link>
                   )
                 )

@@ -25,7 +25,7 @@
     .modal-content{
         position: relative;
         margin: auto;
-        max-width: 600px;
+        max-width: 60rem;
         width: 100%;
         background: linear-gradient(
         180deg,
@@ -37,7 +37,7 @@
         border-radius: 8px;
         
         .wrapper{
-            padding: 11px 25px 31px 25px;
+            padding: 1.1rem 2.5rem 3.1rem 2.5rem;
         }
 
         .head{
@@ -47,8 +47,8 @@
           
               .title {
                 font-weight: 600;
-                font-size: 20px;
-                line-height: 24px;
+                font-size: 2rem;
+                line-height: 2.4rem;
                 text-align: center;
                 color: #365a97;
                 letter-spacing: 0.01em;
@@ -56,8 +56,8 @@
               }
 
               .btn-close{
-                width: 32px;
-                height: 32px;
+                width: 3.2rem;
+                height: 3.2rem;
                 color: #365A97;
 
                 img{

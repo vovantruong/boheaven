@@ -4,9 +4,9 @@
   margin-top: 26px;
   .box-action {
     position: relative;
-    height: 92px;
+    height: 9.2rem;
     width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 2.3rem;
     border-radius: 8px;
 
     &:last-child {
@@ -27,7 +27,7 @@
         justify-content: space-between;
 
         .img-icon{
-          max-width: 52px;
+          max-width: 5.2rem;
 
           img{
             width: 100%;
@@ -40,15 +40,12 @@
             text-align: left;
             h4 {
               font-weight: 500;
-              font-size: 20px;
-              line-height: 22px;
+              font-size: 2rem;
+              line-height: 2.2rem;
               color: #fff;
             }
 
             p {
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 22px;
               color: #fff;
             }
         }
@@ -57,7 +54,7 @@
 
       .icon-next{
         color: #fff;
-        font-size: 18px;
+        font-size: 1.8rem;
       }
     }
   }

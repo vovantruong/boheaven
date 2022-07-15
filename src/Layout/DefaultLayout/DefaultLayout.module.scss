@@ -5,11 +5,15 @@
   background: url("../../assets/images/global/background-main-attactment.jpg")
     no-repeat fixed center;
   background-size: cover;
+  min-height: 100vh;
 
   @include mobile{
     background: linear-gradient(180deg, #EDF6FF 0%, #FFFFFF 53.65%, #F0F7FF 100%)  no-repeat fixed center;
     background-size: cover;
-    min-height: 100vh;
+  }
+
+  .body-screen{
+    min-height: calc(100vh - 34rem);
   }
 
   .group-head{
