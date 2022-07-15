@@ -23,8 +23,7 @@ const CommonProblem = () => {
         <div key={id} className={cx("problem-item", { ["active"]: active == id})}>
           <button
             onClick={() => handleCollapse(id)}
-            className={cx("action-collapse")}
-          >
+            className={cx("action-collapse")}>
             <h4>{rule.title}</h4>
             <BsChevronRight className={cx("icon")} />
           </button>

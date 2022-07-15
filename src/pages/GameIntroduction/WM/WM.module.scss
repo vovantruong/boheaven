@@ -9,59 +9,46 @@
       bottom: 300px;
       top: 25px;
       .title-content {
-        h3 {
+        .title1 {
           font-family: "Inter";
           font-style: normal;
           font-weight: 600;
           font-size: 50px;
           line-height: 61px;
-          color: #ffffff;
+          color: #000000;
+          span {
+            color: #4da8ff;
+          }
         }
         .title2 {
           font-family: "Inter";
           font-style: normal;
           font-weight: 600;
-          font-size: 20px;
-          line-height: 28px;
-          letter-spacing: 0.15px;
-          color: #ffffff;
+          font-size: 50px;
+          line-height: 61px;
+          color: #000000;
+          margin-left: 90px;
         }
       }
       .description-content {
-        display: flex;
-        background-color: #ffffff;
         height: 40px;
         justify-content: flex-start;
         text-align: center;
         align-items: center;
         .go-now {
-          background-color: black;
-          height: 30px;
-          margin: 5px 10px 5px 10px;
+          width: 291px;
+          height: 45px;
+          margin: 35px 10px 5px 10px;
           padding: 5px 10px 5px 10px;
           font-family: "Poppins";
           font-style: normal;
           font-weight: 600;
-          font-size: 12px;
+          font-size: 28px;
           line-height: 9px;
           letter-spacing: 1px;
           color: #ffffff;
-        }
-        .description {
-          display: flex;
-          .description1 {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 30px;
-            letter-spacing: 1px;
-            color: #000000;
-            padding: 0 20px 0 60px;
-          }
-          .img-icon {
-            width: 20px;
-          }
+          background: linear-gradient(180deg, #81dcff 0%, #4da8ff 100%);
+          border-radius: 100px;
         }
       }
     }
@@ -91,10 +78,6 @@
       display: flex;
       .block-left {
         padding-right: 30px;
-        img {
-          padding-right: 30px;
-          margin-left: -30px;
-        }
       }
       .block-right {
         .rigth1 {
@@ -104,6 +87,14 @@
             #ffffff 53.65%,
             #f0f7ff 100%
           );
+          border: 1px solid #ffffff;
+          box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+          border-radius: 8px;
+          justify-content: flex-start;
+          text-align: left;
+          letter-spacing: 2px;
+          letter-spacing: 3px;
+          padding: 15px 30px 15px 30px;
           h4 {
             font-family: "Poppins";
             font-style: normal;
@@ -111,13 +102,6 @@
             font-size: 25.6988px;
             padding-bottom: 5px;
           }
-          border: 1px solid #ffffff;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 8px;
-          justify-content: flex-start;
-          text-align: left;
-          letter-spacing: 2px;
-          padding: 15px;
           .content1 {
             padding-bottom: 10px;
           }
@@ -177,36 +161,97 @@
       display: flex;
       .block-left {
         padding: 20px 0px 0 0;
-        .block-title {
-          border-bottom: 1px solid blue;
+        .problem-item {
+          padding: 8px 20px 15px 0;
+          margin: 15px 0 0 0;
           background: linear-gradient(
             180deg,
             #edf6ff 0%,
             #ffffff 53.65%,
             #f0f7ff 100%
           );
-          box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
           border-radius: 8px;
-          width: 560px;
-          height: 35px;
-          text-align: initial;
-          padding: 15px 50px 55px 10px;
-          margin: 20px 70px 15px -20px;
-          .title {
-            font-family: "Noto Sans TC";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
+
+          .action-collapse {
             display: flex;
-            color: #1c1c1c;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            h4 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 28px;
+              text-align: center;
+              letter-spacing: 0.15px;
+              color: #333333;
+              padding-left: 90px;
+            }
+            .icon {
+              transition: all 0.4s;
+            }
+          }
+
+          .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+            p {
+              color: #575757;
+              padding: 10px;
+
+              &:last-child {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+        .active {
+          background: linear-gradient(180deg, #557ce0 0%, #1e50a6 100%);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+          border-radius: 8px;
+          .action-collapse {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            h4 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 28px;
+              text-align: center;
+              letter-spacing: 0.15px;
+              color: #ffffff;
+              padding-left: 90px;
+            }
+          }
+          .icon {
+            transform: rotateZ(-180deg);
+          }
+
+          .content {
+            max-height: 500px;
+            overflow: auto;
+            p {
+              color: #ffffff;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
           }
         }
       }
       .block-right {
         img {
-          padding-left: 20px;
+          //    padding: 10px 31px 10px 40px;
+          margin: 30px 30px 10px 40px;
         }
+
         .rigth1 {
           background: linear-gradient(
             180deg,
@@ -214,13 +259,6 @@
             #ffffff 53.65%,
             #f0f7ff 100%
           );
-          border: 1px solid #ffffff;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 8px;
-          justify-content: flex-start;
-          text-align: left;
-          letter-spacing: 2px;
-          padding: 15px;
           h4 {
             font-family: "Poppins";
             font-style: normal;
@@ -228,7 +266,13 @@
             font-size: 25.6988px;
             padding-bottom: 5px;
           }
-
+          border: 1px solid #ffffff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+          justify-content: flex-start;
+          text-align: left;
+          letter-spacing: 2px;
+          padding: 15px;
           .content1 {
             padding-bottom: 10px;
           }
@@ -287,16 +331,13 @@
     }
     .wrapper-block {
       .content {
-        text-align: center;
+        text-align: left;
         p {
           padding: 10px 0 10px 0;
         }
       }
       .block-content {
         display: flex;
-        text-align: center;
-        justify-content: center;
-        padding: 15px 0 0 0;
         h4 {
           padding: 0 0 10px 0;
           font-family: "Inter";
@@ -319,6 +360,110 @@
           text-align: left;
           width: 370px;
         }
+        .block-btn {
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.15px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
+          }
+        }
+        .block-btn1 {
+          margin-top: 40px;
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.15px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
+          }
+        }
+        .block-btn2 {
+          margin-top: 15px;
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.15px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
+          }
+        }
       }
     }
   }
@@ -336,11 +481,8 @@
     }
     .wrapper-block {
       display: flex;
-      justify-content: center;
-      padding-top: 15px;
       .block-left {
-        padding: 5px 0px 0 0;
-        margin-left: -35px;
+        padding: 20px 0px 0 0;
         .block-title {
           display: flex;
           background: linear-gradient(
@@ -365,10 +507,11 @@
         }
       }
       .block-right {
-        padding: 15px 10px 20px 0px;
-        width: 50%;
+        padding: 5px 0 20px 0;
         .block-title {
           text-align: left;
+          padding-left: 70px;
+          padding-top: 20px;
           h4 {
             font-family: "Inter";
             font-style: normal;
@@ -445,7 +588,7 @@
       height: 40px;
       align-items: center;
       background: #365a97;
-      margin: 0px -50px 0 30px;
+      margin: 0px -50px 0 0px;
       .title {
         font-family: "Roboto";
         font-style: normal;
@@ -466,7 +609,7 @@
       }
     }
     .tableTab {
-      margin: 0 -50px 0 30px;
+      margin: 0 -50px 0 0px;
       .block1 {
         display: flex;
         font-family: "Roboto";
@@ -544,65 +687,50 @@
         z-index: 1;
         bottom: 300px;
         top: 25px;
-        background-image: url(../../../assets/images/pages/game-intro/img-Allbet/background.png);
-        height: 210px;
+        height: 180px;
         text-align: center;
         .title-content {
-          h3 {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 50px;
-            line-height: 61px;
-            color: #ffffff;
+            .title1 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 35px;
+              line-height: 61px;
+              color: #000000;
+              span {
+                color: #4da8ff;
+              }
+            }
+            .title2 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 35px;
+              line-height: 35px;
+              color: #000000;
+            }
           }
-          .title2 {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 28px;
-            letter-spacing: 0.15px;
-            color: #ffffff;
-          }
-        }
         .description-content {
-          display: flex;
-          background-color: #ffffff;
-          height: 40px;
-          justify-content: flex-start;
-          text-align: center;
-          align-items: center;
-          margin: 10px 70px 10px 50px;
-          .go-now {
-            background-color: black;
-            height: 30px;
-            margin: 5px;
-            padding: 0px 7px 0 7px;
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #ffffff;
-          }
-          .description {
-            display: flex;
-            .description1 {
+            height: 40px;
+            justify-content: flex-start;
+            text-align: center;
+            align-items: center;
+            .go-now {
+              width: 291px;
+              height: 45px;
+              margin: 15px 10px 5px 10px;
+              padding: 5px 10px 5px 10px;
               font-family: "Poppins";
               font-style: normal;
               font-weight: 600;
-              font-size: 12px;
-              line-height: 30px;
+              font-size: 28px;
+              line-height: 9px;
               letter-spacing: 1px;
-              color: #000000;
-              padding: 0px 10px 0 45px;
-            }
-            .img-icon {
-              width: 20px;
+              color: #ffffff;
+              background: linear-gradient(180deg, #81dcff 0%, #4da8ff 100%);
+              border-radius: 100px;
             }
           }
-        }
       }
     }
     .block {
@@ -611,7 +739,7 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 21px;
+        font-size: 24px;
         line-height: 29px;
         color: #365a97;
       }
@@ -619,10 +747,10 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
-        padding: 20px;
+        padding: 5px;
       }
       .wrapper-block {
         .block-left {
@@ -697,118 +825,6 @@
         }
       }
     }
-    .block2 {
-      text-align: center;
-      .tag-name {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 21px;
-        line-height: 29px;
-        color: #365a97;
-      }
-      .tag-head {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 37px;
-        color: #365a97;
-        padding: 20px;
-      }
-      .wrapper-block {
-        .block-left {
-          padding: 20px 0px 0 0;
-          .block-title {
-            display: flex;
-            border-bottom: 1px solid blue;
-            background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-            box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
-            border-radius: 8px;
-            align-items: center;
-            text-align: initial;
-            width: 360px;
-            height: 70px;
-            margin-bottom: 15px;
-            padding: 0 10px 0 10px;
-            .title {
-              font-size: 16px;
-              letter-spacing: -0.01em;
-              line-height: 25px;
-            }
-          }
-        }
-        .block-right {
-          img {
-            width: -webkit-fill-available;
-          }
-          .rigth1 {
-            border: 1px solid #ffffff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 8px;
-            justify-content: flex-start;
-            text-align: left;
-            letter-spacing: 2px;
-            padding: 15px;
-            background: linear-gradient(
-              180deg,
-              #edf6ff 0%,
-              #ffffff 53.65%,
-              #f0f7ff 100%
-            );
-
-            h4 {
-              font-family: "Poppins";
-              font-style: normal;
-              font-weight: 700;
-              font-size: 25.6988px;
-              padding-bottom: 5px;
-            }
-
-            .content1 {
-              padding-bottom: 10px;
-            }
-          }
-          .block-btn {
-            display: flex;
-            padding: 10px 20px 0px 70px;
-            a {
-              background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
-              background-size: cover;
-              background-repeat: round;
-              box-shadow: none;
-              color: #ffffff;
-              // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-              flex-direction: row;
-              align-items: flex-start;
-              padding: 13px 35px;
-              justify-content: center;
-              line-height: 50px;
-              margin: 15px;
-              align-items: center;
-              text-align: center;
-              letter-spacing: 0.15px;
-              font-family: "Inter";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 20px;
-              border-radius: 100px;
-              cursor: pointer;
-            }
-            .active {
-              background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
-              background-size: cover;
-              background-repeat: round;
-              box-shadow: none;
-
-              .tab-pagename {
-                color: #fff;
-              }
-            }
-          }
-        }
-      }
-    }
     .block3 {
       text-align: center;
       padding-top: 10px;
@@ -816,7 +832,7 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 21px;
+        font-size: 24px;
         line-height: 29px;
         color: #365a97;
       }
@@ -824,10 +840,10 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
-        padding: 20px;
+        padding: 5px;
       }
       .wrapper-block {
         .content {
@@ -839,27 +855,115 @@
         }
         .block-content {
           display: flex;
-          h4 {
-            padding: 0 0 10px 0;
+        }
+        p{
+            text-align: justify;
+            padding: 5px 25px;
+        }
+        .block-btn {
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.15px;
             font-family: "Inter";
             font-style: normal;
             font-weight: 600;
             font-size: 20px;
-            line-height: 28px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
+          }
+        }
+        .block-btn1 {
+          display: flex;
+          padding: 10px 20px 0px 70px;
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
             text-align: center;
             letter-spacing: 0.15px;
-            color: #365a97;
-          }
-          p {
-            font-family: "Noto Sans TC";
+            font-family: "Inter";
             font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            color: #333333;
-            padding: 10px 25px 10px 30px;
-            text-align: left;
-            width: 370px;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
+          }
+        }
+        .block-btn2 {
+          margin-top: 15px;
+          a {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+            color: #ffffff;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 13px 35px;
+            justify-content: center;
+            line-height: 50px;
+            margin: 15px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.15px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 100px;
+            cursor: pointer;
+          }
+          .active {
+            background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
+            background-size: cover;
+            background-repeat: round;
+            box-shadow: none;
+
+            .tab-pagename {
+              color: #fff;
+            }
           }
         }
       }
@@ -871,7 +975,7 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 17px;
+        font-size: 24px;
         line-height: 29px;
         color: #365a97;
       }
@@ -879,10 +983,10 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
-        padding: 20px;
+        padding: 5px;
       }
       .wrapper-block {
         .block-left {

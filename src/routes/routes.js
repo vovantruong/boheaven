@@ -16,6 +16,16 @@ import Blogsport from "~/pages/Blogsport/Blogsport";
 import GameIntroduction from "~/pages/GameIntroduction/GameIntroduction";
 import Discount from "~/pages/Discount/Discount";
 import AllBet from "~/pages/GameIntroduction/AllBet/AllBet";
+import DreamGame from "~/pages/GameIntroduction/DreamGame/DreamGame";
+import WM from "~/pages/GameIntroduction/WM/WM";
+import SAgaming from "~/pages/GameIntroduction/SAgaming/SAgaming";
+import OB from "~/pages/GameIntroduction/OB/OB";
+import BetSport from "~/pages/GameIntroduction/BetSport/BetSport";
+import Super from "~/pages/GameIntroduction/Super/Super";
+import SuperG from "~/pages/GameIntroduction/SuperG/SuperG";
+import Lottery from "~/pages/GameIntroduction/Lottery/Lottery";
+import DreamTech from "~/pages/GameIntroduction/DreamTech/DreamTech";
+import BNG from "~/pages/GameIntroduction/BNG/BNG";
 
 // routes profile -----------------------------------------------------------------------
 import Profile from "~/pages/Profile/Profile";
@@ -28,6 +38,8 @@ import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
 import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
 import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
 import InviteFriends from "~/pages/Profile/InviteFriends/InviteFriends";
+
+
 
 
 /**
@@ -91,6 +103,76 @@ const publicRoutes = [
   {
     path: configRoutes.allbet,
     components: AllBet,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.dreamgame,
+    components: DreamGame,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.sagaming,
+    components: SAgaming,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.wm,
+    components: WM,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.ob,
+    components: OB,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.betsport,
+    components: BetSport,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.super,
+    components: Super,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.superg,
+    components: SuperG,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.lottery,
+    components: Lottery,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.dreamtech,
+    components: DreamTech,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.bng,
+    components: BNG,
     layout: DefaultLayout,
     tabHeaderMobile: false,
     titlePageMobile: '遊戲介紹'

@@ -22,7 +22,7 @@
           font-style: normal;
           font-weight: 600;
           font-size: 20px;
-          line-height: 28px;
+          line-height: 40px;
           letter-spacing: 0.15px;
           color: #ffffff;
         }
@@ -57,7 +57,7 @@
             line-height: 30px;
             letter-spacing: 1px;
             color: #000000;
-            padding: 0 20px 0 60px;
+            padding: 0 20px 0 30px;
           }
           .img-icon {
             width: 20px;
@@ -78,23 +78,18 @@
       color: #365a97;
     }
     .tag-head {
-      color: #365a97;
       font-family: "Inter";
       font-style: normal;
-      font-weight: bold;
-      font-size: 34px;
-      line-height: 41px;
-      letter-spacing: 0.25px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 37px;
+      color: #365a97;
       padding: 20px;
     }
     .wrapper-block {
       display: flex;
       .block-left {
         padding-right: 30px;
-        img {
-          padding-right: 30px;
-          margin-left: -30px;
-        }
       }
       .block-right {
         .rigth1 {
@@ -177,36 +172,97 @@
       display: flex;
       .block-left {
         padding: 20px 0px 0 0;
-        .block-title {
-          border-bottom: 1px solid blue;
+        .problem-item {
+          padding: 8px 20px 15px 0;
+          margin: 15px 0 0 0;
           background: linear-gradient(
             180deg,
             #edf6ff 0%,
             #ffffff 53.65%,
             #f0f7ff 100%
           );
-          box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
           border-radius: 8px;
-          width: 560px;
-          height: 35px;
-          text-align: initial;
-          padding: 15px 50px 55px 10px;
-          margin: 20px 70px 15px -20px;
-          .title {
-            font-family: "Noto Sans TC";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
+
+          .action-collapse {
             display: flex;
-            color: #1c1c1c;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            h4 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 28px;
+              text-align: center;
+              letter-spacing: 0.15px;
+              color: #333333;
+              padding-left: 90px;
+            }
+            .icon {
+              transition: all 0.4s;
+            }
+          }
+
+          .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+            p {
+              color: #575757;
+              padding: 10px;
+
+              &:last-child {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+        .active {
+          background: linear-gradient(180deg, #557ce0 0%, #1e50a6 100%);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+          border-radius: 8px;
+          .action-collapse {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            h4 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 28px;
+              text-align: center;
+              letter-spacing: 0.15px;
+              color: #ffffff;
+              padding-left: 90px;
+            }
+          }
+          .icon {
+            transform: rotateZ(-180deg);
+          }
+
+          .content {
+            max-height: 500px;
+            overflow: auto;
+            p {
+              color: #ffffff;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
           }
         }
       }
       .block-right {
         img {
-          padding-left: 20px;
+          //    padding: 10px 31px 10px 40px;
+          margin: 30px 30px 10px 40px;
         }
+
         .rigth1 {
           background: linear-gradient(
             180deg,
@@ -214,13 +270,6 @@
             #ffffff 53.65%,
             #f0f7ff 100%
           );
-          border: 1px solid #ffffff;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 8px;
-          justify-content: flex-start;
-          text-align: left;
-          letter-spacing: 2px;
-          padding: 15px;
           h4 {
             font-family: "Poppins";
             font-style: normal;
@@ -228,7 +277,13 @@
             font-size: 25.6988px;
             padding-bottom: 5px;
           }
-
+          border: 1px solid #ffffff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+          justify-content: flex-start;
+          text-align: left;
+          letter-spacing: 2px;
+          padding: 15px;
           .content1 {
             padding-bottom: 10px;
           }
@@ -287,16 +342,13 @@
     }
     .wrapper-block {
       .content {
-        text-align: center;
+        text-align: left;
         p {
           padding: 10px 0 10px 0;
         }
       }
       .block-content {
         display: flex;
-        text-align: center;
-        justify-content: center;
-        padding: 15px 0 0 0;
         h4 {
           padding: 0 0 10px 0;
           font-family: "Inter";
@@ -336,11 +388,8 @@
     }
     .wrapper-block {
       display: flex;
-      justify-content: center;
-      padding-top: 15px;
       .block-left {
-        padding: 5px 0px 0 0;
-        margin-left: -35px;
+        padding: 20px 0px 0 0;
         .block-title {
           display: flex;
           background: linear-gradient(
@@ -365,8 +414,7 @@
         }
       }
       .block-right {
-        padding: 15px 10px 20px 0px;
-        width: 50%;
+        padding: 5px 0 20px 0;
         .block-title {
           text-align: left;
           h4 {
@@ -611,7 +659,7 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 21px;
+        font-size: 24px;
         line-height: 29px;
         color: #365a97;
       }
@@ -619,7 +667,7 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
         padding: 20px;
@@ -703,42 +751,109 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 21px;
-        line-height: 29px;
+        font-size: 24px;
+        line-height: 41px;
+        letter-spacing: 0.25px;
         color: #365a97;
       }
       .tag-head {
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
         padding: 20px;
       }
       .wrapper-block {
-        .block-left {
+        .block-right {
           padding: 20px 0px 0 0;
-          .block-title {
-            display: flex;
-            border-bottom: 1px solid blue;
-            background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-            box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
+          .problem-item {
+            padding: 8px 20px 15px 0;
+            margin: 15px 0 0 0;
+            background: linear-gradient(
+              180deg,
+              #edf6ff 0%,
+              #ffffff 53.65%,
+              #f0f7ff 100%
+            );
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
             border-radius: 8px;
-            align-items: center;
-            text-align: initial;
-            width: 360px;
-            height: 70px;
-            margin-bottom: 15px;
-            padding: 0 10px 0 10px;
-            .title {
-              font-size: 16px;
-              letter-spacing: -0.01em;
-              line-height: 25px;
+
+            .action-collapse {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              h4 {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 0.15px;
+                color: #333333;
+                padding-left: 100px;
+              }
+              .icon {
+                transition: all 0.4s;
+              }
+            }
+
+            .content {
+              max-height: 0;
+              overflow: hidden;
+              transition: all 0.5s;
+              p {
+                color: #575757;
+                padding: 10px;
+
+                &:last-child {
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+          .active {
+            background: linear-gradient(180deg, #557ce0 0%, #1e50a6 100%);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            .action-collapse {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              h4 {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                letter-spacing: 0.15px;
+                color: #ffffff;
+                padding-left: 90px;
+              }
+            }
+            .icon {
+              transform: rotateZ(-180deg);
+            }
+
+            .content {
+              max-height: 500px;
+              overflow: auto;
+              p {
+                color: #ffffff;
+              }
+
+              &::-webkit-scrollbar {
+                display: none;
+              }
             }
           }
         }
-        .block-right {
+        .block-left {
           img {
             width: -webkit-fill-available;
           }
@@ -769,43 +884,6 @@
               padding-bottom: 10px;
             }
           }
-          .block-btn {
-            display: flex;
-            padding: 10px 20px 0px 70px;
-            a {
-              background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
-              background-size: cover;
-              background-repeat: round;
-              box-shadow: none;
-              color: #ffffff;
-              // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-              flex-direction: row;
-              align-items: flex-start;
-              padding: 13px 35px;
-              justify-content: center;
-              line-height: 50px;
-              margin: 15px;
-              align-items: center;
-              text-align: center;
-              letter-spacing: 0.15px;
-              font-family: "Inter";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 20px;
-              border-radius: 100px;
-              cursor: pointer;
-            }
-            .active {
-              background: url(../../../assets/images/pages/game-intro/img-Allbet/button.png);
-              background-size: cover;
-              background-repeat: round;
-              box-shadow: none;
-
-              .tab-pagename {
-                color: #fff;
-              }
-            }
-          }
         }
       }
     }
@@ -816,15 +894,16 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 21px;
-        line-height: 29px;
+        font-size: 34px;
+        line-height: 41px;
+        letter-spacing: 0.25px;
         color: #365a97;
       }
       .tag-head {
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 24px;
         line-height: 37px;
         color: #365a97;
         padding: 20px;
@@ -871,18 +950,10 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 17px;
-        line-height: 29px;
+        font-size: 34px;
+        line-height: 41px;
+        letter-spacing: 0.25px;
         color: #365a97;
-      }
-      .tag-head {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 37px;
-        color: #365a97;
-        padding: 20px;
       }
       .wrapper-block {
         .block-left {
