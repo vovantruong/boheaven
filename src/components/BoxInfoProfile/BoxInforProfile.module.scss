@@ -1,23 +1,31 @@
+@import '../../styles/globalStyles';
+
 .box-info{
-    margin-bottom: 27px;
+    margin-bottom: 2.7rem;
 
     .title-head{
-        padding: 12px 27px;
+        padding: 1.2rem 2.7rem;
         span {
             font-weight: 400;
-            font-size: 20px;
-            line-height: 22px;
+            font-size: 2rem;
+            line-height: 2.2rem;
             color: #000;
         }
     }
 
     hr {
       background: #cecece;
-      height: 3px;
+      height: 0.3rem;
       border: none;
     }
 
     .body{
-        padding: 12px 27px;
+        padding: 1.2rem 2.7rem;
+    }
+
+    @include tablet{
+        .body{
+            padding: 1rem 1.7rem;
+        }
     }
 }

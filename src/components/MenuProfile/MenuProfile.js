@@ -88,14 +88,14 @@ const MenuProfile = ({
   isDropdown = false,
 }) => {
 
-const isMobile = useContext(MediaQueryContext);
-const {pathname} = useLocation();
-const navigate = useNavigate()
-useEffect(() =>{
-  if(!isMobile && pathname == '/profile'){
-    navigate('personal-information')
-  } 
-},[pathname])
+// const isMobile = useContext(MediaQueryContext);
+// const {pathname} = useLocation();
+// const navigate = useNavigate()
+// useEffect(() =>{
+//   if(!isMobile && pathname == '/profile'){
+//     navigate('personal-information')
+//   } 
+// },[pathname])
 
   return (
     <div className={cx("bg-normal-linear","menu-profile", className)}>

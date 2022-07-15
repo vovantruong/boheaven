@@ -91,6 +91,12 @@ const RealPerson = () => {
               loop={true}
               slidesPerView={4}
               spaceBetween={30}
+              // breakpoints={{
+              //   768: {
+              //     slidesPerView: 3,
+              //     spaceBetween: 40,
+              //   },
+              // }}
             >
               {data.map((item, i) => (
                 <SwiperSlide key={i} className={cx("slide-item")}>

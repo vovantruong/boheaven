@@ -1,19 +1,17 @@
 .sidebar{
     position: fixed;
-    top: 117px;
-    right: 11px;
+    top: 11.7rem;
+    right: 1rem;
     z-index: 999;
 
     .link{
         font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
         color: #000;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
         .image{
-            width: 80px;
-            height: 80px;
+            width: 8rem;
+            height: 8rem;
           
             img{
                 width: 100%;
@@ -22,7 +20,7 @@
         }
 
         p{
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
         }
     }
 

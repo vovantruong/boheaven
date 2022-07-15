@@ -30,17 +30,17 @@
 
     img {
       width: 30.33%;
-      max-height: 10rem;
+      max-height: 15rem;
       object-fit: contain;
-      margin-bottom: 15px;
-      padding: 13px;
+      margin-bottom: 1.5rem;
+      padding: 1.3rem;
       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ABABABFF' stroke-width='3' stroke-dasharray='5%2c 14' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
     }
   }
 
   .change-file {
     position: relative;
-    margin: 17px 0;
+    margin: 1.7rem 0;
     text-align: center;
 
     label {
@@ -49,17 +49,17 @@
       justify-content: center;
       cursor: pointer;
       .icon {
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
         background: #365a97;
         color: #fff;
         border-radius: 50%;
-        margin-right: 15px;
+        margin-right: 1.5rem;
       }
       span {
         font-weight: 700;
-        font-size: 20px;
-        line-height: 22px;
+        font-size: 2rem;
+        line-height: 2.2rem;
         color: #365a97;
       }
     }
@@ -71,14 +71,14 @@
     span {
       font-style: normal;
       font-weight: 700;
-      font-size: 12px;
-      line-height: 22px;
+      font-size: 1.2rem;
+      line-height: 2.2rem;
       color: #575757;
     }
   }
 
   .submit {
-    padding: 6px 0;
+    padding: 0.6rem 0;
     background: #365a97;
     border-radius: 8px;
     width: 70%;
@@ -86,8 +86,8 @@
     color: #fff;
     margin: 0 auto;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     display: block;
   }
 

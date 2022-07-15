@@ -33,7 +33,9 @@ const DefaultLayout = ({ children, tabHeaderMobile, titlePageMobile }) => {
         <React.Fragment>
           <Header />
           <Notification />
-          {children}
+          <div className={cx('body-screen')}>
+            {children}
+          </div>
           <SidebarSupport />
           <Footer />
         </React.Fragment>

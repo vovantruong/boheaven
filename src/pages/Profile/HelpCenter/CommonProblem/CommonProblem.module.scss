@@ -1,19 +1,18 @@
 .problem-item{
-    padding: 8px 20px;
+    padding: 0.8rem 2rem;
     .action-collapse{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        h4{
+        p{
             font-family: 'Noto Sans TC';
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
             color: #000;
         }
 
         .icon{
+            width: 1.2rem;
+            height: 1.2rem;
             transition: all .3s;
         }
 
@@ -25,7 +24,7 @@
         transition: all .5s;
         p{
             color: #575757;
-            padding: 10px;
+            padding: 1rem;
 
             &:last-child{
                 padding-bottom: 0;
@@ -41,7 +40,7 @@
     }
 
     .content{
-       max-height: 500px;
+       max-height: 50rem;
        overflow: auto;
 
        &::-webkit-scrollbar{

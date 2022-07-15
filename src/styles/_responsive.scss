@@ -1,30 +1,72 @@
 $_sm: 320px; // small mobile
+$_a: 639px; // 
 $_m: 767px; // mobile
-$_t: 1024px; // tablet
+$_t: 1023px; // tablet
 $_d: 1179px; // desktop
 $_x: 1339px;
 $_w: 1419px;
 
-@mixin small-mobile {
-    @media only screen and (max-width: #{$_sm}) {
+// @mixin small-mobile {
+//     @media only screen and (max-width: #{$_sm}) {
+//         @content;
+//     }
+// }
+
+// @mixin middle-Mobile {
+//     @media only screen and (max-width: #{$_a}) {
+//         @content;
+//     }
+// }
+
+// @mixin mobile {
+//     @media only screen and (max-width: 739px) {
+//         @content;
+//     }
+// }
+
+// @mixin tablet {
+//     @media only screen and (max-width: #{$_t}) {
+//         @content;
+//     }
+// }
+
+// @mixin desktop {
+//     @media only screen and (max-width: #{$_d}) {
+//         @content;
+//     }
+// }
+
+// // --- Breakpoint F8
+
+@mixin smallmobile {
+    @media only screen and (max-width: 479px) {
         @content;
     }
 }
 
+@mixin middlemobile {
+    @media only screen and (max-width: 639px) {
+        @content;
+    }
+}
+
+// Mobile
 @mixin mobile {
-    @media only screen and (max-width: #{$_m}) {
+    @media only screen and (max-width: 739px) {
         @content;
     }
 }
 
+//Tablet
 @mixin tablet {
-    @media only screen and (max-width: #{$_t}) {
+    @media only screen and (min-width: 740px) and (max-width: 1023px) {
         @content;
     }
 }
 
+//PC
 @mixin desktop {
-    @media only screen and (max-width: #{$_d}) {
+    @media only screen and (min-width: 1024px) {
         @content;
     }
 }
