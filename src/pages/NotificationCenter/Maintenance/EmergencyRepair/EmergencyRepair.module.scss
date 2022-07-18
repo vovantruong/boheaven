@@ -1,0 +1,11 @@
+@import '../Maintenance.module.scss';
+.emergency-repair{
+    .title{
+        @include titleStyle(#FF5F7B);
+    }
+
+    .content{
+        padding: 9px 0;
+        text-align: center;
+    }
+}

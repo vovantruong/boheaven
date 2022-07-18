@@ -1,0 +1,54 @@
+@import '../Maintenance.module.scss', '../../../../styles/globalStyles';
+
+.general{
+    &__title{
+        @include titleStyle(#22A7FB);
+    }
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .weekdays{
+            position: relative;
+            width: 100%;
+            padding-top: 14px;
+            border-bottom: 3px solid #575757;
+            &:last-child{
+                border-bottom: none;
+            }
+            &__title{
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 2.2rem;
+                text-align: center;
+            }
+            &__details{
+                text-align: center;
+                margin: 9px 0;
+                .name{
+                    font-family: 'Inter',sans-serif;
+                    width: 24rem;
+                    height: 4.2rem;
+                    background: #3381C6;
+                    border-radius: 4px;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    margin: 0 auto;
+                }
+                p{
+                    color: #000000;
+                    margin-top: 9px;
+                }
+            }
+        }
+    }
+}
