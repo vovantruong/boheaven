@@ -1,11 +1,10 @@
-import React,{useEffect, useContext} from "react";
+import React, {  useState } from "react";
 import styles from "./MenuProfile.module.scss";
 import classNames from "classnames/bind";
 import Vip from "~/constants/tagVip";
-import { BsChevronDown } from "react-icons/bs";
-import { NavLink, useLocation,useNavigate ,Link} from "react-router-dom";
-import { MediaQueryContext } from "~/Context/MainContext";
+import { NavLink, Link } from "react-router-dom";
 import Icon from "~/constants/icons";
+import TotalBalance from "./TotalBalance/TotalBalance";
 
 const cx = classNames.bind(styles);
 
@@ -87,38 +86,35 @@ const MenuProfile = ({
   onCloseDropdown,
   isDropdown = false,
 }) => {
-
-// const isMobile = useContext(MediaQueryContext);
-// const {pathname} = useLocation();
-// const navigate = useNavigate()
-// useEffect(() =>{
-//   if(!isMobile && pathname == '/profile'){
-//     navigate('personal-information')
-//   } 
-// },[pathname])
-
+  const [showDropdown, setShowDropdown] = useState(false);
   return (
-    <div className={cx("bg-normal-linear","menu-profile", className)}>
+    <div className={cx("bg-normal-linear", "menu-profile", className)}>
       {!isDropdown && (
         <div className={cx("user-info")}>
           <div className={cx("avatar")}>
             <img src={dataUser?.image} alt="..." />
           </div>
-          <div className={cx('information')}>
-            <div className={cx('member')}>
+          <div className={cx("information")}>
+            <div className={cx("member")}>
               <span>{dataUser.member}</span>
               <Vip className={cx("tag-vip")} name={dataUser.vip} />
             </div>
-            <div className={cx('balance')}>
-              <span>${dataUser.balance}</span>
-              <BsChevronDown />
-            </div>
+            <TotalBalance
+              visible={showDropdown}
+              totalBalance={dataUser.balance}
+              setVisible={setShowDropdown}
+            />
           </div>
         </div>
       )}
       <div className={cx("top")}>
         {currencyItem.map((item, i) => (
-          <Link key={i} to={item.link} className={cx("link")} onClick={onCloseDropdown}>
+          <Link
+            key={i}
+            to={item.link}
+            className={cx("link")}
+            onClick={onCloseDropdown}
+          >
             <div style={{ background: `${item.bg}` }} className={cx("action")}>
               {item.key}
             </div>

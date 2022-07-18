@@ -9,7 +9,7 @@ import { MediaQueryContext } from "~/Context/MainContext";
 import { imagesBanner } from "~/constants/imagesBanner";
 import BannerSlide from "~/components/BannerSlide/BannerSlide";
 import { IoCaretBack } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import User from "./Header/User/User";
 
 const cx = classNames.bind(styles);
@@ -25,17 +25,16 @@ const dataBanner = [
   },
 ];
 
-const DefaultLayout = ({ children, tabHeaderMobile, titlePageMobile }) => {
+const DefaultLayout = ({ children, tabHeaderMobile, titlePageMobile}) => {
   const isMobile = useContext(MediaQueryContext);
+  const navigate = useNavigate();
   return (
     <div className={cx("wrapper-frame")}>
       {!isMobile ? (
         <React.Fragment>
           <Header />
           <Notification />
-          <div className={cx('body-screen')}>
-            {children}
-          </div>
+          <div className={cx("body-screen")}>{children}</div>
           <SidebarSupport />
           <Footer />
         </React.Fragment>
@@ -48,14 +47,12 @@ const DefaultLayout = ({ children, tabHeaderMobile, titlePageMobile }) => {
                 <BannerSlide data={dataBanner} container />
                 <Notification isMobile={isMobile} />
               </div>
-              <User isMobile={true} infoMember/>
+              <User isMobile={true} infoMember />
             </React.Fragment>
           ) : (
             <div className={cx("tab-head")}>
-              <button className={cx("back")}>
-                <Link to="/">
-                  <IoCaretBack />
-                </Link>
+              <button onClick={() => navigate(-1)} className={cx("back")}>
+                <IoCaretBack />
               </button>
               <h1>{titlePageMobile}</h1>
             </div>

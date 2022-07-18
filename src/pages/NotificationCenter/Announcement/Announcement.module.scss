@@ -1,0 +1,4 @@
+@import '../NotificationCenter.module.scss';
+.announcement {
+  @include bodyCollapse
+}

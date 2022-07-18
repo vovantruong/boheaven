@@ -1,0 +1,32 @@
+@import '../../../styles/globalStyles';
+.maintenance {
+  padding: 5rem 12.4rem;
+
+  @include mobile{
+    padding: 0 16px;
+  }
+
+  hr{
+    background: #575757;
+    margin-bottom: 14px;
+    height: 2px;
+    border: none;
+  }
+}
+
+@mixin titleStyle($bgcolor: #22A7FB) {
+  background: $bgcolor;
+  border-radius: 4px;
+  height: 4.2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+}
