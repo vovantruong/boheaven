@@ -100,7 +100,7 @@ const QualityService = () => {
           </div>
           <div className={cx("info")}>
             {data.map((item, i) => (
-              <div className={cx("info-box","bg-normal-linear")}>
+              <div key={i} className={cx("info-box","bg-normal-linear")}>
                 <div className={cx("img-info")}>
                   <img src={item.image} alt="..." />
                 </div>
