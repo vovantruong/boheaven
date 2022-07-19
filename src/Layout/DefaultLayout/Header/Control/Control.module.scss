@@ -4,17 +4,15 @@
     justify-content: center;
 
     a{
-        width: 70px;
-        height: 30px;
+        width: 7rem;
+        height: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 8px;
-        margin-right: 9px;
+        margin-right: 0.9rem;
         transition: all .3s;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 22px;
     }
 
     .btn-login{

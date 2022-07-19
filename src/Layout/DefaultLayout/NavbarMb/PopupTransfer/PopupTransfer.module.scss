@@ -1,0 +1,61 @@
+.transfer-btn{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: showModal .4s forwards;
+    overflow: auto;
+    z-index: 999;
+
+    .group{
+        height: 57px;
+        background: linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%);
+        position: absolute;
+        width: 100%;
+        bottom: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 17px;
+        padding: 0 16px;
+        a{
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            max-width: 108px;
+            width: 100%;
+            height: 40px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__deposit{
+            background: linear-gradient(180deg, #57D7FF 0%, #1E50A6 100%);
+        }
+
+        &__withdrawal{
+            background: linear-gradient(180deg, #F7DA87 0%, #DBA903 100%);
+        }
+
+        &__turning-point{
+            background: linear-gradient(180deg, #78F3B0 0%, #3BDB85 100%);
+        }
+    }
+}
+
+@keyframes showModal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

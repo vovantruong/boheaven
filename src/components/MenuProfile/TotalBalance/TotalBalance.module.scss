@@ -1,0 +1,113 @@
+.balance {
+  position: relative;
+  z-index: 3;
+  .total-balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    cursor: pointer;
+    .icon {
+      transition: transform 0.5s;
+    }
+  }
+}
+
+.balance-details {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  width: 25.6rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.3rem) translateX(-50%);
+  transition: all 0.5s;
+
+  .wrapper{
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -1rem;
+    right: 6.5rem;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 1rem solid rgba(0, 0, 0, 0.9);
+    border-left: 0.8rem solid transparent;
+  }
+
+  .table-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+
+    .item-balance{
+      font-family: 'Inter', sans-serif;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      border-bottom: 1.27px solid #717171;
+      width: 100%;
+      padding: 0 2px;
+      text-align: left;
+
+      p{
+        flex: 40%;
+        border-right: 1.27px solid #717171;
+      }
+      span{
+        color: #DBA903;
+        flex: 60%;
+        padding-left: 1.3rem;
+      }
+    }
+  }
+
+  .total{
+    padding: 1.4rem 3rem;
+    background: #000000;
+    .amount{
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        color: #DBA903;
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    button{
+        background: #365A97;
+        border-radius: 100px;
+        color: #fff;
+        width: 20rem;
+        height: 3rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+
+    }
+  }
+}
+
+.active {
+  .total-balance{
+    .icon{
+      transform: rotate(180deg);
+    }
+  }
+
+  .balance-details {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
