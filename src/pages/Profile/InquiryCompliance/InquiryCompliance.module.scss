@@ -1,0 +1,46 @@
+@import '../../../styles/globalStyles';
+
+.wrapper{
+    padding: 1.2rem 2.7rem;
+    align-self: flex-start;
+
+    @include desktop{
+        padding: 1.2rem 1.7rem;
+    }
+
+    @include tablet{
+        padding: 1.2rem 0.7rem;
+    }
+
+    .title{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .turnover{
+        margin-bottom: 1.2rem;
+    }
+
+    .table-detail{
+        .thead{
+            // background: transparent;
+            // color: #000000;
+        }
+
+        .tbody{
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 0.75px;
+            line-height: 1.7rem;
+            color: #575757;
+
+            // tr{
+            //     &:nth-child(even){
+            //         background: transparent;
+            //     }
+            // }
+        }
+    }
+}

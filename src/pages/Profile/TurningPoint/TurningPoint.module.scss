@@ -80,13 +80,17 @@
         justify-content: space-between;
         gap: 4rem;
 
+        @include desktop{
+            gap: 2rem;
+        }
+
         .wallet{
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 6rem;
 
-            @include tablet{
+            @include desktop{
                 gap: 3rem;
             }
         }
@@ -97,6 +101,11 @@
             justify-content: flex-end;
             gap: 2rem;
             flex: 1;
+
+            @include desktop{
+                gap: 1rem;
+            }
+
             button{
                 font-family: 'Inter',sans-serif;
                 font-weight: 500;
@@ -107,8 +116,11 @@
                 height: 4.5rem;
                 border-radius: 8px;
 
-                @include tablet{
+                @include desktop{
                     font-size: 1.6rem;
+                }
+
+                @include tablet{
                     max-width: 13.5rem;
                     height: 4rem;
                 }
