@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import styles from './Announcement.module.scss'
-import { dataAnnouncement } from '~/constants/mocks/DataNotoficationCenter/dataAnnouncement'
+import { dataAnnouncement } from '~/constants/mocks/DataNotificationCenter/dataAnnouncement'
 import Collapse from '~/components/Collapse/Collapse'
 
 const cx = classNames.bind(styles)
