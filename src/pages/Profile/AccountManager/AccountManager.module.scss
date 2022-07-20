@@ -1,3 +1,4 @@
+@import '../../../styles/globalStyles';
 .bank, .credit-card{
     padding: 1.2rem 3.2rem 2rem 1.2rem;
     margin-bottom: 1.6rem;
@@ -23,7 +24,18 @@
     &__item{
         max-width: 20rem;
         width: 100%;
-        height: 11.8rem;
+        max-height: 11.8rem;
+        img{
+            width: 100%;
+        }
+
+    }
+    @include tablet{
+        gap: 1.6rem;
+        &__item{
+            width: 15.5rem;
+            height: 8.8rem;
+        }
     }
 
     &__item-add{
@@ -36,7 +48,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: 11.8rem;
+            @include desktop{
+                height: 8.8rem;
+            }
         }
 
         svg{
