@@ -66,6 +66,11 @@
             line-height: 2.2rem;
             color: #717171;
             background: transparent;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button{
+                margin: 0;
+                -webkit-appearance: none;
+            }
         }
 
         .all{

@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import styles from './General.module.scss'
-import { dataGeneralMaintence } from '~/constants/mocks/DataNotoficationCenter/dataGeneralMaintence'
+import { dataGeneralMaintence } from '~/constants/mocks/DataNotificationCenter/dataGeneralMaintence'
 
 const cx = classNames.bind(styles)
 
