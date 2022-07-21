@@ -1,0 +1,28 @@
+.wrapper{
+    padding: 1.2rem 3rem 4rem 3rem;
+
+    .title{
+        margin-bottom: 1.4rem;
+    }
+}
+
+.record{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &__group{
+        width: 36.4rem;
+    }
+
+    &__btn{
+        margin-left: 3.6rem;
+        button{
+            width: 8rem;
+            height: 4rem;
+            background: #365A97;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+            border-radius: 100px;
+            color: #fff;
+        }
+    }
+}

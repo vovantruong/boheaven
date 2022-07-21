@@ -10,7 +10,7 @@ const column = ["類型", "金額", "流水", "時間", "交易編號"];
 
 const InquiryCompliance = () => {
   return (
-    <div className={cx("inuiry")}>
+    <div className={cx("inquiry")}>
       <div className={cx("bg-normal-linear", "wrapper")}>
         <h4 className={cx("title")}>優惠達標查詢</h4>
         <p className={cx("turnover")}>未完成流水:2,000.00</p>

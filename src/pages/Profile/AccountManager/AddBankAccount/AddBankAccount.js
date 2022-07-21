@@ -5,7 +5,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { BsChevronLeft } from "react-icons/bs";
 import ImgExample from "../../../../assets/images/pages/profile/accountManager/example-bank-account.png";
 import Select from "react-select";
-import InputText from "~/components/InputText/InputText";
+import SelectOption from "~/components/SelectOption/SelectOption";
 
 const cx = classNames.bind(styles);
 
@@ -14,23 +14,6 @@ const options = [
   { value: "清华银行", label: "清华银行" },
   { value: "北京银行", label: "北京银行" },
 ];
-
-const customStyleSelect = {
-  control: (provided, state) => ({
-    // ...provided,
-    display: 'flex',
-    height: '3.4rem',
-    alignItems: 'center',
-    background: "transparent",
-    border: "1px solid #ABABAB",
-    cursor: "pointer",
-  }),
-  placeholder: (provided, state) => ({
-    ...provided,
-    color: "#cbcdd0",
-  }),
-  indicatorSeparator: () => ({}),
-};
 
 const AddBankAccount = () => {
   const navigate = useNavigate();
@@ -73,8 +56,7 @@ const AddBankAccount = () => {
           </div>
           <div className={cx("form-item")}>
             <label className={cx('lb-name')}>銀行代碼與名稱:</label>
-            <Select
-              styles={customStyleSelect}
+            <SelectOption
               className={cx("bank-code")}
               value={bankCode}
               onChange={(e) => setBankCode(e)}
