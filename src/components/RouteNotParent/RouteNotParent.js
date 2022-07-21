@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
+/**
+ * note: Router but doesn't need parent tag for navigation, works independently as 2 different pages
+ */
+
 const RouteNotParent = ({ children, pathNameParent = "", outLetContext }) => {
   const [href, setHref] = useState(pathNameParent);
   const { pathname } = useLocation();

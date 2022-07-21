@@ -1,0 +1,9 @@
+@import '../AccountManager.module.scss';
+
+.credit-card{
+    padding: 1.2rem 4rem 4rem 4rem;
+}
+
+.go-back{
+    @include backParent();
+}

@@ -4,12 +4,15 @@ import styles from "./AccountManager.module.scss";
 import ImgBank from "../../../assets/images/pages/profile/accountManager/bank-account.png";
 import ImgCreditCard from "../../../assets/images/pages/profile/accountManager/credit-card.png";
 import { BsPlusCircleFill } from "react-icons/bs";
-import { Link, useLocation, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import RouteNotParent from "~/components/RouteNotParent/RouteNotParent";
 
 const cx = classNames.bind(styles);
 
 const dataBank = [
+  {
+    image: ImgBank,
+  },
   {
     image: ImgBank,
   },
@@ -41,8 +44,7 @@ const AccountManager = () => {
   return (
     <div className={cx("manager-account")} >
       <RouteNotParent pathNameParent="account-manager">
-        <div className={cx("wrapper")}>
-          <div className={cx("bank", "bg-normal-linear")}>
+          <div className={cx("box-bank", "bg-normal-linear")}>
             <div className={cx("head")}>
               <h4 className={cx("head__title")}>銀行帳戶</h4>
               <span className={cx("head__total-card")}>{amountBank}/3</span>
@@ -66,7 +68,7 @@ const AccountManager = () => {
               )}
             </ul>
           </div>
-          <div className={cx("credit-card", "bg-normal-linear")}>
+          <div className={cx("box-credit-card", "bg-normal-linear")}>
             <div className={cx("head")}>
               <h4 className={cx("head__title")}>信用卡</h4>
               <span className={cx("head__total-card")}>{amountCredit}/3</span>
@@ -90,7 +92,6 @@ const AccountManager = () => {
               )}
             </ul>
           </div>
-        </div>
       </RouteNotParent>
     </div>
   );

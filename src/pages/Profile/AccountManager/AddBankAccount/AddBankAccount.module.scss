@@ -1,0 +1,15 @@
+@import '../AccountManager.module.scss';
+
+.bank-account{
+    padding: 1.2rem 4rem 4rem 4rem;
+}
+
+.go-back{
+    @include backParent();
+}
+
+.upload-data{
+    .username{
+        padding-left: 7px !important;
+    }
+}
