@@ -18,13 +18,13 @@ const InputText = ({
     <div
       className={cx("input-text", horizontal ? "horizontal" : "", className)}
     >
-      {label && <div className={cx("label")}>{label}</div>}
+      {label && <label htmlFor={label} className={cx("label")}>{label}</label>}
       <div
-        style={!props.icon ? { paddingLeft: "22px" } : {}}
         className={cx("wrap", wrapClassName)}
       >
         {props.icon && <div className={cx("icon")}>{props.icon}</div>}
         <input
+          id={label && label}
           className={cx("input", inputClassName)}
           {...props}
           placeholder={placeholder}
