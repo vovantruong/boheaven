@@ -12,7 +12,6 @@ const icons = {
     visa: require('../assets/images/global/visa-icon.png'),
     addPeople: require('../assets/images/global/add-people-icon.png'),
     question: require('../assets/images/global/question-icon.png'),
-    close: require('../assets/images/global/close-outline.png'),
     facebook: require('../assets/images/global/social-fb-icon.png'),
     line: require('../assets/images/global/social-line-icon.png'),
     mail: require('../assets/images/global/social-mail-icon.png'),

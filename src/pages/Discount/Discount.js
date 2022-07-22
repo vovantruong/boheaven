@@ -34,7 +34,7 @@ const Discount = () => {
           !isMobile ? (
             <Button
               key={i}
-              active={i == active ? true : false}
+              active={i === active ? true : false}
               onClick={() => handeActive(i)}
             >
               {item}
@@ -64,28 +64,28 @@ const Discount = () => {
             {tab === 0 ? (
               <React.Fragment>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
               </React.Fragment>
             ) : tab === 1 ? (
               <React.Fragment>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
               </React.Fragment>
             ) : (
               <React.Fragment>
                 <Link to="#">
-                  <img src={imgOffer} />
+                  <img src={imgOffer} alt="..."/>
                 </Link>
               </React.Fragment>
             )}

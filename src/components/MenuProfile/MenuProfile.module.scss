@@ -1,21 +1,19 @@
+@import '../../styles/globalStyles';
+
 .menu-profile {
-  padding: 20px 0;
-  width: 285px;
-  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 53.65%, #f0f7ff 100%);
-  border: 3px solid #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  padding: 2rem 0;
+  width: 28.5rem;
 
   .user-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 17px;
+    margin-bottom: 1.7rem;
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 8rem;
+      height: 8rem;
       img {
         width: 100%;
         height: 100%;
@@ -33,8 +31,8 @@
         justify-content: space-between;
         width: 45%;
         .tag-vip {
-          width: 34px;
-          height: 21px;
+          width: 3.4rem;
+          height: 2.1rem;
         }
       }
 
@@ -42,7 +40,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap: 2rem;
         width: 45%;
       }
     }
@@ -52,19 +50,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 2rem;
 
     .link {
       .action {
-        width: 50px;
-        height: 50px;
+        width: 5rem;
+        height: 5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
         font-weight: 700;
-        font-size: 25px;
-        line-height: 24px;
+        font-size: 2.5rem;
+        line-height: 2.4rem;
         letter-spacing: 0.1px;
         color: #ffffff;
         margin-bottom: 3px;
@@ -78,8 +76,6 @@
       p {
         text-align: center;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
         letter-spacing: 0.1px;
         color: #000000;
       }
@@ -87,12 +83,12 @@
   }
 
   .body {
-    padding-top: 15px;
+    padding-top: 1.5rem;
 
     .item {
       display: flex;
       align-items: center;
-      padding: 8px 20px;
+      padding: 0.8rem 2rem;
       transition: all .2s ease;
 
       &:hover{
@@ -107,30 +103,36 @@
 
       .name {
         display: flex;
-        margin-left: 27px;
+        margin-left: 2.7rem;
         flex-direction: column;
         h4 {
           font-weight: 400;
-          font-size: 20px;
-          line-height: 22px;
+          font-size: 2rem;
+          line-height: 2.2rem;
           color: #000000;
         }
 
         p {
           color: #575757;
-          font-size: 11px;
+          font-size: 1rem;
         }
       }
 
       .icon-item {
-        width: 48px;
-        height: 48px;
+        width: 4.8rem;
+        height: 4.8rem;
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
         background: #fff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include tablet{
+          img{
+            width: 2.4rem;
+          }
+        }
       }
     }
 
@@ -146,19 +148,19 @@
   }
 
   .sign-out {
-    width: 245px;
-    height: 44px;
+    width: 24.5rem;
+    height: 4.4rem;
     border: 2px solid #365a97;
     border-radius: 100px;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 2rem;
+    line-height: 2.4rem;
     letter-spacing: 0.01em;
     color: #365a97;
     transition: all 0.3s;
     display: block;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 1.5rem;
 
     &:hover {
       background: #365a97;

@@ -4,11 +4,19 @@ import styles from "./Textarea.module.scss";
 
 const cx = classNames.bind(styles);
 
-const Textarea = ({ className, label, children, maxLength,horizontal, ...props }) => {
+const Textarea = ({
+  className,
+  label,
+  children,
+  wrapClassName,
+  maxLength,
+  horizontal,
+  ...props
+}) => {
   return (
-    <div className={cx("fields",horizontal ? 'horizontal':'' ,className)}>
+    <div className={cx("fields", horizontal ? "horizontal" : "", className)}>
       {label && <div className={cx("label")}>{label}</div>}
-      <div className={cx("wrap")}>
+      <div className={cx("wrap", wrapClassName)}>
         <textarea maxLength={maxLength} className={cx("textarea")} {...props} />
         {maxLength && (
           <span className={cx("length-textarea")}>{`${

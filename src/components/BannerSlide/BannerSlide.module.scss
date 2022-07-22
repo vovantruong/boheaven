@@ -21,9 +21,8 @@
       height: 147px;
       overflow: hidden;
 
-      img {
-        width: 120%;
-        transform: translateX(-30px);
+      img{
+        object-fit: cover;
       }
     }
   }

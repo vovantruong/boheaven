@@ -23,4 +23,6 @@ export const configRoutes = {
     hotgame: '/hotgame',
     electronicgame:'/electronicgame',
     profile: '/profile',
+    customerService: '/customer-service',
+    notificationCenter: '/notification'
 }

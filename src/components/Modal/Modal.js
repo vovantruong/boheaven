@@ -3,8 +3,8 @@ import { createPortal } from "react-dom";
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import OutsideClickHandler from "react-outside-click-handler";
-import Icon from "~/constants/icons";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+import Close from '../../assets/images/global/close-outline.svg';
 
 const cx = classNames.bind(styles);
 
@@ -56,8 +56,10 @@ const Modal = ({
               >
                 {title && <h4 className={cx("title")}>{title}</h4>}
                 {!removeIconClose && (
-                  <button className={cx("close")} onClick={onCloseModal}>
-                    <Icon name="close" />
+                  <button className={cx("btn-close")} onClick={onCloseModal}>
+                    {/* <IoIosCloseCircleOutline className={cx('icon-close')}/> */}
+                    {/* <Icon name="close" /> */}
+                    <img src={Close} />
                   </button>
                 )}
               </div>

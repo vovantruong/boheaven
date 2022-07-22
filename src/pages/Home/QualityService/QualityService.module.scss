@@ -1,8 +1,5 @@
 @import '../../../styles/globalStyles';
 
-.quality-servide{
-}
-
 .wrapper{
     padding-top: 40px;
     padding-bottom: calc(50px - 16px);
@@ -22,12 +19,56 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-    
-        .info-item{
+        .info-box{
+            position: relative;
             width: 48%;
-            margin-bottom: 16px;
-    
+            margin-bottom: 1.6rem;
+            height: 12rem;
+            display: flex;
+            align-items: center;
+            padding: 2.4rem 3.1rem;
+            overflow: hidden;
+
+            .img-info{
+                margin-right: 1.9rem;
+                max-width: 104px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        
+            .wrap-text{
+
+                p{
+                    font-weight: 700;
+                    line-height: 2.2rem;
+                    display: flex;
+                    align-items: center;
+                
+                    @include mobile{
+                        font-size: 12px;
+                    }
+                }
+
+                .title{
+                    color: #365A97;
+                }
+
+                .tag{
+                    color: #575757;
+                    font-weight: 400;
+                }
+
+                .desc{
+                    color: #000000;
+                }
+
+            }
+        
             @include mobile{
+                padding: 12px 15px;
                 width: 100%;
             }
         }

@@ -48,7 +48,7 @@ const dataRadilChart = [
         value: 60,
         character: "秒",
         fill: "#81DCFF",
-      }
+      },
     ],
   },
   {
@@ -59,7 +59,7 @@ const dataRadilChart = [
         value: 80,
         character: "家",
         fill: "#81DCFF",
-      }
+      },
     ],
   },
   {
@@ -70,7 +70,7 @@ const dataRadilChart = [
         value: 5,
         character: "分",
         fill: "#81DCFF",
-      }
+      },
     ],
   },
   {
@@ -81,7 +81,7 @@ const dataRadilChart = [
         value: 22,
         character: "家",
         fill: "#81DCFF",
-      }
+      },
     ],
   },
 ];
@@ -100,12 +100,16 @@ const QualityService = () => {
           </div>
           <div className={cx("info")}>
             {data.map((item, i) => (
-              <InfoBox key={i} className={cx("info-item")}>
-                <InfoImage src={item.image} />
-                <InfoHead>{item.title}</InfoHead>
-                <InfoTag>{item.tag}</InfoTag>
-                <InfoBody>{item.description}</InfoBody>
-              </InfoBox>
+              <div className={cx("info-box","bg-normal-linear")}>
+                <div className={cx("img-info")}>
+                  <img src={item.image} alt="..." />
+                </div>
+                <div className={cx("wrap-text")}>
+                  <p className={cx("title")}>{item.title}</p>
+                  <p className={cx("tag")}>{item.tag}</p>
+                  <p className={cx("desc")}>{item.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

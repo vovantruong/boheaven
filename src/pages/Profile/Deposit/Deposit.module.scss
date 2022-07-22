@@ -1,0 +1,162 @@
+@import '../../../styles/globalStyles';
+
+.deposit{
+    margin-left: 1.7rem;
+
+    .box-group{
+        margin-bottom: 2.2rem;
+    }
+
+    .payment-method{
+        display: flex;
+        align-items: center;
+        gap: 2.3rem;
+        justify-content: flex-start;
+
+        .btn-change{
+            position: relative;
+            background: #EAEAEA;
+            border: 1px solid #CECECE;
+            border-radius: 8px;
+            width: 16.2rem;
+            height: 13.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background .2s;
+            overflow: hidden;
+
+            .image-method{
+                max-height: 10rem;
+                margin-bottom: 1rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include tablet {
+                    max-height: 8rem;
+                }
+            }
+
+            span{
+                position: absolute;
+                bottom: 1.1rem;
+                font-weight: 400;
+                color: #365A97;
+            }
+        }
+
+        .active{
+            background: #fff;
+            border-color: #365A97;
+
+            .ic-active-check{
+                position: absolute;
+                width: 3.2rem;
+                height: 3.2rem;
+                top: -3px;
+                left: -2px;
+                background: linear-gradient(180deg, #57D7FF 0%, #1E50A6 100%);
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 1.6rem;
+            }
+        }
+
+        @include tablet{
+            gap: 1.3rem;
+
+            .btn-change{
+                width: 14.2rem;
+                height: 11.9rem;
+            }
+        }
+    }
+
+    .method-payment{
+        padding-top: 0.6rem;
+
+        .drop-option{
+            max-width: 42.5rem;
+        }
+
+    }
+
+    .deposit-amount{
+        .input-deposit{
+            height: 3.8rem;
+            max-width: 42.5rem;
+            background: #FFFFFF;
+            border: 1px solid #CECECE;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-left: 1.6rem;
+            gap: 1rem;
+
+            input{
+                width: 100%;
+                height: 100%;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                color: #717171;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button{
+                    margin: 0;
+                    -webkit-appearance: none;
+                }
+            }
+
+            .ic-dollar, .ic-change{
+                img{
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+
+        .deposit-now{
+            background: #365A97;
+            border-radius: 0.8rem;
+            max-width: 26.2rem;
+            width: 100%;
+            height: 4.5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #fff;
+            margin: 1.2rem 0;
+        }
+
+        .customer-service{
+            button,span {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+            
+            button{
+                color: #365A97;
+            }
+        }
+    }
+
+    .notes{
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: #FF5F7B;
+    }
+
+    @include tablet{
+        margin-left: 1rem;
+    }
+
+}

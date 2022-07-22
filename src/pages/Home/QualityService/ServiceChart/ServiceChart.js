@@ -45,7 +45,7 @@ const ServiceChart = ({ className,data, ...props }) => {
             <p>{dataChart[1].character ? dataChart[1].character : ''}</p>
           </h4>
         </div>
-      <img className={cx('bg-chart-transparent')} src={ImageTransparent}/>
+      <img className={cx('bg-chart-transparent')} src={ImageTransparent} alt="..."/>
       </div>
       <div className={cx('title-chart')}>
         <p>{dataChart[1].title ? dataChart[1].title : 'No key `title`'}</p>
