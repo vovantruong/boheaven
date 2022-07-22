@@ -26,6 +26,14 @@ import SuperG from "~/pages/GameIntroduction/SuperG/SuperG";
 import Lottery from "~/pages/GameIntroduction/Lottery/Lottery";
 import DreamTech from "~/pages/GameIntroduction/DreamTech/DreamTech";
 import BNG from "~/pages/GameIntroduction/BNG/BNG";
+import RTG from "~/pages/GameIntroduction/RTG/RTG";
+import SimplePlay from  "~/pages/GameIntroduction/SimplePlay/SimplePlay";
+import HotGame from "~/pages/GameIntroduction/HotGame/HotGame";
+import OG from "~/pages/GameIntroduction/OG/OG";
+
+// routes electronic game----------------------------------------------------------
+
+import Electronicgame from "~/pages/Electronicgame/Electronicgame";
 
 // routes profile -----------------------------------------------------------------------
 import Profile from "~/pages/Profile/Profile";
@@ -38,6 +46,7 @@ import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
 import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
 import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
 import InviteFriends from "~/pages/Profile/InviteFriends/InviteFriends";
+
 
 
 
@@ -173,6 +182,42 @@ const publicRoutes = [
   {
     path: configRoutes.bng,
     components: BNG,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.rtg,
+    components: RTG,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.simpleplay,
+    components: SimplePlay,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.hotgame,
+    components: HotGame,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  {
+    path: configRoutes.og,
+    components: OG,
+    layout: DefaultLayout,
+    tabHeaderMobile: false,
+    titlePageMobile: '遊戲介紹'
+  },
+  // electronic game
+  {
+    path: configRoutes.electronicgame,
+    components: Electronicgame,
     layout: DefaultLayout,
     tabHeaderMobile: false,
     titlePageMobile: '遊戲介紹'

@@ -6,13 +6,13 @@ import block1 from "../../../assets/images/pages/game-intro/img-BNG/bng1.png";
 import block2 from "../../../assets/images/pages/game-intro/img-BNG/bng2.png";
 import block3 from "../../../assets/images/pages/game-intro/img-BNG/bng3.png";
 const cx = className.bind(styles);
-const tabLotteryList = [
+const tabBNGList = [
   {
     Date: "2022/04/27",
     Subject: "百家樂 | 北京暴雨！地鐵成「水簾洞」河水毀民宅 3男抱樹求生",
   },
 ];
-const Lottery = () => {
+const BNG = () => {
   const isMobile = useContext(MediaQueryContext);
   return (
     <div className={cx(!isMobile ? "wrapper" : "wrapper-mobile")}>
@@ -150,7 +150,7 @@ const Lottery = () => {
             <div className={cx("time")}>時間</div>
           </div>
           <div className={cx(!isMobile ? "tableTab" : "tableTabMobile")}>
-            {tabLotteryList.map((item, i) => (
+            {tabBNGList.map((item, i) => (
               <div className={cx("block1")} key={i}>
                 <table>
                   <tr>
@@ -213,4 +213,4 @@ const Lottery = () => {
     </div>
   );
 };
-export default Lottery;
+export default BNG;

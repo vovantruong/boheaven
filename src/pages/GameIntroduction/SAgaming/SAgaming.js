@@ -184,21 +184,21 @@ const SAgaming = () => {
 
             {!isMobile ? (
               <div className={cx("block-content")}>
-                <div>
+                <div className={cx("swiper-content")}>
                   <h4>sa36輪盤</h4>
                   <img src={block3} />
                   <p>
                     沙龍百家樂的輪盤遊戲有高達50倍的獎金賠率，以中國傳統的「魚蝦蟹」為主題，搭配超性感的荷官進行輪盤的旋轉控制，並且與每位玩家進行線上的互動，讓您有更接近實體賭場的體驗。
                   </p>
                 </div>
-                <div>
+                <div className={cx("swiper-content")}>
                   <h4>sa36幸運六</h4>
                   <img src={block4} />
                   <p>
                     沙龍百家樂幸運六玩法，提供玩家在下注莊家與閒家的同時可以選擇是否要預測莊閒其中一方可以六點的點數獲勝，賠率最高20倍。sa36玩家不得同時下注莊閒情況下，則必須下注莊或閒其中一方，且再下注幸運六選項，才能贏得彩金。
                   </p>
                 </div>
-                <div>
+                <div className={cx("swiper-content")}>
                   <h4>sa36骰寶</h4>
                   <img src={block5} />
                   <p>
@@ -213,7 +213,7 @@ const SAgaming = () => {
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}>
                 <SwiperSlide>
-                  <div>
+                  <div className={cx("swiper-content")}>
                     <h4>sa36輪盤</h4>
                     <img src={block3} />
                     <p>
@@ -222,7 +222,7 @@ const SAgaming = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div>
+                  <div className={cx("swiper-content")}>
                     <h4>sa36幸運六</h4>
                     <img src={block4} />
                     <p>
@@ -231,7 +231,7 @@ const SAgaming = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div>
+                  <div className={cx("swiper-content")}>
                     <h4>sa36骰寶</h4>
                     <img src={block5} />
                     <p>

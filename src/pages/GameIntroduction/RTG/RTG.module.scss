@@ -1,0 +1,475 @@
+@import "../../../styles/globalStyles";
+.wrapper {
+  .block {
+    text-align: center;
+    padding: 20px 0 0px 0;
+    .wrapper-block {
+      display: flex;
+      .block-left {
+        width: 40%;
+        text-align: center;
+        justify-content: center;
+        img {
+          width: 327px;
+        }
+      }
+      .block-right {
+        text-align: initial;
+        width: 60%;
+        .rigth1 {
+          h4 {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #365a97;
+          }
+          .content1 {
+            padding: 15px 0 10px 0;
+            font-family: "Noto Sans TC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .block2 {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    .wrapper-block {
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #365a97;
+        padding: 0 0 10px 0;
+      }
+      .block-left {
+        img {
+          width: 338px;
+        }
+      }
+      .block-right {
+        .right1 {
+          .content1 {
+            padding: 15px 0 10px 0;
+            font-family: "Noto Sans TC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .block3 {
+    padding: 0px 0 20px 0;
+    h4 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #365a97;
+    }
+    .wrapper-block {
+      display: flex;
+      .block-left {
+        width: 30%;
+        img {
+          width: 229px;
+          padding-top: 20px;
+        }
+      }
+      .block-right {
+        text-align: initial;
+        width: 70%;
+        .rigth1 {
+          .content1 {
+            padding: 15px 0 10px 0;
+            font-family: "Noto Sans TC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .block4 {
+    text-align: center;
+    padding-bottom: 20px;
+    .wrapper-block {
+      display: flex;
+      .block-right {
+        width: 45%;
+        margin: 0 0px 0 60px;
+        img {
+          width: 443px;
+        }
+      }
+      .block-left {
+        text-align: initial;
+        width: 55%;
+        .content-block2 {
+          h4 {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #365a97;
+          }
+          .content1 {
+            padding: 15px 0 10px 0;
+            font-family: "Noto Sans TC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .wrapper-block {
+    .fiel {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      background: #365a97;
+
+      .title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        padding-left: 230px;
+      }
+      .time {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        padding-left: 580px;
+      }
+    }
+    .tableTab {
+      .block1 {
+        display: flex;
+        font-family: "Roboto";
+        .subject {
+          width: 74%;
+          padding-left: 50px;
+          padding-top: 10px;
+          text-align: left;
+          letter-spacing: 3px;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+        }
+        .date {
+          width: 30%;
+          padding-left: 65px;
+          padding-top: 5px;
+          padding-right: 45px;
+          letter-spacing: 1px;
+        }
+        table {
+          font-family: "Roboto";
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td,
+        th {
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background: #eaeaea;
+        }
+      }
+    }
+    .block-trans2 {
+      padding: 10px 5px 10px 35px;
+      text-align: center;
+
+      &__ont1 {
+        opacity: 0.6;
+      }
+      .block {
+        display: flex;
+        padding-left: 350px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        p {
+          border: 1px solid;
+          padding: 1px 12px 4px 7px;
+          text-align: center;
+          justify-content: center;
+          margin-left: 3px;
+          border-radius: 5px;
+          line-height: 20px;
+          font-weight: 700;
+          font-size: 14px;
+          font-family: "SF Pro Text";
+        }
+      }
+    }
+  }
+}
+
+//<----------------- responsive ----------------->//
+@include mobile {
+  .wrapper-mobile {
+    padding: 0px 10px 0px 10px;
+    .block {
+      text-align: center;
+      padding: 20px 0 0px 0;
+      .wrapper-block {
+        h4 {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 29px;
+          color: #365a97;
+          text-align: left;
+        }
+        .block-left {
+          text-align: center;
+          justify-content: center;
+          img {
+            width: 342px;
+          }
+        }
+        .block-right {
+          text-align: initial;
+
+          .rigth1 {
+            .content1 {
+              font-family: "Noto Sans TC";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              color: #000000;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    .block2 {
+      padding: 10px 0 10px 0;
+      .wrapper-block {
+        h4 {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 29px;
+          color: #365a97;
+          text-align: left;
+        }
+        .block-left {
+          text-align: center;
+          justify-content: center;
+          img {
+            width: 342px;
+          }
+        }
+        .block-right {
+          text-align: initial;
+          .content1 {
+            font-family: "Noto Sans TC";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            padding: 10px 0 10px 0;
+          }
+        }
+      }
+    }
+    .block3 {
+      h4 {
+        font-family: "Noto Sans TC";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #365a97;
+        padding-bottom: 10px;
+      }
+      .wrapper-block {
+        .block-left {
+          margin: 5px 0px 0px 2px;
+          img {
+            width: 335px;
+          }
+        }
+        .block-right {
+          text-align: initial;
+
+          .rigth1 {
+            h4 {
+              font-family: "Noto Sans TC";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 26px;
+              color: #365a97;
+            }
+            .content1 {
+              padding: 5px 0 10px 0;
+              font-family: "Noto Sans TC";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+    .block4 {
+        padding-bottom: 10px;
+      h4 {
+        font-family: "Noto Sans TC";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #365a97;
+        padding-bottom: 10px;
+      }
+      .wrapper-block {
+        .block-left {
+          margin: 5px 0px 0px 2px;
+          img {
+            width: 335px;
+          }
+        }
+        .block-right {
+          text-align: initial;
+
+          .rigth1 {
+            h4 {
+              font-family: "Noto Sans TC";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 26px;
+              color: #365a97;
+            }
+            .content1 {
+              padding: 15px 0 10px 0;
+              font-family: "Noto Sans TC";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wrapper-block {
+    margin: 0;
+    padding: 0;
+    .fiel {
+      height: 40px;
+      background: #365a97;
+      width: 337px;
+      padding: 0;
+      display: flex;
+      .title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        color: #ffffff;
+        padding-left: 70px;
+      }
+      .time {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        color: #ffffff;
+        padding-left: 170px;
+      }
+    }
+    .tableTabMobile {
+      letter-spacing: 2px;
+      font-family: "Roboto";
+      .subject {
+        width: 80%;
+        padding-top: 10px;
+        padding-left: 20px;
+        font-family: "Roboto";
+        overflow: hidden;
+        text-overflow: clip;
+        -webkit-line-clamp: 0;
+        height: 30px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+      .date {
+        width: 35%;
+        padding-left: 25px;
+      }
+      table {
+        font-family: "Roboto";
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background: #eaeaea;
+      }
+    }
+    .block-trans2 {
+      visibility: hidden;
+      height: 0;
+      padding-bottom: 10px;
+    }
+  }
+}

@@ -5,9 +5,9 @@
       bottom: 30px;
       position: absolute;
       z-index: 1;
-      padding: 200px 30px 0 210px;
       bottom: 300px;
       top: 25px;
+      margin: 200px;
       .title-content {
         h3 {
           font-family: "Inter";
@@ -1054,6 +1054,8 @@
     }
     .block-trans2 {
       visibility: hidden;
+      height: 0;
+      padding-bottom: 10px;
     }
   }
 }

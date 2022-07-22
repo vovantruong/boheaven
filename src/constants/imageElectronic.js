@@ -1,0 +1,18 @@
+export const ELECTRONIC = {
+    Logo1: require('../assets/images/pages/img-electronic/logo1.png'),
+    Logo2: require('../assets/images/pages/img-electronic/logo2.png'),
+    Icon: require('../assets/images/pages/img-electronic/Vector1.png'),
+    IconActivety: require('../assets/images/pages/img-electronic/Vector2.png'),
+    Bg: require('../assets/images/pages/img-electronic/bg.png'),
+    Rectangle: require('../assets/images/pages/img-electronic/Rectangle.png'),
+    Num: require('../assets/images/pages/img-electronic/Group.png'),
+    Num1: require('../assets/images/pages/img-electronic/Group1.png'),
+    Num2: require('../assets/images/pages/img-electronic/Group2.png'),
+    Num3: require('../assets/images/pages/img-electronic/Group3.png'),
+    Num4: require('../assets/images/pages/img-electronic/Group4.png'),
+    Num5: require('../assets/images/pages/img-electronic/Group5.png'),
+    Num6: require('../assets/images/pages/img-electronic/Group6.png'),
+    Num7: require('../assets/images/pages/img-electronic/Group7.png'),
+    Num8: require('../assets/images/pages/img-electronic/Group8.png'),
+    Num9: require('../assets/images/pages/img-electronic/Group9.png'),
+}

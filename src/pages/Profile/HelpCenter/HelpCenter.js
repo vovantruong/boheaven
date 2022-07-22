@@ -32,8 +32,7 @@ const HelpCenter = () => {
       <BoxInforProfile
         className={cx("tab-head")}
         titleHead="通知中心"
-        bodyClassName={cx("wrap-tabs")}
-      >
+        bodyClassName={cx("wrap-tabs")} >
         <div className={cx("action-tabs")}>
           {dataTabs.map((item, i) => (
             <button
@@ -41,9 +40,7 @@ const HelpCenter = () => {
               key={i}
               onClick={() => {
                 setTabControl(item.tab);
-                setActive(i);
-              }}
-            >
+                setActive(i); }}>
               {item.name}
             </button>
           ))}
