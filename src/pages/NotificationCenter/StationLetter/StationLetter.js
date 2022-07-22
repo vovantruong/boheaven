@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./StationLetter.module.scss";
 import classNames from "classnames/bind";
-import { dataLetter } from "~/constants/mocks/DataNotoficationCenter/dataStationLetter";
+import { dataLetter } from "~/constants/mocks/DataNotificationCenter/dataStationLetter";
 import Collapse from "~/components/Collapse/Collapse";
 
 const cx = classNames.bind(styles);

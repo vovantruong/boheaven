@@ -1,0 +1,186 @@
+@import '../../../styles/globalStyles';
+
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1rem;
+
+    @include tablet{
+        gap: 0.4rem;
+    }
+}
+
+.turning-point{
+    padding: 1.5rem 1.5rem 1.8rem;
+}
+
+.wrapper{
+
+    .transaction{
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .transfer-in{
+            @include d-flex();
+            > span{
+                color: #2ABF6F;
+            }
+        }
+
+        .transfer-out{
+            @include d-flex();
+            > span{
+                color: #365A97;
+            }
+        }
+
+        .amount{
+            margin-bottom: 1rem;
+            label{
+                margin-right: 1.4rem;
+            }
+            input{
+                background: #FFFFFF;
+                border: 1px solid #CECECE;
+                border-radius: 4px;
+                max-width: 17rem;
+                width: 100%;
+                height: 3.8rem;
+                color: #575757;
+                padding: 0 1rem;
+
+                @include desktop{
+                    max-width: 14rem;
+                }
+
+                @include tablet{
+                    max-width: 10rem;
+                }
+            }
+        }
+
+        .drop-transfer{
+            width: 17rem;
+
+            @include desktop{
+                width: 14rem;
+            }
+        }
+    }
+
+    .account{
+        margin: 2.7rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+
+        @include desktop{
+            gap: 2rem;
+        }
+
+        .wallet{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6rem;
+
+            @include desktop{
+                gap: 3rem;
+            }
+        }
+
+        .btn-group{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 2rem;
+            flex: 1;
+
+            @include desktop{
+                gap: 1rem;
+            }
+
+            button{
+                font-family: 'Inter',sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                max-width: 15.5rem;
+                width: 100%;
+                height: 4.5rem;
+                border-radius: 8px;
+
+                @include desktop{
+                    font-size: 1.6rem;
+                }
+
+                @include tablet{
+                    max-width: 13.5rem;
+                    height: 4rem;
+                }
+            }
+    
+            .btn-transfer-back{
+                border: 1px solid #365A97;
+                color: #365A97;
+            }
+    
+            .btn-sure{
+                background: #365A97;
+                color: #fff;
+            }
+        }
+
+    }
+
+    .list-convertions{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__item{
+            width: 25%;
+            @include tablet{
+                width: 33.33%;
+            }
+
+            .b-price{
+                background: #EBF5FF;
+                border-radius: 8px;
+                max-width: 15.4rem;
+                width: 100%;
+                height: 5.6rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0.6rem auto;
+                &__name{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                }
+
+                &__price{
+                    font-family: 'Inter',sans-serif;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+                    color: #365A97;
+                    font-size: 1.4rem;
+
+                }
+
+                @include desktop{
+                    max-width: 13.5rem;
+                }
+            }
+        }
+    }
+}

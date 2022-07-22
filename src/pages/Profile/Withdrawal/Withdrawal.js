@@ -13,7 +13,7 @@ const Withdrawal = ({ className }) => {
   const [visible, setVisible] = useState(false);
   return (
     <>
-    <div className={cx("withdrawal", className)}>
+    <section className={cx("withdrawal", className)}>
       <div className={cx("bg-normal-linear", "bank-account")}>
         <h4 className={cx("bank-account__title")}>銀行帳戶</h4>
         <div className={cx("bank-account__name")}>
@@ -47,7 +47,7 @@ const Withdrawal = ({ className }) => {
           如需幫助，請<button onClick={() => setVisible(true)}>聯繫客服</button>
         </span>
       </div>
-    </div>
+    </section>
     <ShowModalSupport visible={visible} setVisible={setVisible} />
     </>
   );

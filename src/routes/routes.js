@@ -23,6 +23,10 @@ import PersonalInformation from "~/pages/Profile/PersonalInformation/PersonalInf
 import VipPrivileges from "~/pages/Profile/VipPrivileges/VipPrivileges";
 import InquiryCompliance from "~/pages/Profile/InquiryCompliance/InquiryCompliance";
 import AccountManager from "~/pages/Profile/AccountManager/AccountManager";
+//chidren part 2 Account Manager-------------------------------------------------------------------------
+import AddBankAccount from "~/pages/Profile/AccountManager/AddBankAccount/AddBankAccount";
+import AddCreditCard from "~/pages/Profile/AccountManager/AddCreditCard/AddCreditCard";
+//----------------------------------------------------------------------------------------
 import BettingHistory from "~/pages/Profile/BettingHistory/BettingHistory";
 import HelpCenter from "~/pages/Profile/HelpCenter/HelpCenter";
 import TransactionRecord from "~/pages/Profile/TransactionRecord/TransactionRecord";
@@ -39,6 +43,7 @@ import Maintenance from "~/pages/NotificationCenter/Maintenance/Maintenance";
 
 // New route mobile ---------------------------------------------------------------------
 import CustomerService from "~/pages/Mobile/CustomerService/CustomerService";
+import NotFound from "~/components/NotFound/NotFound";
 
 /**
  *  Parameter Object: 
@@ -113,7 +118,17 @@ const publicRoutes = [
       },
       {
         path: "account-manager",
-        components: AccountManager
+        components: AccountManager,
+        children: [
+          {
+            path: "add-bank-account",
+            components: AddBankAccount
+          },
+          {
+            path: "add-credit-card",
+            components: AddCreditCard
+          },
+        ]
       },
       {
         path: "betting-history",
@@ -143,6 +158,10 @@ const publicRoutes = [
         path: "turning-point",
         components: TurningPoint
       },
+      {
+        path: "*",
+        components: NotFound
+      }
     ]
   },
   {
@@ -170,8 +189,16 @@ const publicRoutes = [
       {
         path: "maintenance",
         components: Maintenance
+      },
+      {
+        path: "*",
+        components: NotFound
       }
     ]
+  },
+  {
+    path: "*",
+    components: NotFound
   }
 ];
 

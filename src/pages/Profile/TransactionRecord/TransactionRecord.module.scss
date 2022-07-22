@@ -1,0 +1,62 @@
+.enquiry{
+    padding: 1.2rem 3rem 4rem 3rem;
+    margin-bottom: 2rem;
+
+    .title{
+        margin-bottom: 1.4rem;
+    }
+
+    .record{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &__group{
+            width: 36.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            align-items: center;
+            justify-content: center;
+    
+            .method{
+                width: 100%;
+            }
+        }
+    
+        &__btn-select{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button{
+                width: 8rem;
+                height: 4rem;
+                border-radius: 100px;
+                background: #fff;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+                color: #575757
+            }
+    
+            .active{
+                color: #fff;
+                background: #365A97;
+            }
+        }
+    
+        &__btn{
+            margin-left: 3.6rem;
+            button{
+                width: 8rem;
+                height: 4rem;
+                background: #365A97;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+                border-radius: 100px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.info-transaction{
+    padding: 2rem;
+}

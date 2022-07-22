@@ -44,7 +44,21 @@ function App() {
                           key={indexChild}
                           path={`${children.path}`}
                           element={<Children />}
-                        />
+                        >
+                          {
+                            children.children?.map((child, index) => {
+                              const ChildPart1 = child.components;
+
+                              return(
+                                <Route
+                                  key={index}
+                                  path={`${child.path}`}
+                                  element={<ChildPart1 />}
+                                 />
+                              )
+                            })
+                          }
+                        </Route>
                       );
                     })
                   : null}

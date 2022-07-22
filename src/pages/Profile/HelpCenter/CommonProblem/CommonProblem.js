@@ -18,7 +18,7 @@ const CommonProblem = () => {
   };
 
   return (
-    <div className={cx("common-problem")}>
+    <section className={cx("common-problem")}>
       {dataCommon.map((rule, id) => (
         <div key={id} className={cx("problem-item", { ["active"]: active === id})}>
           <button
@@ -37,7 +37,7 @@ const CommonProblem = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

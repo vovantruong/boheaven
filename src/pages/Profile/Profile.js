@@ -20,7 +20,7 @@ const Profile = () => {
   }, [pathname]);
 
   return (
-    <div className={cx("profiles")}>
+    <section className={cx("profiles")}>
       <div className="container">
         {isMobile ? (
           <div className={cx("wrapper-mb")}>
@@ -42,7 +42,7 @@ const Profile = () => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -28,7 +28,7 @@ const HelpCenter = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className={cx("help-center")}>
+    <section className={cx("help-center")}>
       <BoxInforProfile
         className={cx("tab-head")}
         titleHead="通知中心"
@@ -55,7 +55,7 @@ const HelpCenter = () => {
       >
         {tabControl}
       </BoxInforProfile>
-    </div>
+    </section>
   );
 };
 

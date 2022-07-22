@@ -27,7 +27,7 @@ const HandsHelping = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className={cx("hands-help")}>
+    <section className={cx("hands-help")}>
       <div className={cx("action-tabs")}>
         {dataTabs.map((item, i) => (
           <button
@@ -43,7 +43,7 @@ const HandsHelping = () => {
         ))}
       </div>
       <div className={cx("tab-pane")}>{tabControl}</div>
-    </div>
+    </section>
   );
 };
 export default HandsHelping;
