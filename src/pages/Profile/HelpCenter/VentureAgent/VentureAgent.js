@@ -42,7 +42,7 @@ const column = [
 
 const VentureAgent = () => {
   return (
-    <div className={cx("venture-agent")}>
+    <section className={cx("venture-agent")}>
       <TableCustom dataSource={dataRebate} columns={column} colSpanHead={3}/>
       <div className={cx("unlimited-bonus")}>
         <h4 className={cx("title-bonus")}>獎金無上限</h4>
@@ -73,7 +73,7 @@ const VentureAgent = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

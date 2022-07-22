@@ -24,7 +24,7 @@ const AddCreditCard = () => {
   };
 
   return (
-    <div className={cx("credit-card", "bg-normal-linear")}>
+    <section className={cx("credit-card", "bg-normal-linear")}>
       <div className={cx("go-back")} onClick={() => navigate(-1)}>
         <BsChevronLeft />
         <span>新增銀行帳戶</span>
@@ -103,7 +103,7 @@ const AddCreditCard = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 export default AddCreditCard;

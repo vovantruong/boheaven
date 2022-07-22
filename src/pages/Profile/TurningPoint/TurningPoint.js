@@ -15,7 +15,7 @@ const TurningPoint = () => {
   const [transferIn, setTransferIn] = useState({name: "請選擇"});
 
   return (
-    <div className={cx("bg-normal-linear", "turning-point")}>
+    <section className={cx("bg-normal-linear", "turning-point")}>
       <div className={cx("wrapper")}>
         <div className={cx("transaction")}>
           <div className={cx("transfer-in")}>
@@ -66,7 +66,7 @@ const TurningPoint = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 export default TurningPoint;

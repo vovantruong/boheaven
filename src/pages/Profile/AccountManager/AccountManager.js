@@ -42,7 +42,7 @@ const AccountManager = () => {
   }, [dataCreditCard]);
 
   return (
-    <div className={cx("manager-account")} >
+    <section className={cx("manager-account")} >
       <RouteNotParent pathNameParent="account-manager">
           <div className={cx("box-bank", "bg-normal-linear")}>
             <div className={cx("head")}>
@@ -93,7 +93,7 @@ const AccountManager = () => {
             </ul>
           </div>
       </RouteNotParent>
-    </div>
+    </section>
   );
 };
 export default AccountManager;

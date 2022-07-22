@@ -56,7 +56,7 @@ const Deposit = () => {
 
   return (
     <>
-      <div className={cx("deposit")}>
+      <section className={cx("deposit")}>
         <BoxInforProfile className={cx("box-group")} titleHead="請選擇付款方式">
           <div className={cx("payment-method")}>
             {paymentMethod.map((method, i) => (
@@ -149,7 +149,7 @@ const Deposit = () => {
             <button onClick={() => setOnShowPopup(true)}>聯繫客服</button>
           </div>
         </BoxInforProfile>
-      </div>
+      </section>
       <ShowModalSupport visible={onShowPopup} setVisible={setOnShowPopup} />
     </>
   );

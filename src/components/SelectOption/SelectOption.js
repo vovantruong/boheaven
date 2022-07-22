@@ -38,6 +38,7 @@ const SelectOption = ({
       options={options}
       onChange={onChange}
       value={value}
+      defaultValue={value}
     />
   );
 };

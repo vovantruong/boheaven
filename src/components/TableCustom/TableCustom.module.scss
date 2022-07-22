@@ -23,13 +23,19 @@
   }
 }
 
-.non-bg{
+.none-bg{
   thead{
     background: transparent;
     color: #000;
   }
 
   tbody {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    line-height: 1.7rem;
+    color: #575757;
     tr {
       &:nth-child(even) {
         background: transparent;
@@ -66,10 +72,12 @@
     .disable{
       background: #919EAB;
       opacity: 0.5;
+      color: #fff;
     }
 
     .active{
       border-color: #365A97;
+      color: #365A97;
     }
   }
 }

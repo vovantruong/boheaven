@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./TableCustom.module.scss";
 import classNames from "classnames/bind";
+import {BsChevronRight, BsChevronLeft} from 'react-icons/bs'
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +17,7 @@ const TableCustom = ({
   colSpanHead,
 }) => {
   return (
-    <div className={cx("table-custom", className, !background && "non-bg")}>
+    <div className={cx("table-custom", className, {["none-bg"]: !background})}>
       <table>
         <thead className={cx(headClassName)}>
           <tr>
@@ -31,7 +32,7 @@ const TableCustom = ({
           {dataSource.map((item, i) => (
             <tr key={i}>
               {item.data.map((child, index) => (
-                <td key={index}>{child.name}</td>
+                <td key={index}>{child.name ? child.name : child}</td>
               ))}
             </tr>
           ))}
@@ -40,13 +41,13 @@ const TableCustom = ({
       {panigation && 
         <nav className={cx("panigation")}>
           <ul className={cx('list-btn')}>
-              <li className={cx('disable')}>{'<'}</li>
+              <li className={cx('disable')}><BsChevronLeft /></li>
               <li className={cx('active')}>1</li>
               <li>2</li>
               <li>...</li>
               <li>9</li>
               <li>10</li>
-              <li>{'>'}</li>
+              <li><BsChevronRight /></li>
           </ul>
         </nav>
       }

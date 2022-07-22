@@ -35,7 +35,7 @@ const dataRule = [
 
 const WithDrawal = () => {
   return (
-    <div className={cx("with-drawal")}>
+    <section className={cx("with-drawal")}>
       {dataRule.map((item, i) => (
         <div key={i} className={cx("rule")}>
           <span className={cx("rule-id")}>{item.id}</span>
@@ -55,7 +55,7 @@ const WithDrawal = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

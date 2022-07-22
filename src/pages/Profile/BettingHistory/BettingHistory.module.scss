@@ -1,0 +1,78 @@
+
+.title{
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.record-date, .total-bet{
+    padding: 1.2rem 2rem 2.6rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.record-date{
+    margin-bottom: 1.6rem;
+
+    .btn-betting{
+        width: 8rem;
+        height: 4rem;
+        border-radius: 100px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+        background: #fff;
+        color: #575757;
+    }
+
+    .box-date{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .date-picker{
+            max-width: 36.4rem;
+            width: 100%;
+        }
+
+        .search{
+            margin-left: 3.6rem;
+            background: #365A97;
+            color: #fff;
+        }
+    }
+
+    .btn-select{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .active{
+            background: #365A97;
+            color: #fff;
+        }
+    }
+}
+
+.total-bet{
+    .general-info{
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lost-win > span{
+        color: #3BDB85;
+    }
+
+    .detail-info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+
+        .info-item{
+            width: 33.33%;
+            margin-bottom: 1.6rem;
+        }
+    }
+}

@@ -63,7 +63,7 @@ const TurningPoint = () => {
   const [visible, setVisible] = useState(false);
   return (
     <>
-      <div className={cx("turning-point")}>
+      <section className={cx("turning-point")}>
         {dataRule.map((item, i) => (
           <div key={i} className={cx("rule")}>
             <span className={cx("rule-id")}>{item.id}</span>
@@ -105,7 +105,7 @@ const TurningPoint = () => {
             </div>
           </div>
         ))}
-      </div>
+      </section>
       <ShowModalSupport visible={visible} setVisible={setVisible} />
     </>
   );

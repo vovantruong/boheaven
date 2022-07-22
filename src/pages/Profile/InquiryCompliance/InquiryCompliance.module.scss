@@ -23,10 +23,6 @@
     }
 
     .table-detail{
-        .thead{
-            // background: transparent;
-            // color: #000000;
-        }
 
         .tbody{
             font-family: 'Inter', sans-serif;
@@ -35,12 +31,6 @@
             letter-spacing: 0.75px;
             line-height: 1.7rem;
             color: #575757;
-
-            // tr{
-            //     &:nth-child(even){
-            //         background: transparent;
-            //     }
-            // }
         }
     }
 }

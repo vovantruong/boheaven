@@ -119,7 +119,7 @@ function InviteFriends() {
   const isMobile = useContext(MediaQueryContext);
 
   return (
-    <div className={cx("invite-friends")}>
+    <section className={cx("invite-friends")}>
       <BannerSlide container={false} loop={false} data={dataBanner} />
       <div className="container">
         <div className={cx("wrapper")}>
@@ -181,7 +181,7 @@ function InviteFriends() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

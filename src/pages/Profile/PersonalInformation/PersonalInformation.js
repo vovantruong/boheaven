@@ -34,7 +34,7 @@ const PersonalInformation = () => {
   
   return (
     <>
-      <div className={cx("personal-information")}>
+      <section className={cx("personal-information")}>
         <BoxInforProfile titleHead="基本資料" lineHead>
           <div className={cx("asic-info", "wrapper")}>
             <div className={cx("member")}>
@@ -84,7 +84,7 @@ const PersonalInformation = () => {
             </div>
           </div>
         </BoxInforProfile>
-      </div>
+      </section>
       <ShowModalSupport visible={visible} setVisible={setVisible} />
     </>
   );

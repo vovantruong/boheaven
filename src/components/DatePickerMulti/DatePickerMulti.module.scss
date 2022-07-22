@@ -13,7 +13,7 @@
         align-items: center;
         gap: 1rem;
 
-        .from, .to{
+        .name-fromdate, .name-todate{
             cursor: pointer;
         }
 
@@ -30,6 +30,7 @@
         position: absolute;
         top: calc(100% + 3px);
         width: 100%;
+        min-width: 26rem;
         opacity: 0;
         visibility: hidden;
         transform: translateY(15px);
@@ -41,12 +42,32 @@
             width: 100%;
             margin: 0 auto;
             border-radius: 10px;
+
+            abbr{
+                text-decoration: none;
+            }
         }
     }
 }
 
-.show-picker{
-    .picker{
+.show-fromdate{
+    .name-fromdate{
+        color: #365a97;
+        font-weight: 500;
+    }
+    .picker-from{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+.show-todate{
+    .name-todate{
+        color: #365a97;
+        font-weight: 500;
+    }
+    .picker-to{
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
